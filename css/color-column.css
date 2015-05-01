@@ -1,0 +1,86 @@
+.six {
+    width: 16.6666%;
+    float: left;
+}
+.five {
+    width: 20%;
+    float: left;
+}
+.four {
+    width: 25%;
+    float: left;
+}
+.three {
+    width: 33.3333%;
+    float: left;
+}
+.two {
+    width: 50%;
+    float: left;
+}
+.one{
+ width:100%;
+    float:left;
+}
+.multi-group-container {
+    margin-bottom:30px;
+}
+.dark {
+    color: #fff;
+}
+.groupcolor {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-right: 0px;
+    height: 100%;
+}
+
+/*chart styles*/
+.color{
+ float: left;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+.swatch{
+}
+.color-code{
+    font-size: 1em;
+    text-align: center;
+    min-height: 60px;
+}
+.color-group{
+ margin-bottom: 30px; 
+    height: auto;
+}
+
+/*COLORS*/
+.blue{
+ background-color:#1696d2;   
+}
+.blue-1-6{
+ background-color: #cfe3f5;   
+}
+.blue-2-6{
+ background-color:#b0d5f1;  
+}
+.blue-3-6{
+ background-color:#82c4e9;  
+}
+.blue-5-6{
+ background-color: #00578b; 
+}
+.green{
+ background-color: #54b849;   
+}
+.black{
+ background-color: #000;   
+}
+.gray{
+background-color: #bcbec0;
+}
+.yellow{
+   background-color: #fdbf11; 
+}
+.magenta{
+   background-color: #ec008b; 
+}
