@@ -227,9 +227,11 @@ width: 130px;
 }
 
 .btn-primary{
-     background-color:#008BB0;
+     background-color:#1696d2;
     border-radius: 0;
     border: none;
+    font-weight: 400;
+    padding: 12px;
    
 }
 
@@ -371,17 +373,17 @@ width: 130px;
 }
 
 .btn-default {
-    border: 1px solid #219ab3;
-    color: #219ab3;
+    border: 1px solid #1696d2;
+    color: #1696d2;
     background-color: transparent;
 }
 
 .btn-default:hover,
 .btn-default:focus {
-    border: 1px solid #219ab3;
+    border: 1px solid #1696d2;
     outline: 0;
     color: #000;
-    background-color: #219ab3;
+    background-color: #1696d2;
 }
 
 ul.banner-social-buttons {
