@@ -23,27 +23,36 @@ $(document).ready(function () {
 
     $(".color").each(function (i) {
         var colorRGB = $(this).find(".swatch").css("background-color");
-        
+
         
         var rgbOut = "rgb(" + hexToRgb(colorRGB).r + "," + hexToRgb(colorRGB).g + "," + hexToRgb(colorRGB).b + ")";
-console.log(rgbOut);
-        var cmykOut = "CMYK: " + rgb2cmyk(hexToRgb(colorRGB).r, hexToRgb(colorRGB).g, hexToRgb(colorRGB).b);
-        console.log(cmykOut);
 
-//        $(this).after(cmykOut);
+        var cmykOut = "CMYK: " + rgb2cmyk(hexToRgb(colorRGB).r, hexToRgb(colorRGB).g, hexToRgb(colorRGB).b);
         
         var hexOut = "Hex: " + $(this).find(".swatch").css("backgroundColor");
-console.log(hexOut);
-
-//        $(this).after(hexOut);
-var thisColorCode = $(this).find(".color-code");
-        console.log(thisColorCode);
-                thisColorCode.html(hexOut + "<br/>" + rgbOut + "<br/>" + cmykOut);
 
         
-    });
+        
+var thisColorCode = $(this).find(".color-code");
+                thisColorCode.html(hexOut + "<br/>" + rgbOut + "<br/>" + cmykOut);
+//                        thisColorCode.html(rgbOut + "  |  " + cmykOut + "  |  " + hexOut);
+        
 
-function hexToRgb(hex) {
+        
+var svgContainer = d3.select(this).append("svg")
+    .attr("width", 30)
+    .attr("height", 30)
+        .attr("class","print-swatch");
+
+//Draw the rectangle for printing
+var rectangle = svgContainer.append("rect")
+    .attr("width", 30)
+    .attr("height", 30)
+    .attr("fill",colorRGB);
+});
+
+    
+    function hexToRgb(hex) {
     var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
     return result ? {
         r: parseInt(result[1], 16),

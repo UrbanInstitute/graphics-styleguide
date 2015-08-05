@@ -1,6 +1,13 @@
-# [Start Bootstrap](http://startbootstrap.com/) - [Grayscale](http://startbootstrap.com/template-overviews/grayscale/)
+# Tax Policy Center Dataviz Styleguide
 
-[Grayscale](http://startbootstrap.com/template-overviews/grayscale/) is a multipurpose, one page HTML theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/). This template features various content sections and a Google Maps section with a custom map marker.
+Use this data visualization style guide to create a uniform look and feel to all of Tax Policy Center’s charts and graphs. This site contains guidelines that are in line with data visualization best practices and proven design principles. It also eliminates the burden of design and color decisions when creating charts.
+
+These guidelines are primarily for publishing charts to the website. Minor sizing and typographic adjustments need to be made to insert charts into documents.
+
+
+
+## Built with the [Grayscale](http://startbootstrap.com/template-overviews/grayscale/) theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/).
+
 
 ## Getting Started
 
@@ -21,6 +28,10 @@ Start Bootstrap was created by and is maintained by **David Miller**, Managing P
 
 Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
 
-## Copyright and License
+## Theme Copyright and License
 
-Copyright 2014 Iron Summit Media Strategies, LLC. Code released under the [Apache 2.0](https://github.com/IronSummitMedia/startbootstrap-grayscale/blob/gh-pages/LICENSE) license.# graphics-styleguide
+Copyright 2014 Iron Summit Media Strategies, LLC. Code released under the [Apache 2.0](https://github.com/IronSummitMedia/startbootstrap-grayscale/blob/gh-pages/LICENSE) license.
+
+
+## Dataviz Style Copyright and License
+Copyright 2015 Urban Institute. Code released under the [GNU General Public License v3.0](http://choosealicense.com/licenses/gpl-3.0/)
