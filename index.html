@@ -1613,8 +1613,40 @@ http://www.businessinsider.com/pie-charts-are-the-worst-2013-6" target="_blank">
             <p>Depending on the purpose and content, maps should use different projections. US maps for print publication, or use in reports should use the Albers Equal Area projection. Simple interactive county- or state-level maps also use the Albers projection. <a href="http://datatools.urban.org/features/ncdb/immigrants-reshaping-residential-segregation/index.html#" target="_blank">Zoomable tile-based interactive maps</a> use the Mercator projection.</p>  
                 
                 <h3>Map Colors</h3>
-                <p>Maps should follow the same basic rules as other graphics when it comes to colors. <a href="https://en.wikipedia.org/wiki/Choropleth_map" target="_blank">Choropleth maps</a>, or maps that show the magnitude of a variable, should normally use the blue sequential ramp. Sometimes, a map needs to display change in a positive and negative way. In those cases, a diverging scheme works best. </p>
-                <h4>Urban's Diverging Scheme</h4>
+                <p>Maps should follow the same basic rules as other graphics when it comes to colors. <a href="https://en.wikipedia.org/wiki/Choropleth_map" target="_blank">Choropleth maps</a>, or maps that show the magnitude of a variable, should normally use the blue sequential ramp. </p>
+                
+                <div class="multi-group-container">
+                    <div class="color five">
+                        <div class="swatch groupcolor blue-1">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                    <div class="color five">
+                        <div class="swatch groupcolor blue-3">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                    <div class="color five">
+                        <div class="swatch groupcolor blue-5 dark ">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                    <div class="color five">
+                        <div class="swatch groupcolor blue-7 dark">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                    <div class="color five">
+                        <div class="swatch groupcolor blue-9 dark">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+
+                </div>
+                 
+                <iframe class="map-frame" frameborder="1" height="650px" marginheight="0px" marginwidth="0px" name="myiFrame" scrolling="no" src="http://datatools.urban.org/features/school-poverty/map1.html" style="border:0px #FFFFFF none;" width="100%"></iframe>
+                
+                <p>Sometimes, a map needs to <a href="http://datatools.urban.org/features/mapping-americas-futures/" target="_blank">display change in a positive and negative way.</a> In those cases, a diverging scheme works best. </p>
             <div class="multi-group-container">
                     <div class="color eight">
                         <div class="swatch groupcolor yellow-7 dark">
@@ -1657,6 +1689,22 @@ http://www.businessinsider.com/pie-charts-are-the-worst-2013-6" target="_blank">
                         </div>
                     </div>
                 </div>
+                
+                <img src="img/maf.png" class="example-chart" width="100%"/>
+                
+                <h4>Other ways to map</h4>
+                <p>Need to show data across multiple points in time? Consider using small map multiples to show the progression or spread.</p>
+                <img src="img/sm-multiple-map.jpg" class="example-chart" width="100%"/>
+                <h4>Tile Maps</h4>
+                <p>The problem with normal state-by-state maps is that the western US has very large states and the eastern US has small states. This leads to the western states being over represented with more visual weight than the states in the northeast.</p>
+                <p>Recently, <a href="http://blog.apps.npr.org/2015/05/11/hex-tile-maps.html" target="_blank">many organizations</a> have adopted use of grid or tile maps. The advantage of these maps is that each state has equal visual weight. Even better, these maps can be created with a <a href="tile-maps.xlsx">simple excel file.</a></p>
+                <div class="col-md-6 ">
+                <img src="img/tile-map-1.png" width="100%" class="example-chart"/>
+                </div>
+                <div class="col-md-6 ">
+                <img src="img/tile-map-4.png" width="100%" class="example-chart"/>
+                </div>
+                
 <!--
                     projections
                 colors
@@ -1665,8 +1713,7 @@ http://www.businessinsider.com/pie-charts-are-the-worst-2013-6" target="_blank">
                 interactive vs print
                     cartograms?
 -->
-                
-                <iframe class="map-frame" frameborder="1" height="650px" marginheight="0px" marginwidth="0px" name="myiFrame" scrolling="no" src="http://datatools.urban.org/features/school-poverty/map1.html" style="border:0px #FFFFFF none;" width="100%"></iframe>
+               
                 
                 
                 </div>
