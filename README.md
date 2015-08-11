@@ -1,6 +1,6 @@
-# Tax Policy Center Dataviz Styleguide
+# Urban Institute Dataviz Styleguide
 
-Use this data visualization style guide to create a uniform look and feel to all of Tax Policy Center’s charts and graphs. This site contains guidelines that are in line with data visualization best practices and proven design principles. It also eliminates the burden of design and color decisions when creating charts.
+Use this data visualization style guide to create a uniform look and feel to all of Urban Institute’s charts and graphs. This site contains guidelines that are in line with data visualization best practices and proven design principles. It also eliminates the burden of design and color decisions when creating charts.
 
 These guidelines are primarily for publishing charts to the website. Minor sizing and typographic adjustments need to be made to insert charts into documents.
 
@@ -15,9 +15,6 @@ To use this template, choose one of the following options to get started:
 * Download the latest release on Start Bootstrap
 * Fork this repository on GitHub
 
-## Bugs and Issues
-
-Have a bug or an issue with this template? [Open a new issue](https://github.com/IronSummitMedia/startbootstrap-grayscale/issues) here on GitHub or leave a comment on the [template overview page at Start Bootstrap](http://startbootstrap.com/template-overviews/grayscale/).
 
 ## Creator
 
