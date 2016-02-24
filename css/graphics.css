@@ -77,13 +77,14 @@ ul{
 .divider{
    width: 150px;
   display: inline-block;
-  border: 3px solid #174A7C;
+  border: 3px solid #1696d2;
   margin-top: 55px;
     margin-bottom:55px;
   display: block;
   margin-left: auto;
   margin-right: auto;   
 }
+
 
 a {
     color: #1696d2;
