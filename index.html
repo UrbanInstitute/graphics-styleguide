@@ -416,7 +416,7 @@
                 <p><b>Note:</b> <span class="text-swatch yellow-5 dark">Yellow</span> and <span class="text-swatch magenta-5 dark">Magenta</span> should be used sparingly, as these colors should be considered for highlighting purposes (such as drawing attention to a certain category or in some cases, Magenta can be used for a trend line).
                 <p>For more information about the subtleties of color, refer to <a href="http://blog.visual.ly/?s=%22subtleties+of+color%22" target="_blank">this collection of blog posts</a> from <a href="http://visual.ly/" target="_blank"> Visual.ly</a>.</p>
                 <p>The following color combinations are intended to take some of the guess work out of the process of assigning colors to charts. They're only examples, and can be mixed-and-matched depending on the story you are trying to tell with your data.</p>
-                <p>When comparing data by gender do not use blue to represent men and pink to represent women. Instead, choose a color combination like <span class="text-swatch yellow-5 dark">yellow</span> and <span class="text-swatch blue-5 dark">cyan</span>, or another combination of our main graphic colors.</p>
+                <p><b>Color Categorization</b> is important to think about when associating colors with gender and race. When comparing data by gender do not use blue to represent men and pink to represent women. Instead, choose a color combination like <span class="text-swatch yellow-5 dark">yellow</span> and <span class="text-swatch blue-5 dark">cyan</span>, or another combination of our main graphic colors. When comparing data by race or ethnicity, avoid using "racial" colors to represent each group.</p>
 
                 <h2>Color combinations</h2>
 
@@ -1269,8 +1269,8 @@
                 <ul>
                     <li>When dealing with political comparisons, lean on the identifiable colors of the parties. Red colors are generally associated with Republicans and blues are generally associated with Democrats.
                     </li>
-                    <li>When working on a chart that has political categories, be sure to use a nonpolitical color for baseline or unaffiliated series (in this case, “current law”).</li>
-
+                    <li>When working on a chart that has political categories, be sure to use a nonpolitical color for baseline or unaffiliated series (in this case, “Overall turnout”).</li>
+                    <li>If there is no specific order to the groups, sort by the most important category. In this example, the regions are sorted by "Overall turnout" from greatest to least. </li>
                 </ul>
 
             </div>
@@ -1456,10 +1456,9 @@
                 <h5>Notes about this chart</h5>
                 <ul>
                     <li>If the story for this chart is about the distribution of any given series, small multiple area charts are the way to go. </li>
-                    <li>For example, it's easy to see that the lower-earning groups get most of their income from salary, whereas the highest-earners get more from capital gains.</li>
-                    <li>The x-axis labels are a little small.</li>
-                    <li>The legend is likely unnecessary—the same labels could be accomplished with text boxes. </li>
-                    <li>The colors here are also unnecessary—There's no need to code the data by color because they're all separate. However, the contrast of the colors differentiates each category.</li>
+                    <li>For example, it's easy to see that there has been the largest increases for Native Americans and African Americans from 2011 to 2017.</li>
+                    <li>To reduce cluttering on the x-axis, the years are formatted in two-digit years and labels are applied for every other tick mark.</li>
+                    <li>The legend is not necessary, and instead, is replaced by direct labels for each multiple.</li>
                 </ul>
             </div>
 
@@ -1505,11 +1504,21 @@
 
                 <h5>Notes about this chart</h5>
                 <ul>
-                    <li>Supposing the data in this chart is categorical, two contrasting colors should be used. If the data were sequential, there would be two shades of teal.
+                    <li>Supposing the data in this chart is categorical, two contrasting colors should be used. If the data were sequential, there would be two shades of blue.
                     </li>
-                    <li>The x-axis is starting to get a little cramped. To free up some space, we could reduce the number of labels (labeling every 2, 5, or 10 years) or change the year format to be '98, '99, '00, etc.
+                    <li>To free up some space on the x-axis in terms of labelling, the number of labels is reduced to every other year. Another option was to change the year format to be '98, '99, '00, etc.
                     <li>If the labels contain the month and year, the standard format would be "Jan. 2010", for instance. Alternatively, other formats could be "1/2010" or "1/'10".</li>
                     </li>
+                    <li>Because there are only two series in this chart and the lines are spaced out, it makes sense to add labels rather than a legend.</li>
+                </ul>
+                <hr class="divider" />
+                <img src="img/line-chart2.png" width="100%" class="example-chart" />
+
+                <h5>Notes about this chart</h5>
+                <ul>
+                    <li>Notice that when there are negative values, a second x-axis sits below the graph while a solid x-axis line remains at y=0. This is done by adding a false dataset to the graph and creating a secondary x-axis line. Then set the secondary y-axis line and false dataset to transparent. 
+                    </li>
+   
                 </ul>
                 <hr class="divider" />
                 <img src="img/line.png" width="100%" class="example-chart" />
@@ -1601,7 +1610,7 @@ http://pubs.aeaweb.org/doi/pdfplus/10.1257/jep.28.1.209" target="_blank">An Econ
                     <p>
                         <ul>
                             <li><a href="
-http://www.perceptualedge.com/articles/visual_business_intelligence/save_the_pies_for_dessert.pdf" target="_blank">Save the Pies for Desert,</a> Stephen Few</li>
+http://www.perceptualedge.com/articles/visual_business_intelligence/save_the_pies_for_dessert.pdf" target="_blank">Save the Pies for Dessert,</a> Stephen Few</li>
                             <li><a href="
 http://pubs.aeaweb.org/doi/pdfplus/10.1257/jep.28.1.209" target="_blank">An Economist’s Guide to Visualizing Data</a>, Jon Schwabish</li>
                             <li><a href="
@@ -1706,7 +1715,7 @@ http://www.businessinsider.com/pie-charts-are-the-worst-2013-6" target="_blank">
 
 <!--                     <iframe class="map-frame" frameborder="1" height="650px" marginheight="0px" marginwidth="0px" name="myiFrame" scrolling="no" src="http://apps.urban.org/features/school-poverty/map1.html" style="border:0px #FFFFFF none;" width="100%"></iframe> -->
                     <img src="img/map.png" class="example-chart" width="100%" />
-                    <p>Sometimes, a map needs to <a href="http://apps.urban.org/features/mapping-americas-futures/" target="_blank">display change in a positive and negative way.</a> In those cases, a diverging scheme works best. Note that in the example above, this would be an appropriate case where the map title font-size can be larger at 24px.</p>
+                    <p>Sometimes, a map needs to <a href="http://apps.urban.org/features/mapping-americas-futures/" target="_blank">display change in a positive and negative way.</a> In those cases, a diverging scheme works best. Also note that in the example above, given the large magnitude of the map, this would be an appropriate case where the font-size of the title can be larger at 24px.</p>
                     <div class="multi-group-container">  
                         <div class="color eight">
                             <div class="swatch groupcolor yellow-7 dark">
