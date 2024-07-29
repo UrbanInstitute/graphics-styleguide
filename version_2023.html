@@ -54,7 +54,7 @@
 
     <style>
         h4 {padding: 50px 0px 5px 0px}
-    </style>
+        </style>
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
@@ -108,8 +108,9 @@
                     <div class="col-md-8 col-md-offset-2">
                         <h1 class="brand-heading">Urban Institute Data Visualization Style Guide</h1>
                         <!--                        <p class="byline-text">Lorem ipsum</p>-->
-                        <p class="intro-text">This data visualization style guide helps the Urban Institute ensure a uniform look and feel across charts, graphs, and tables that appear in Urban publications and on the Urban website. This guide is intended for Urban employees and, as such, may include references and links to internal language and tools. <br><br> We have made this guide public in the hope of creating a resource for other nonprofit and research organizations and to benefit the wider data visualization community. We will update and expand this guide on an ad hoc basis depending on the changing needs of Urban staff members and evolving technologies, tools, and publication types. If you’re looking for the previous version of the Urban style guide, click here.</p>
-                        
+                        <p class="intro-text">Use this data visualization style guide to create a uniform look and feel to all of Urban’s charts and graphs. This site contains guidelines that are in line with data visualization best practices and proven design principles. It also eliminates the burden of design and color decisions when creating charts.</p>
+                        <p>
+                            These guidelines are primarily for publishing charts to the website. Minor sizing and typographic adjustments need to be made to insert charts into documents. </p>
                         <a target="_blank" href="#typography" class="btn btn-circle page-scroll">
                             <i class="fa fa-angle-down animated"></i>
                         </a>
@@ -120,64 +121,33 @@
     </header>
 
     <!-- Typography Section -->
-    <section id="toc" class="container content-section text-center">
+    <section id="typography" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-10 col-lg-offset-1">
-                
-                <p>This site contains guidelines that are consistent with current data visualization best practices and design principles. It also reduces the burden of design and color decisions on individual researchers and analysts. These guidelines are primarily intended for charts, graphs, and tables that appear on the Urban website and in Urban (PDF) publications. There are minor sizing and typographic differences between visuals formatted for the web and those appearing in PDF documents and PowerPoint presentations, which we note throughout this guide.</p> 
-
-                <p>The Urban Institute Excel Macro add-in and the Urban styles package for R (<a href="https://urbaninstitute.github.io/urbnthemes/" target="_blank">urbnthemes</a>) are two open source tools Urban staff can use to more easily create and format their data visualizations for different publication types. Both tools automate much of the information in this guide, including applying formatting conventions for charts created in Urban style.</p>
-                
-                <h1>Table of Contents</h1>
-
-                <ol class="centerlist">
-                <li><a target="_blank" href="#typography">Chart Typography and Sizing</a></li>
-                <li><a target="_blank" href="#excel">Using the Excel Macro</a></li>
-                <li><a target="_blank" href="#third-party-tools">R Shiny, Tableau, and PowerBI Guidance</a></li>
-                <li><a target="_blank" href="#excel">Chart Parts</a></li>
-                <li>Inserting Figures into Urban Word Templates</li>
-                <li>Using Color in Urban Graphs and Charts</li>
-                <li>What Is the Right Chart for Your Data?</li>
-                <li>Best Practices for Creating Effective Charts</li>
-                <li>Data Visualization Absolutes</li>
-                <li>Accessibility</li>
-                <li>Considerations for Data related to Race, Ethnicity, and Gender</li>
-                </ol>
-            </div>
-        </div>
-        </section>
-
-        <section id="typography" class="container content-section text-center">
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-1">
-
-                <h1>Chart Typography and Sizing</h1>
-                
-                <p>Good chart typography creates a hierarchy among elements and guides the reader through the visual. Urban uses a defined set of font sizes and styles to create this hierarchy.</p>
-
-                <p>Urban uses the <em>Lato</em> font for all our products, including the website, PDF publications, and presentations. A suitable replacement is the default Arial font. If Lato is not installed on your computer, contact the Tech and Data department.</p>
-
-                <p>The font sizes in Urban charts depend on whether the chart is produced for the web or within a PDF. The Excel macro and R theme apply the correct font sizes to both web and PDF figures.</p>
-
+                <h1>Chart Typography</h1>
+                <p>Urban.org uses the font <em>Lato</em>. When possible, this font should also be used to create charts. If Lato is not installed on your computer, contact IT. A suitable replacement is Arial. Good chart typography creates a hierarchy among elements and guides the reader through the visual. </p>
 
                 <table class="type-table" border="0" cellspacing="10px" cellpadding="10px" align="left">
                     <tbody>
                         <tr style="text-transform:Uppercase; font-weight:bold; border-bottom:1px solid #000;">
                             <td valign="bottom"> </td>
                             <td valign="bottom">
-                                <p>Font</p>
+                                <p>Typeface (Alternative)</p>
                             </td>
                             <td valign="bottom">
-                                <p>Color</p>
+                                <p>Web Size</p>
+                            </td>
+                            <td valign="bottom">
+                                <p>Print Size</p>
                             </td>
                             <td valign="bottom">
                                 <p>Case</p>
                             </td>
                             <td valign="bottom">
-                                <p>PDF figures</p>
+                                <p>Color</p>
                             </td>
                             <td valign="bottom">
-                                <p>Web figures</p>
+                                <p>Notes</p>
                             </td>
                         </tr>
 
@@ -189,17 +159,18 @@
                                 <p>Lato Regular</p>
                             </td>
                             <td valign="top">
-                                <p>#1696d2 or rgb(22, 150, 210)</p>
+                                <p>11</p>
+                            </td>
+                            <td valign="top">
+                                <p>8</p>
                             </td>
                             <td valign="top">
                                 <p>ALL CAPS</p>
                             </td>
                             <td valign="top">
-                                <p>8pt</p>
+                                <p>#1696d2 or rgb(22, 150, 210)</p>
                             </td>
-                            <td valign="top">
-                                <p>11px</p>
-                            </td>
+                            <td valign="top"> </td>
                         </tr>
 
                         <tr>
@@ -207,19 +178,22 @@
                                 <p style="font-size:20px;"><b>Title</b></p>
                             </td>
                             <td valign="top">
-                                <p>Lato Black</p>
+                                <p>Lato Bold (Arial Bold)</p>
+                            </td>
+                            <td valign="top">
+                                <p>20 (24 for maps–see "Maps" section)</p>
+                            </td>
+                            <td valign="top">
+                                <p>12</p>
+                            </td>
+                            <td valign="top">
+                                <p>Title Case</p>
                             </td>
                             <td valign="top">
                                 <p>#000000 or rgb(0,0,0)</p>
                             </td>
                             <td valign="top">
-                                <p>Title (all major words capitalized)</p>
-                            </td>
-                            <td valign="top">
-                                <p>18pt [inserted in the Word document, not the actual chart]</p>
-                            </td>
-                            <td valign="top">
-                                <p>20px</p>
+                                <p>The main point of the chart. Try to keep shorter than two lines and avoid qualifiers.</p>
                             </td>
                         </tr>
 
@@ -228,282 +202,211 @@
                                 <p style="font-size:16px;">Subtitle</p>
                             </td>
                             <td valign="top">
-                                <p>Lato Black</p>
+                                <p>Lato Regular (Arial)</p>
                             </td>
                             <td valign="top">
-                                <p>Black (#000000 or rgb(0,0,0))</p>
+                                <p>16</p>
                             </td>
                             <td valign="top">
-                                <p>Sentence (only the first word capitalized)</p>
+                                <p>9.5</p>
                             </td>
                             <td valign="top">
-                                <p>14pt [inserted in the Word document, not the actual chart]</p>
+                                <p>Sentence case</p>
                             </td>
                             <td valign="top">
-                                <p>16px</p>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td valign="top">
-                                <p>Axis titles</p>
+                                <p>#000000 or rgb(0,0,0)</p>
                             </td>
                             <td valign="top">
-                                <p>Lato Regular</p>
-                            </td>
-                            <td valign="top">
-                                <p>Black (#000000 or rgb(0,0,0))</p>
-                            </td>
-                            <td valign="top">
-                                <p>Sentence</p>
-                            </td>
-                            <td valign="top">
-                                <p>8.5pt</p>
-                            </td>
-                            <td valign="top">
-                                <p>12px</p>
+                                <p>Use this to add qualifiers or further clarification to the title.</p>
                             </td>
                         </tr>
 
                         <tr>
                             <td valign="top">
-                                <p style="">Axis labels</p>
+                                <p style="font-size:12px;"><em>X and Y axis titles</em>
+                                </p>
                             </td>
                             <td valign="top">
-                                <p>Lato Regular</p>
+                                <p>Lato Regular Italic (Arial Italic)</p>
                             </td>
                             <td valign="top">
-                                <p>Black (#000000 or rgb(0,0,0))</p>
+                                <p>12</p>
                             </td>
                             <td valign="top">
-                                <p>Sentence</p>
+                                <p>8.5</p>
                             </td>
                             <td valign="top">
-                                <p>8.5pt</p>
+                                <p>Sentence case</p>
                             </td>
                             <td valign="top">
-                                <p>12px</p>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td valign="top">
-                                <p style="">Data labels</p>
+                                <p>#000000 or rgb(0,0,0)</p>
                             </td>
                             <td valign="top">
-                                <p>Lato Regular</p>
-                            </td>
-                            <td valign="top">
-                                <p>Black (#000000 or rgb(0,0,0))</p>
-                            </td>
-                            <td valign="top">
-                                <p>Sentence</p>
-                            </td>
-                            <td valign="top">
-                                <p>8.5pt</p>
-                            </td>
-                            <td valign="top">
-                                <p>12px</p>
+                                <p>Always horizontal, above the top axis label Include units or multipliers in parenthesis (millions), ($2014)</p>
                             </td>
                         </tr>
 
                         <tr>
                             <td valign="top">
-                                <p style="">Legend text</p>
+                                <p style="font-size:12px;">X and Y axis labels</p>
                             </td>
                             <td valign="top">
-                                <p>Lato Regular</p>
+                                <p>Lato Regular (Arial)</p>
                             </td>
                             <td valign="top">
-                                <p>Black (#000000 or rgb(0,0,0))</p>
+                                <p>12</p>
                             </td>
                             <td valign="top">
-                                <p>Sentence</p>
+                                <p>8.5</p>
                             </td>
                             <td valign="top">
-                                <p>9.5pt</p>
+                                <p>Sentence case</p>
                             </td>
                             <td valign="top">
-                                <p>14px</p>
+                                <p>#000000 or rgb(0,0,0)</p>
+                            </td>
+                            <td valign="top">
+                                <p>Always horizontal, avoid units or multipliers. Those should be added to the axis title in parenthesis</p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td valign="top">
+                                <p style="font-size:12px;">Key labels</p>
+                            </td>
+                            <td valign="top">
+                                <p>Lato Regular (Arial)</p>
+                            </td>
+                            <td valign="top">
+                                <p>12</p>
+                            </td>
+                            <td valign="top">
+                                <p>9.5</p>
+                            </td>
+                            <td valign="top">
+                                <p>Sentence case</p>
+                            </td>
+                            <td valign="top">
+                                <p>#000000 or rgb(0,0,0)</p>
+                            </td>
+                            <td valign="top">
+                                <p>Always horizontal. Avoid redundant key labels if possible.</p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td valign="top">
+                                <p style="font-size:12px;"><b>Direct labels</b>
+                                </p>
+                            </td>
+                            <td valign="top">
+                                <p>Lato Bold (Arial Bold)</p>
+                            </td>
+                            <td valign="top">
+                                <p>12</p>
+                            </td>
+                            <td valign="top">
+                                <p>9.5</p>
+                            </td>
+                            <td valign="top">
+                                <p>Sentence case</p>
+                            </td>
+                            <td valign="top">
+                                <p>#000000 or rgb(0,0,0)</p>
+                            </td>
+                            <td valign="top">
+                                <p>Use for line or column charts with three or fewer series.</p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td valign="top">
+                                <p style="font-size:12px;">Data-point label</p>
+                            </td>
+                            <td valign="top">
+                                <p>Lato Regular (Arial)</p>
+                            </td>
+                            <td valign="top">
+                                <p>12</p>
+                            </td>
+                            <td valign="top">
+                                <p>8.5</p>
+                            </td>
+                            <td valign="top">
+                                <p>Sentence case</p>
+                            </td>
+                            <td valign="top">
+                                <p>#000000 or rgb(0,0,0)</p>
+                            </td>
+                            <td valign="top">
+                                <p>Always horizontal. No units or multipliers. Only directly label columns if there are fewer than 10 total columns in the chart.</p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td valign="top">
+                                <p style="font-size:11px;">Source and Notes</p>
+                            </td>
+                            <td valign="top">
+                                <p>Lato Regular (Arial)</p>
+                            </td>
+                            <td valign="top">
+                                <p>11</p>
+                            </td>
+                            <td valign="top">
+                                <p>8</p>
+                            </td>
+                            <td valign="top">
+                                <p>Sentence case</p>
+                            </td>
+                            <td valign="top">
+                                <p>#000000 or rgb(0,0,0)</p>
+                            </td>
+                            <td valign="top">
+                                <p>Bold “<b>Source:</b>” and “<b>Notes:</b>” as well as any statistical significance indicators.</p>
                             </td>
                         </tr>
 
                     </tbody>
-                </table>    
+                </table>
             </div>
-        </section> 
-
-        <section class="container within-section text-center">
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-1">
-                    <p>Most of Urban’s charts will be full width (760px for web and 6.25” for PDFs). The main content width on the Urban website is 760px, which translates to approximately 125.83 characters in Excel. In PDF products, simple figures can be 3.13” wide, which is half the width of full-size figures. </p>
-                </div>
-            </div>
-        </section>
-
-    <!-- Using the Excel Macro Section -->
-    <section id="excel" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-10 col-lg-offset-1">
-                
-                <h1>Using the Excel Macro</h1>
-                <p>Urban has created an add-in for Microsoft Excel that automatically applies Urban colors, chart formatting, font styling, and font sizes to Excel figures. This set of instructions will show you how to install and use the add-in. </p>
-            </div>         
-
-                <h5>Installing the add-in on PC computers</h5>
-                <ol>
-                    <li>Download the Excel add-in from the <b>Brand Identity Guidelines</b> intranet page: Your Urban > Templates > Excel > “Excel add-in for creating Urban style charts.”</li>
-                    <li>Save the file to your computer. You can put the file anywhere, but placing it directly in the Excel AddIn folder is preferred. On Urban PC computers, the add-in folder is most likely located on the D drive at: <code>D:\Users\USERNAME\AppData\Roaming\Microsoft\AddIns\</code>. (USERNAME is your username on the computer. On other computers, the folder may be in the C: drive in the same subdirectory.)
-                        <ol type="a">
-                            <li>If you can’t locate the AppData subdirectory, you can use Excel’s built-in Themes menu to help you locate it. Under the Page Layout tab, select the Themes button. At the bottom of that menu, select “Save current theme.” Excel will bring you to the Document Themes folder, which is in <code>D:\Users\USERNAME\AppData\Roaming\Microsoft\folder</code>. You can copy the folder location from the top of that window, paste it into your Windows Explorer folder, and navigate to the AddIn folder from there.</li>
-                            <li>To navigate to this AddIn folder location, you may need to unhide the AppData subdirectory. To do so, open a Windows Explorer window, click Tools, then View. You can now select “Show hidden files, folders, and drives” under the “Hidden files and folders” option.</li>
-                        </ol>
-                    </li>
-                    <li>Regardless of whether you saved the file to your AddIn folder or to another location on your computer, you can now install the add-in. To do so, select the File tab in the ribbon.</li>
-                    <li>At the bottom of the File window, select Options.</li>
-                    <li>In the Options window, select the Add-Ins option near the bottom of the left pane, and then select the Go... button at the bottom of the larger window.</li>
-                    <li>At this point, a menu will load. If you saved the add-in file to the “AppData” folder location, the add-in should already be listed. You can simply check the box and select OK. If you saved it anywhere else, select Browse… and navigate to the location where you saved the <code>UrbanGraphingStyle.xlam</code> file. (Excel may ask if you’d like to place the add-in into your Roaming folder; it is fine to select OK here.) Select OK.
-                        <ol type="a">
-                            <li class="security-note">SECURITY NOTE: If the ribbon tab does not appear after installing the add-in (this typically happens in a later session), it may be due to a security update from Microsoft. A detailed description of how to solve this issue can be found <a href="http://peltiertech.com/Utility30/Documentation30/RibbonDisappears.html" target="_blank">here</a>.</li>
-                        </ol>
-                    </li>
-                </ol>
-                
-                <h5>Installing the add-in on Mac computers</h5>
-                <ol>
-                    <li>Save the add-in to a location on your computer.</li>
-                    <li>Under the Tools menu in the top toolbar, select the Excel Add-Ins... option.</li>
-                    <li>Select Browse… and navigate to the <code>UrbanGraphingStyle.xlam</code> file. Select Open. The box next to the UrbanGraphStyle add-in should now be checked. In this smaller menu, select OK. You will now see the Urban Graph Styles tab in your Excel ribbon. The tab will appear every time you open Excel.</li>
-                </ol>
-                
-                <h5>Using the add-in</h5>
-                <ol>
-                    <li>Select the data you want to use to create your chart.</li>
-                    <li>Click the chart option from the Urban Graph Styles menu that matches the style of your chart.</li>
-                    <li>A pop-up box will appear asking if you want to format your graph for web or print (the Cancel option will close the dialog box). An Urban-formatted version of your chart will appear.</li>
-                    <li>Edit the x-axis title and y-axis title or delete them if the units are already specified in the chart title or subtitle.</li>
-                    <li>Edit any corresponding data cells to fix wording and capitalization as needed. Your edits should automatically appear in the chart.</li>
-                    <li>To export your chart:
-                        <ol type="a">
-                            <li>On PC computers, use the Export menu in the add-in. You can choose a folder location and file type as you would for any other software tool.</li>
-                            <li>On Mac computers, the Export menu does not exist. Instead, copy the chart (Command-C), open the Preview tool, and open a new file (Command-N). Save the chart (Command-S) and use the drop-down menu to change the file format to PNG. In the resulting menu, change the resolution to 600 (pixels/inch). Name the file and click Save.</li>
-                        </ol>
-                    </li>
-                </ol>
-      
-        </div>
 
     </section>
 
-
-    <!-- Using the R Urban Theme Section -->
-    <section id="urban-theme" class="container content-section text-center">
+    <!-- chart parts Section -->
+    <section id="chart-parts" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-10 col-lg-offset-1">
-                <h1>Using the R Urban Theme</h1>
-                
-                <p><a href="https://urbaninstitute.github.io/urbnthemes/" target="_blank">urbnthemes</a> is a set of tools for creating Urban Institute–themed plots and maps in R (the theme has been tested against ggplot2 version 3.0.0; it will not function properly with older versions of ggplot2). The package extends ggplot2 with print and map themes as well as tools that make plotting easier. A comprehensive set of examples is available at the <a href="https://urbaninstitute.github.io/r-at-urban/graphics-guide.html" target="_blank">Institute R Users Group website</a>.</p>
+                <h1>Chart Parts</h1>
+                <p>The main content well on the Urban website is 760px wide, which translates to approximately 125.83 characters wide in Excel. Because Excel’s chart title and subtitle fields are limiting in terms of formatting, we use a regular text box for all the text at the top of the graphic, as well as the source and notes text at the bottom. We also include an Urban tag in the lower-right corner of the figure so that when media members copy-paste our charts into their stories, Urban’s brand is on them.</p>
+                <p>This tagline is built from standard text using Lato Regular with 1pt of expanded character spacing. Urban is colored blue—#1696d2 or rgb(22,150,210)—and Institute is black. The text is in uppercase and should be 9pt for web, 7pt for print.</p>
+                <h4>Tips</h4>
 
-                <p><code>library(urbnthemes)</code> makes ggplot2 output align more closely with this style guide, but it does not produce publication-ready graphics. Visual styles must still be edited using your project’s normal editing workflow. Exporting charts as PDFs rather than image files (e.g., PNG, JPEG) will allow them to be edited more easily.</p> 
+                <ul>
+                    <li>All of Urban’s charts will be full-width (760px), so it is important to keep the data density as high as possible. Always include a text reference to your figure to give the data context to the content of the report/brief/blog post. If your chart has only two or three values, consider a couple sentences of text to explain the figure.
+                    </li>
+                    <li>If you find your explanatory sentences do a better job of distilling the information, you might want to consider going without a chart.
+                    </li>
+                    <li>Title: Keep it short and simple. Try to explain the chart in a few words. If you need to add qualifiers (e.g., years, dollars) or further clarification, use a subtitle
+                    </li>
+                    <li>Source and Notes: This is where the technical information about methodology can go. Try to avoid putting this information in the title, labels, or on the chart.
+                    </li>
+                    <li>Legends: Stretch legends across the top of the chart, or to the right. Order them in a logical way, mirroring the order of the data in the charts.
+                    </li>
+                </ul>
 
-<p>Run the following code to install or update urbnthemes:
-    <br>
-<code>install.packages("remotes")<br>
-remotes::install_github("UrbanInstitute/urbnthemes")
-</code>
-
-</p>
-<p>Run the following code at the top of each script:
-<br>
-<code>library(tidyverse)<br>
-library(urbnthemes)<br>
-set_urbn_defaults(style = "print")
-</code>
-<br><br>
-A comprehensive review, installation instructions, and more details and tutorials about using R at Urban and the urbnthemes package can be found in the <a href="https://urbaninstitute.github.io/r-at-urban/graphics-guide.html" target="_blank">Urban Institute R Graphics Guide</a>.</p>
-                
             </div>
+            <div class="col-lg-12">
+                <!-- <h4>In Print</h4>
+                <img src="img/chart-parts-01.png" width="100%" /> -->
+                <h4>On the web</h4>
+                <img src="img/chart-typography-and-layout.png" width="100%" />
+            </div>
+
+
         </div>
 
     </section>
-
-
-    <!-- Inserting Figures into Urban Word Templates Section -->
-    <section id="insert-figures" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-10 col-lg-offset-1">
-                <h1>Inserting Figures into Urban Word Templates</h1>
-                
-                <p>Urban Microsoft Word templates have built-in formatting to ensure correct placement of figures. To insert a figure—either as an Excel graph or as an image exported from another tool like R—follows these steps:</p>
-                <ol>
-                    <li>Start with the most recent Word template for your product, which can be downloaded from Urban Explorer on the <a href="https://explorer.urban.org/page/2229" target="_blank">Brand Identity Guidelines</a> intranet page.</li>
-                    <li>For each figure, copy and paste the figure template text from the figure number through the notes line (see image below). This will automatically apply the built-in styles to the text around the figure. </li>
-                    <li>Write out the figure number, title, and subtitle (delete the subtitle if needed) directly in the Word file (not in the Excel graph or image).</li>
-                    <li>Highlight the red Figure Placer paragraph and then paste your figure, choosing either “Use Destination Theme and Embed Workbook,” “Use Destination Theme and Link Data,” or “Paste Special … Microsoft Office Graphic Object.”</li>
-                    <li>Write out the source and notes beneath the figure.</li> 
-                </ol>
-            </div>
-        </div>
-
-    </section>
-
-<!-- R Shiny, Tableau, and PowerBI Guidance Section -->
-<section id="third-party-tools" class="container content-section text-center">
-    <div class="row">
-        <div class="col-lg-10 col-lg-offset-1">
-            <h1>R Shiny, Tableau, and PowerBI Guidance</h1>
-            
-            <p>Urban staff use a variety of data analytics and visualization tools in their work. When it comes to R, interested users should consult the public-facing R tutorials available on the Urban Github site and consult the R User Group for additional resources. We recommend that Urban staff consult with the Data Visualization team for additional support related to obtaining Tableau and PowerBI licenses and creating graphs or dashboards with these tools.</p> 
-
-            <p>Public-facing, high-visibility data visualization tools and dashboards published at Urban are built with custom tools and undergo a full design and build process to ensure that products hit the highest accessibility, UI, and mobile-friendly design standards—all with Urban’s wider audience in mind.</p>
-
-            <p>COMM and the Tech and Data Science teams are developing guidance on R Shiny, Tableau, PowerBI, and other off-the-shelf dashboarding tools for use at Urban. Our intake processes are connected for this kind of tooling request.</p>
-
-            <p>Currently, only the R Shiny tool is approved for specific use cases. Our consensus is that R Shiny dashboards can be appropriate for highly niche audiences (e.g., other researchers or select funders), with review and input from COMM’s Design and Data Visualization teams. </p>
-
-            <p>These products are not embedded on Urban’s website. Rather, our guidance is to screenshot and link to them, as seen in this Data at Urban post and this Urban Wire post. These guidelines are evolving and subject to change.</p>
-
-            
-        </div>
-    </div>
-
-</section>
-
-
-<!-- chart parts Section -->
-<section id="chart-parts" class="container content-section text-center">
-    <div class="row">
-        <div class="col-lg-10 col-lg-offset-1">
-            <h1>Chart Parts</h1>
-            <p>The main content well on the Urban website is 760px wide, which translates to approximately 125.83 characters wide in Excel. Because Excel’s chart title and subtitle fields are limiting in terms of formatting, we use a regular text box for all the text at the top of the graphic, as well as the source and notes text at the bottom. We also include an Urban tag in the lower-right corner of the figure so that when media members copy-paste our charts into their stories, Urban’s brand is on them.</p>
-            <p>This tagline is built from standard text using Lato Regular with 1pt of expanded character spacing. Urban is colored blue—#1696d2 or rgb(22,150,210)—and Institute is black. The text is in uppercase and should be 9pt for web, 7pt for print.</p>
-            <h4>Tips</h4>
-
-            <ul>
-                <li>All of Urban’s charts will be full-width (760px), so it is important to keep the data density as high as possible. Always include a text reference to your figure to give the data context to the content of the report/brief/blog post. If your chart has only two or three values, consider a couple sentences of text to explain the figure.
-                </li>
-                <li>If you find your explanatory sentences do a better job of distilling the information, you might want to consider going without a chart.
-                </li>
-                <li>Title: Keep it short and simple. Try to explain the chart in a few words. If you need to add qualifiers (e.g., years, dollars) or further clarification, use a subtitle
-                </li>
-                <li>Source and Notes: This is where the technical information about methodology can go. Try to avoid putting this information in the title, labels, or on the chart.
-                </li>
-                <li>Legends: Stretch legends across the top of the chart, or to the right. Order them in a logical way, mirroring the order of the data in the charts.
-                </li>
-            </ul>
-
-        </div>
-        <div class="col-lg-12">
-            <!-- <h4>In Print</h4>
-            <img src="img/chart-parts-01.png" width="100%" /> -->
-            <h4>On the web</h4>
-            <img src="img/chart-typography-and-layout.png" width="100%" />
-        </div>
-
-
-    </div>
-
-</section>
 
     <section id="color" class="container content-section text-center">
         <div class="row">

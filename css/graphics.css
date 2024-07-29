@@ -33,14 +33,25 @@ h6 {
 
 p {
     margin: 0 0 15px;
-    font-size: 18px;
+    font-size: 2rem;
     line-height: 1.5;
     text-align: left;
 }
 
 ul{
- text-align: left;
-    font-size: 1.25em;
+    text-align: left;
+    font-size: 1.5rem;
+}
+
+ol{
+    text-align:justify;
+    list-style-position: inside;   
+}
+
+.centerlist {
+    text-align: center;
+    font-size: 2rem;
+    list-style-position: inside;
 }
 
 .example-chart{
@@ -48,6 +59,10 @@ ul{
  max-width:700px;
  margin:0 auto;
 
+}
+
+.within-section {
+    padding-top: 50px;
 }
 
 .text-swatch{
