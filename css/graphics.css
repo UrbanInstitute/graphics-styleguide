@@ -52,6 +52,7 @@ ol{
     text-align: center;
     font-size: 2rem;
     list-style-position: inside;
+    padding-left: 0;
 }
 
 .example-chart{

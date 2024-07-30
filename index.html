@@ -79,19 +79,19 @@
                         <a target="_blank" href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#typography">Typography</a>
-                    </li>
-                    <li>
                         <a class="page-scroll" href="#chart-parts">Chart Parts</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#color">Color</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#examples">Examples</a>
+                        <a class="page-scroll" href="#best-practices">Best Practices</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#maps">Maps</a>
+                        <a class="page-scroll" href="#accessibility">Accessibility</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#examples">Examples</a>
                     </li>
                 </ul>
             </div>
@@ -133,15 +133,15 @@
                 <ol class="centerlist">
                 <li><a target="_blank" href="#typography">Chart Typography and Sizing</a></li>
                 <li><a target="_blank" href="#excel">Using the Excel Macro</a></li>
+                <li><a target="_blank" href="#insert-figs">Inserting Figures into Urban Word Templates</a></li>
                 <li><a target="_blank" href="#third-party-tools">R Shiny, Tableau, and PowerBI Guidance</a></li>
-                <li><a target="_blank" href="#excel">Chart Parts</a></li>
-                <li>Inserting Figures into Urban Word Templates</li>
-                <li>Using Color in Urban Graphs and Charts</li>
-                <li>What Is the Right Chart for Your Data?</li>
-                <li>Best Practices for Creating Effective Charts</li>
-                <li>Data Visualization Absolutes</li>
-                <li>Accessibility</li>
-                <li>Considerations for Data related to Race, Ethnicity, and Gender</li>
+                <li><a target="_blank" href="#chart-parts">Chart Parts</a></li>
+                <li><a target="_blank" href="#color">Using Color in Urban Graphs and Charts</a></li>
+                <li><a target="_blank" href="#right-chart">What Is the Right Chart for Your Data?</a></li>
+                <li><a target="_blank" href="#best-practices">Best Practices for Creating Effective Charts</a></li>
+                <li><a target="_blank" href="#absolutes">Data Visualization Absolutes</a></li>
+                <li><a target="_blank" href="#accessibility">Accessibility</a></li>
+                <li><a target="_blank" href="#raceethgender">Considerations for Data related to Race, Ethnicity, and Gender</a></li>
                 </ol>
             </div>
         </div>
@@ -267,7 +267,7 @@
 
                         <tr>
                             <td valign="top">
-                                <p style="">Axis labels</p>
+                                <p>Axis labels</p>
                             </td>
                             <td valign="top">
                                 <p>Lato Regular</p>
@@ -288,7 +288,7 @@
 
                         <tr>
                             <td valign="top">
-                                <p style="">Data labels</p>
+                                <p>Data labels</p>
                             </td>
                             <td valign="top">
                                 <p>Lato Regular</p>
@@ -309,7 +309,7 @@
 
                         <tr>
                             <td valign="top">
-                                <p style="">Legend text</p>
+                                <p>Legend text</p>
                             </td>
                             <td valign="top">
                                 <p>Lato Regular</p>
@@ -429,7 +429,7 @@ A comprehensive review, installation instructions, and more details and tutorial
 
 
     <!-- Inserting Figures into Urban Word Templates Section -->
-    <section id="insert-figures" class="container content-section text-center">
+    <section id="insert-figs" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-10 col-lg-offset-1">
                 <h1>Inserting Figures into Urban Word Templates</h1>
@@ -545,10 +545,15 @@ A comprehensive review, installation instructions, and more details and tutorial
                 </ul>
                 <p>For more information about the subtleties of color and choosing colors for your data visualizations, refer to Datawrapper's blog post "<a href="https://blog.datawrapper.de/colors-for-data-vis-style-guides/" target="_blank">A detailed guide to colors in data vis style guides</a>” and <em>Nightingale</em> magazine's <a href="https://nightingaledvs.com/how-to-choose-colors-for-your-data-visualizations/" target="_blank">blog</a> <a href="https://nightingaledvs.com/tag/color/" target="_blank">posts</a> on the subject.</p>
 
-                <h2>Color combinations</h2>
+                <h4>Color combinations</h4>
 
                 <p>Urban’s core color palette consists of eight main colors, ordered below in a hierarchy from core colors to less commonly used colors. All Urban tool sets, including the Excel add-in and the <a href="https://urbaninstitute.github.io/urbnthemes/" target="_blank">urbnthemes</a> R package, follow this hierarchy. </p>
 
+                <h4>Shades of main colors</h4>
+                <p>Specific shades of each main categorical color are found below for use in graphs that require sequential and diverging palettes. It should be noted that tints and shades of colors in the Excel add-in do not exactly match these colors.</p>
+                
+                <p>The palettes below offers multiple options for combining colors in Urban charts, though only the combinations shown in the first set of each section are included in the Excel add-in and R theme. When in doubt, individuals are encouraged to consult the Urban Design and/or Data Visualization teams for assistance in choosing color combinations.</p>
+                
                 <h4>Main graphic colors</h4>
                 <div class="multi-group-container">
                     <div class="color eight">
@@ -903,11 +908,7 @@ A comprehensive review, installation instructions, and more details and tutorial
                             <div class="color-code"></div>
                         </div>
                     </div>
-<!--                     <div class="color one">
-                        <div class="swatch groupcolor gray-5 ">
-                            <div class="color-code"></div>
-                        </div>
-                    </div> -->
+
                     <div class="color one">
                         <div class="swatch groupcolor black dark ">
                             <div class="color-code"></div>
@@ -1483,10 +1484,372 @@ A comprehensive review, installation instructions, and more details and tutorial
                         </div>
                     </div>
                 </div>
+                
                 <h4>Seven Groups</h4>
-                <img src="http://www.reactiongifs.com/wp-content/uploads/2012/12/too-much.gif" />
+                <h5>Categorical</h5>
+                <div class="multi-group-container">
+                    <div class="color seven">
+                        <div class="swatch groupcolor blue-5 dark">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                    <div class="color seven">
+                        <div class="swatch groupcolor black dark">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                    <div class="color  seven">
+                        <div class="swatch groupcolor gray-5">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                    <div class="color  seven">
+                        <div class="swatch groupcolor yellow-5">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                    <div class="color  seven">
+                        <div class="swatch groupcolor green-5 dark">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                    <div class="color  seven">
+                        <div class="swatch groupcolor magenta-5 dark">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                    <div class="color  seven">
+                        <div class="swatch groupcolor blue-7 dark">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                </div>
 
-                <h5>Consider consolidating categories or breaking up the chart. Seven groups is really too many.</h5>
+                <h5>Sequential</h5>
+                <div class="multi-group-container">
+                    <div class="color seven">
+                        <div class="swatch groupcolor blue-1">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                    <div class="color  seven">
+                        <div class="swatch groupcolor blue-2">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                    <div class="color  seven">
+                        <div class="swatch groupcolor blue-3">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                    <div class="color seven">
+                        <div class="swatch groupcolor blue-4">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                    <div class="color  seven">
+                        <div class="swatch groupcolor blue-5 dark">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                    <div class="color  seven">
+                        <div class="swatch groupcolor blue-6 dark">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                    <div class="color  seven">
+                        <div class="swatch groupcolor blue-7 dark">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <h4>Eight Groups</h4>
+                <img src="img/too-much.gif" />
+
+                <h5>Consider consolidating categories or breaking up the chart. Eight groups is really too many.</h5>
+            
+               <h4>Text and contrast</h4>
+                <p>Urban Institute data visualizations should strive to meet <a href="https://www.w3.org/WAI/WCAG2AA-Conformance" target="_blank">Web Content Accessibility Guidelines (WCAG)</a> to make web content most accessible to people with disabilities. (Read more about those international standards <a href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="_blank">here</a> and in the Urban Institute report <a href="https://www.urban.org/research/publication/do-no-harm-guide-centering-accessibility-data-visualization" target="_blank"><em>Do No Harm Guide: Centering Accessibility in Data Visualization</em></a>). Urban follows WCAG 2.0 Level AA guidance to ensure that background color and text pairings maximize contrast.</p> 
+                    
+                <p>White text at smaller sizes (18px or less) will pass the WCAG AA ratings for contrast on top of these colors:
+                    </p>
+                    
+                <img src="img/wcag-contrast.png" />
+                <br><br>
+                <p>Black text at smaller sizes (18px or less) will pass the WCAG AA ratings for contrast on top of these colors: </p>
+            
+                <img src="img/wcag-contrast2.png" />
+            </div>
+        </div>
+    </section>
+
+
+
+    <!--What Is the Right Chart for Your Data? Section -->
+    
+    <section id="right-chart" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1">
+                
+                <h1>What Is the Right Chart for Your Data?</h1>
+                <p>Stop! Should it even be a chart?</p>   
+                
+                <p>Although charts are great for communicating data, they are not the appropriate tool for every situation. If you find explanatory sentences do a better job of distilling the information you want to convey, consider going without a chart. If your main goal is to present detailed information as opposed to showing patterns, or if it’s important that the reader can accurately determine the values of your data, consider using a table instead. You may also find that simply including a single, large number (commonly known as “<a href="https://policyviz.com/2023/07/13/the-power-of-big-aggregate-numbers/" target="_blank">big aggregate numbers</a>”) may be sufficient. In these cases, inserting a simple text box or shape in your PowerPoint or Word document will work.</p>
+
+                <p>Selecting the appropriate chart type for your data and the message you want to convey is critical to creating a successful data visualization. The chart chooser below offers guidance on what types of charts are best suited for different purposes. However, this is not an infallible set of choices, because there is not a one-to-one relationship between data types and graph types; for example, a vertical bar chart can be used to compare categories or show changes over time. The list below should therefore be viewed as a starting resource to guide the graph creator. If you are unsure, reach out to the Data Visualization team to help explore your options.</p>
+            
+                <table class="type-table" border="0" cellspacing="10px" cellpadding="10px" align="center">
+                    <tbody>
+                        <tr style="text-transform:Uppercase; font-weight:bold; border-bottom:1px solid #000;">
+                            <td valign="bottom"> 
+                                <p>I want to...</p>
+                            </td>
+                            <td valign="bottom">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td valign="top">
+                                <p>Compare values or rankings</p>
+                            </td>
+                            <td valign="top">
+                                <ul>
+                                    <li>Bar charts</li>
+                                    <li>Dot plots</li>
+                                </ul>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td valign="top">
+                                <p>Show trends or change over time</p>
+                            </td>
+                            <td valign="top">
+                                <ul>
+                                    <li>Area charts</li>
+                                    <li>Bar charts</li>
+                                    <li>Connected scatterplots</li>
+                                    <li>Dot plots</li>
+                                    <li>Gantt charts</li>
+                                    <li>Line charts</li>
+                                    <li>Slope charts</li>
+                                    <li>Sparklines</li>
+                                </ul>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td valign="top">
+                                <p>Depict a part-to-whole relationship</p>
+                            </td>
+                            <td valign="top">
+                                <ul>
+                                    <li>Pie/donut charts</li>
+                                    <li>Stacked bar charts</li>
+                                    <li>Stacked area charts</li>
+                                    <li>Tree maps</li>
+                                    <li>Unit/waffle charts</li>
+                                </ul>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td valign="top">
+                                <p>Show deviation from a reference point</p>
+                            </td>
+                            <td valign="top">
+                                <ul>
+                                    <li>Bubble charts</li>
+                                    <li>Heat maps</li>
+                                    <li>Scatter plots</li>
+                                </ul>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td valign="top">
+                                <p>Show the distribution of values</p>
+                            </td>
+                            <td valign="top">
+                                <ul>
+                                    <li>Beeswarm charts</li>
+                                    <li>Box and whisker plots</li>
+                                    <li>Fan/confidence interval plots</li>
+                                    <li>Histograms</li>
+                                    <li>Strip charts</li>
+                                </ul>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>                      
+      
+        </div>
+    </section>
+
+ <!--Best Practices Section -->
+    
+ <section id="best-practices" class="container content-section text-center">
+    <div class="row">
+        <div class="col-lg-10 col-lg-offset-1">
+            
+            <h1>Best Practices for Creating Effective Charts</h1>
+            
+            <p>Data visualization is a mix of science and art. There are some basic guidelines and best practices rooted in our understanding of cognitive psychology, statistics, and human-computer interaction, but these also reflect preferences for different colors, typefaces, layouts, and more. The list of best practices provided here is a set of guidelines derived from years of work, research, and experience.</p>
+
+            <p><strong>Keep it simple</strong>. Don’t try to stuff every data value into a single graph. This doesn’t mean you need to strip out all your data, but consider what you want your reader to come away with. You might be able to include all your data and highlight a subset of values. For example, consider a line chart with all 50 US states—you could use gray for the majority of states and add color to just the few you want to highlight. </p>
+ 
+            <p><strong>Be consistent</strong>. Once you’ve chosen blue to represent one group in one chart, make sure all other charts in your publication or slide deck use blue to represent that group as well. This consistency makes reading and comprehension easier for your reader.  </p>
+ 
+            <p><strong>Small multiples</strong>. The small multiples approach is exactly what it sounds like: create a series of smaller graphs positioned in close proximity. Breaking a single larger, complex graph into smaller pieces can not only make a complex graph easier for readers to comprehend but also help create a sense of movement by aligning changes over time in a particular order. </p>
+ 
+            <p>There are two primary guidelines to follow when creating a small multiples visualization. First, each multiple should be the same type, shape, and size and use the same type of scales, which should start and end at the same values. The best way to think about small multiples is to take a single, dense graph and break it up into many charts—in other words, the framing elements of the chart should not change. Second, try to order the small multiple graphs in a meaningful way—for example, by some value, geographic location, or even alphabetically. </p>
+ 
+            <p><strong>Highlighting</strong>. Highlighting can call attention to specific data points in very dense charts. The observations you want the reader to focus on should be rendered in a color that helps them stand out (usually pink or yellow at Urban), while the rest of the series are in a different color (usually blue, black, or gray). However, be selective with your use of color to highlight specific values, series, or observations, because too many colors can make it difficult to pick out the values on which you want your reader to focus.  </p>
+ 
+            <p><strong>Reference lines</strong>. There may be times when you want to include a reference line or pointer for a specific event, threshold, or benchmark. In such cases, make sure that your line is measured precisely. For example, if you are marking June 2010 in a line chart, the reference line should be located halfway between 2010 and 2011. </p>
+ 
+            <p><strong>Titles</strong>. Use active, concise titles. For example, instead of a purely descriptive title, such as “Labor Force Participation Rate, Men and Women, 1950–2019,” a more active title would be “The Labor Force Participation Rate Has Declined for Men and Increased for Women.” Subtitles can be used to denote specifics about the data, such as time periods, frequency, units, or geography. </p>
+ 
+            <p><strong>Annotation</strong>. Annotation is one of the most important ways to improve your data communication efforts. There are two primary ways to annotate your visualizations. First, adding explanatory text within the graph itself can highlight specific values or explain content. Second, you can add a layer of annotation to explain how to read the graph. This approach can be especially useful for readers who may not be familiar with a particular graph type. For example, you could add a pointer that denotes how the values get larger or smaller along each axis in a scatterplot. </p>
+ 
+            <p><strong>Data labels and markers</strong>. When possible, avoid using legends and instead directly label the data on the graph. Endeavor to evenly space and align the labels instead of scattering them around the graph, which can make it difficult for your reader to find the label and risks emphasizing one series or data value over another. On a line chart, for example, you might place the labels at the far right of the graph, slightly outside the graph space, but left-aligned.</p>
+  
+            <p><strong>Marking outliers</strong>. Data values that are significantly different from others in your dataset may be considered outliers. In some sense, the statistical definition of an outlier is not necessarily important; a data value(s) may simply look like an outlier when plotted in your graph, which may require some explanation. Be careful with outliers, however; they can signify an interesting result or finding, but they may also indicate that something is wrong or mismeasured in the data.</p>
+ 
+            <p><strong>Showing uncertainty</strong>. Visualizations that depict distributions or uncertainty may be inherently difficult for many readers who are not familiar with the underlying data or statistical concepts. It is therefore important to clearly explain when certain data are missing or if there is uncertainty around certain estimates.   </p>
+ 
+            <p>There are various kinds of data uncertainty. One form of uncertainty stems from randomness in the data. Small samples are a prime example of this kind of uncertainty. Consider a political poll that gives candidate Smith a 54 percent approval rating with a margin of error of plus or minus 4 percentage points. The poll has uncertainty because the dataset is only a sample of people who responded to the survey. </p>
+ 
+            <p>Another form of uncertainty comes from inaccurate, untrusted, imprecise, or unknown data. In some cases, we would be unable to address the uncertainty because we aren’t aware of it. In other cases, we could say our data are imprecise because, for example, it’s measured at an aggregate level; for example, infants’ ages captured in months rather than weeks.</p>
+ 
+            <p>Urban takes both kinds of uncertainty seriously, and researchers are best equipped to assess whether their data are unreliable. But knowing when to visualize different kinds of uncertainty is a different task and often depends on the knowledge and statistical sophistication of your reader.  </p>
+ 
+            <p><strong>Stay away from 3-D</strong>. There is no need to add a superfluous third dimension to your chart, particularly when you don’t have a third value. The 3-D effect available in many software tools actually distorts the data values because the effect is not actually 3-D but rather a perspective rendering of 3-D. </p>
+  
+            <p><strong>Be careful with data transformations</strong>. Log scales or other transformations can be useful for depicting rates of change or to address large outliers. The obvious trade-off is that many readers will not understand what a log transformation is and what it means. For example, everyone can understand what $150,000 of income means, but a logged value of 5.18 is not familiar to many readers. However, log scales can be an appropriate choice when the rate of change is more meaningful than the absolute values.</p>
+        </div>                      
+    </div>
+</section>
+
+<section id="absolutes" class="container content-section text-center">
+ 
+    <div class="row">
+        <div class="col-lg-10 col-lg-offset-1">
+            
+            <h1>Data Visualization Absolutes</h1>
+            
+            <p>The Urban Institute is committed to exploring and expanding how we create and engage audiences and readers through our visual display of information. While the practice of data visualization is a mixture of art and science with ample opportunity for creativity, there are certain data visualization practices that we avoid.</p>
+            <ul>    
+            <li>Nonzero baselines. The axis in bar charts (whether vertical or horizontal) should always start at zero. The gaps between bars are overemphasized when the value axis starts at something other than zero. When small differences between bars are important to show but a zero axis makes those differences difficult for the reader to see, consider adjusting the data to show percent change, difference, or some other similar adjustment. It is important to note that other charts types that do not use length or height as the primary encoding—including, for example, scatterplots and line charts—do not need to start at zero.</li>
+            <br>
+            <li>Dual axis charts. Charts that have two axes—where one series is tagged to one axis and another series is tagged to another, parallel axis—should be avoided. These kinds of charts are confusing, difficult to read, and are often misleading. There are several possible solutions to creating a dual axis chart, including multiple graphs (arrayed either horizontally or vertically); show the percent change or another normalization; or use a different chart type such as a connected scatterplot. (There are two exceptions to this rule: charts that show the translation of a single measure such as Fahrenheit and Celsius temperatures; and the Pareto chart, which shows individual values as bars and a line showing the cumulative sum.)</li>
+            <br>
+            <li>Pie charts with too many slices. This advice is purposely left unclear. There is no specific “rule” about how many slices are too many slices in a pie chart, but the general recommendation is to keep the overall number of slices in pie charts to fewer than 5. Humans cannot easily compare differently sized slices in pie charts, which reduces the effectiveness of the chart itself. In general, pie charts are best used when the slices of interest are values that generate right angles, which are familiar shapes, namely 25% and 75%, or a straight vertical line through the chart, namely 50%. While there may be exceptions to this guidance, Urban style is to avoid pie charts that have too many slices and are therefore difficult to understand.</li>
+            <br>
+            <li>Avoid too many categories. While the Urban color palette offers several hues and multiple tints and shades, our standard is to keep the number of categories in any graph to fewer than seven. Stacked bar/column charts, pie charts, line charts, and other charts with seven or more series/colors will look cluttered and be difficult to read. In these instances, fewer series or several multiple charts may be a better solution.</li>
+            </ul>    
+
+
+        </div>
+    </div>
+
+</section>
+
+   <!-- Accessibility Section -->
+<section id="accessibility" class="container content-section text-center">
+ 
+    <div class="row">
+        <div class="col-lg-10 col-lg-offset-1">
+            
+            <h1>Accessibility</h1>
+            <p>It’s important to consider how people with different impairments and disabilities access online content. Many people rely on screen readers to navigate the internet. (Screen readers are tools used by blind people, people with low vision, and people with learning disabilities who consume text in audio formats.) When a screen reader passes by content on the screen, including file names, titles, and headings, it reads this content out loud. Ensuring that content will work with screen readers is a large part of making a document accessible. Some of the primary issues we’re concerned with when we talk about accessibility are <a href="https://www.disabled-world.com/disability/types/hearing/" target="_blank">hearing issues</a>, <a href="https://www.cdc.gov/vision-health-data/case-definitions/vision-loss-blindness.html" target="_blank">vision issues</a>, <a href="https://www.nei.nih.gov/learn-about-eye-health/eye-conditions-and-diseases/color-blindness" target="_blank">color blindness</a>, <a href="https://www.cdc.gov/ncbddd/disabilityandhealth/disability.html" target="_blank">ability</a>, <a href="https://webaim.org/articles/cognitive/" target="_blank">cognition</a>, <a href="https://www.disabled-world.com/disability/awareness/neurodiversity/#google_vignette" target="_blank">neurodiversity</a>, and <a href="https://ldaamerica.org/disability_type/learning-disabilities/" target="_blank">learning disabilities</a>. Not all the conditions are permanent—consider, for instance, how you would use a computer if you were to break your arm.</p> 
+
+            <p>To create accessible content, Urban follows the guidelines laid out in Section 508 of the Rehabilitation Act of 1973. Section 508 requires US federal government agencies to develop, procure, maintain, and use information and communications technology that is accessible to people with disabilities. We also follow some of the recommendations and guidelines from the <a href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="_blank">Web Content Accessibility Guidelines</a>. Some federal agencies that fund Urban work have agency-specific accessibility requirements that we are asked to follow.</p>
+
+            <p>Data visualization creators can do several things to create accessible charts and tables:</p>
+
+            <h4>Write alt text</h4>
+            <ul>
+                <li>Screen readers can only communicate information via text. To meet accessibility requirements, all nontext items in a web product require “alternative text” (alt text), or a written description that communicates visual content. All Urban website content must have alt text for charts, tables, and images. All Urban PDF products asked to meet 508 accessibility requirements must also have alt text, but alt text is not otherwise required for images in Urban PDF products.</li>
+                <li>Urban researchers are responsible for writing alt text when it is required. It is often easier to write alt text as you create your figures rather than at the end of the writing process. Engaging with Urban’s Disability Affinity Group may be one way to seek advice on writing good alt text or, more generally, creating accessible content.</li>
+            </ul>
+
+            <br><br>
+            <p>Below, we share some guidance on writing from the MacArthur Foundation and a <a href="https://medium.com/nightingale/writing-alt-text-for-data-visualization-2a218ef43f81" target="_blank">blog post</a> by Amy Cesal:</p>
+            <ul>
+                <li>Alternative text should present the content and function, not necessarily a description, of an image. If you had to remove the image, what text would you put in its place?</li>
+                <li>If an image is decorative, such as a header image on a blog or cover image on a report, or the alternative text is provided in nearby text, then the image should have empty alternative text (some tools have an option for “blank” or “empty”). If this is not an option, leave the field blank. You should not put empty spaces, empty quotes (except in HTML alt=""), or any other nonsense information in these fields.
+                <li>Avoid words like “picture of,” “image of,” or “link to.”</li>
+                <li>Use the fewest number of words necessary. Less than 160 characters is ideal for search engine optimization.</li>
+                <li>Avoid phrases like “click here,” “here,” “more,” “more information,” “read more,” and “continue.” Instead, use descriptive text that informs a user of the link destination.</li>
+            </ul>  
+
+            <h4>Meet color contrast requirements</h4>
+            <p>Urban’s color palette has been tested to meet accessibility requirements. If you are working with an agency or group that requires additional accessibility considerations, please contact the Data Visualization or Design teams. You can also consider adding additional encodings to your visualizations, such as hashmarks, stripes, or other patterns. This style guide promotes clean design and graphs that are free of extraneous colors, but when communicating data to readers with accessibility needs, additional encodings may be important. </p>
+ 
+            <p><a href="https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#contrast-minimum" target="_blank">Web Content Accessibility Guidelines (WCAG) 2.0</a> Level AA requires the contrast ratio of the luminance (think: brightness) of two colors to be 4.5:1 for normal text and 3:1 for large text. A higher level of contrast (Level AAA), requires a contrast ratio of 7:1 for normal text and 4.5:1 for large text. Large text is defined as 14 point (typically 18.66px) and bold or larger, or 18 point (typically 24px) or larger. Text standards also apply to text in graphics, such as data labels in a chart or text boxes in a logic model. </p>
+
+            <p>Below are the contrast ratios for the Urban color palette against white, black, and light gray background colors using the <a href="https://webaim.org/resources/contrastchecker/" target="_blank">WebAim Color Contrast tool</a>. The same ratios apply when the color relationships are swapped: for example, Urban blue text against a white background has the same contrast ratio as white text against an Urban blue background.</p>
+
+            <img src="img/contrast-ratios.png" width="80%" />
+            
+            <br><br>
+            <p>Please note that the Urban blue used in Urban Word templates does not meet color contrast requirements for headings. If you are producing an Urban PDF product that needs to meet 508 accessibility requirements, the editorial team has 508-compliant Word templates that use Urban dark blue to meet contrast requirements.</p>
+
+            <h4>Avoid merged cells in tables</h4>
+            <p>Tables are possibly the most difficult aspect of working with 508 accessibility standards. Tables that meet accessibility requirements cannot have any merged cells, blank cells, blank rows, or blank columns, as screen readers have a difficult time with spanner headings and blank cells. To meet 508-accessibility requirements, tables need to be stripped of spanner headings so that every column has a separate heading. This can be a tedious and time-consuming process. If you know you are producing a product that needs to be 508 compliant, it can be helpful to design tables that have no spanner headings from the start. </p>
+
+            <h4>Use built-in Word styles in Urban Word templates</h4>
+            <p>Manual formatting that creates tabbed indents for paragraphs, line spaces between paragraphs, and arbitrary heading styles is not accessible, as it creates extra characters that screen readers will read. Urban Word templates have built in styles that apply proper line spacing, paragraph indents, and heading hierarchy without relying on manual formatting. Urban’s built-in styles also cover table and figure formatting to ensure that proper line spacing and styles are applied to figure and table numbers, titles, subtitles, and notes. Built-in styles also allow us to apply the correct formatting and spacing to table elements, including column headings, row headings, table rows, and table text. Using these styles rather than manually applying formatting will help meet accessibility guidelines for line spacing, headings, and color contrast. You can apply Urban Word styles using the Styles Pane in Word, and/or your editor will review and apply these styles during the editing process. For PDF products that need to meet 508 accessibility requirements, use the 508-compliant brief or report template, which has additional accessibility formatting built in.</p>
+
+            <h4>Write in plain language</h4>
+
+            <p>Government agencies follow plain language guidelines to meet the <a href="https://www.plainlanguage.gov/guidelines/" target="_blank">Plain Language Act of 2010</a>. In cases where Urban products must meet plain language requirements, the Urban Editorial team can conduct a plain language edit in addition to a copyedit. But even if your product does not need to meet plain language requirements, adopting some principles of plain language can help your readers better understand your charts and tables.</p> 
+            <ul>
+                <li><strong>Use active voice in titles and labels</strong>. Urban style is to use concise, active titles that tell the reader what they are supposed to learn and take away from the graph. Active titles help tell the story of your graph.</li>
+                <li><strong>Make sure to explain all chart parts</strong>. Your chart or table should have enough information that it can be understood out of context of the rest of your document. Make sure titles, labels, legends, and notes provide enough information to tell the full story of your data. Your target audience should be able to navigate your chart, even if they don’t have a technical background.</li>
+                <li><strong>Reduce jargon</strong>. Think about your audience and decide whether the terms that are familiar to you as a researcher will be understood by your readers. Aim to be as clear as possible and try to replace complicated words and phrases with more direct language. If a technical term is necessary to include but may not be understood by all your readers, define it!  </li>
+                <li><strong>Omit needless words</strong>. With charts and tables, space is at a premium. Identify phrases that can be rewritten to be more concise. </li>
+            </ul>
+
+            <p>Additional guidelines and strategies can be found in Urban’s <a href="https://www.urban.org/research/publication/do-no-harm-guide-centering-accessibility-data-visualization" target="_blank"><em>Do No Harm Guide: Centering Accessibility in Data Visualization</em></a> and the following Urban editorial resources: “<a href="https://urbanorg.app.box.com/file/1319104028961?s=phtm4c7aefgv1rg6wlfe0conbhqewyfy" target="_blank">508 Compliance Process</a>” and “<a href="https://urbanorg.app.box.com/file/317866315236?s=c7y0hwmrp9j4bd7k6sws5ucchwyuiiz7" target="_blank">508 Accessibility Basics</a>.”</p>
+        </div>
+    </div>
+</section>
+
+    <!-- Race Ethn Gender Section -->
+    <section id="raceethgender" class="container content-section text-center">
+ 
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1">
+
+                <h1>Considerations for Data Related to Race, Ethnicity, and Gender</h1>
+                <p>The Urban Institute’s mission is to open minds, shape decisions, and offer solutions. To advance that goal, we must think intentionally about how we can learn from and speak to audiences that reflect the rich diversity of US communities, and we must foster a culture where employees from different backgrounds and perspectives enjoy mutual respect, inclusivity, and collegiality.</p>
+
+                <p>Urban’s efforts around diversity, equity, and inclusion (DEI) are reflected in our hiring and promotion practices as well as in our published work. With every data project, Urban researchers have an opportunity to carefully consider the language they use to describe people and groups and how to visually present data about these groups to readers, users, and audiences, including the communities that participate in or are affected by our research.</p>
+                    
+                <h4>Choosing language related to people and demographic groups</h4>
+                <p>Urban editorial style does not prescribe language for the terms used to describe people. Instead, we encourage research teams to consider using language and terms that are inclusive and respectful of the people they describe. (See Urban’s <a href="https://explorer.urban.org/page/2231" target="_blank">DEI toolkits</a>, a collection of reference guides for creating respectful and inclusive products.) Urban editors encourage researchers to choose terms mindfully and to use these terms consistently and appropriately throughout a research product, including in the titles, labels, and annotations of tables and graphs.</p> 
+                <p>In some instances, Urban researchers may choose to use the same terms used in an underlying data source, such as the racial categories used by the US Census Bureau. In other cases, researchers may choose to deviate from those terms. Researchers may want to consider including a footnote explaining their language choices related to the people and groups in their research and, if appropriate, why these language choices mirror or deviate from the terms used in an underlying data source. (This footnote only needs to appear once in an Urban publication and is usually placed at the first instance of a term; it does not need to be repeated in the notes for each table and figure.) There are example footnotes in many of the DEI toolkits.</p> 
+                    
+                <h4>Choosing the order for groups in charts and tables</h4>
+                <p>Many graphs and tables encode data by demographic group. Graph producers should take an active role in choosing how to order and present data values for different groups. Urban does not have universal rules about ordering demographic data in visuals, but a few considerations can help you make decisions about order:</p>
+                <ul>
+                    <li>Is there a quantitative relationship or ordering between groups in your data?</li>
+                    <li>Is there a particular story or relationship you are trying to visualize? If so, the order or presentation of results should reflect that story.</li>
+                    <li>Is there a basic way to sort the results, such as by population size or sample size (weighted or unweighted), alphabetically, or by magnitude/effect of the results? </li> 
+                    <li>Are groups ordered in a particular way in the underlying data, and is it appropriate to match that order in your chart or table?</li>
+                </ul>    
+                
+                <h4>Choosing colors for groups of people</h4>
+                    
+                <p>Follow the Urban color palette to select colors for the groups in your dataset. Urban tries not to use color palettes that reinforce gender or racial stereotypes (e.g., pink for women and blue for men). Furthermore, researchers should avoid using colors associated with skin tones. Using standard Urban colors will avoid such issues.</p> 
+                    
+                <p>Additional guidelines and strategies can be found in Urban’s <a href="file:///Do No Harm Guide/ Applying Equity Awareness in Data Visualization" target="_blank">Do No Harm Guide: Applying Equity Awareness in Data Visualization</a>.</p>
+
             </div>
         </div>
     </section>
@@ -1495,7 +1858,7 @@ A comprehensive review, installation instructions, and more details and tutorial
     <section id="examples" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-10 col-lg-offset-1">
-                <h1>Examples</h1>
+                <h1>ChartExamples</h1>
                 <p>The following examples use the styles and colors to illustrate common chart types. To deconstruct any example, download the master Excel file.</p>
                 <!--            download the file-->
                 <h3>Excel example files</h3>
