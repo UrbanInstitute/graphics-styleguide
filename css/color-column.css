@@ -63,6 +63,13 @@
     text-align: center;
     min-height: 60px;
 }
+
+.color-code-hex{
+    font-size: 0.9em;
+    text-align: center;
+    min-height: 60px;
+}
+
 .color-group{
  margin-bottom: 30px; 
     height: auto;

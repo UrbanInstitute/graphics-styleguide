@@ -114,7 +114,7 @@
                             We have made this guide public in the hope of creating a resource for other nonprofit and research organizations and to benefit the wider data visualization community. We will update and expand this guide on an ad hoc basis depending on the changing needs of Urban staff members and evolving technologies, tools, and publication types. If you’re looking for the previous version of the Urban style guide, click here.
                         </p>
                             
-                        <a target="_blank" href="#typography" class="btn btn-circle page-scroll">
+                        <a target="_blank" href="#toc" class="btn btn-circle page-scroll">
                             <i class="fa fa-angle-down animated"></i>
                         </a>
                     </div>
@@ -127,7 +127,7 @@
     <section id="toc" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-10 col-lg-offset-1">
-                <p>LAST UPDATED ON JULY 30, 2024</p>
+                <p>LAST UPDATED ON JULY 31, 2024</p>
                 <p>This site contains guidelines that are consistent with current data visualization best practices and design principles. It also reduces the burden of design and color decisions on individual researchers and analysts. These guidelines are primarily intended for charts, graphs, and tables that appear on the Urban website and in Urban (PDF) publications. There are minor sizing and typographic differences between visuals formatted for the web and those appearing in PDF documents and PowerPoint presentations, which we note throughout this guide.</p> 
 
                 <p>The Urban Institute Excel Macro add-in and the Urban styles package for R (<a href="https://urbaninstitute.github.io/urbnthemes/" target="_blank">urbnthemes</a>) are two open source tools Urban staff can use to more easily create and format their data visualizations for different publication types. Both tools automate much of the information in this guide, including applying formatting conventions for charts created in Urban style.</p>
@@ -355,8 +355,9 @@
                 <p>Download the Urban Institute Excel macro <a href="UrbanGraphingStyle_2023.xlam" target="_blank">here</a>. Download the WorkRise macro <a href="WorkRiseGraphingStyle_2023.xlam" target="_blank">here</a> and the Tax Policy Center macro <a href="TPCGraphingStyle_2023.xlam" target="_blank">here</a>.</p>
             </div>         
 
+            <div class="col-lg-8 col-lg-offset-2">
                 <h5>Installing the add-in on PC computers</h5>
-                <ol>
+                <ol class="excel_instructions">
                     <li>Download the Excel add-in from the <b>Brand Identity Guidelines</b> intranet page: Your Urban > Templates > Excel > “Excel add-in for creating Urban style charts.”</li>
                     <li>Save the file to your computer. You can put the file anywhere, but placing it directly in the Excel AddIn folder is preferred. On Urban PC computers, the add-in folder is most likely located on the D drive at: <code>D:\Users\USERNAME\AppData\Roaming\Microsoft\AddIns\</code>. (USERNAME is your username on the computer. On other computers, the folder may be in the C: drive in the same subdirectory.)
                         <ol type="a">
@@ -375,14 +376,14 @@
                 </ol>
                 
                 <h5>Installing the add-in on Mac computers</h5>
-                <ol>
+                <ol class="excel_instructions">
                     <li>Save the add-in to a location on your computer.</li>
                     <li>Under the Tools menu in the top toolbar, select the Excel Add-Ins... option.</li>
                     <li>Select Browse… and navigate to the <code>UrbanGraphingStyle.xlam</code> file. Select Open. The box next to the UrbanGraphStyle add-in should now be checked. In this smaller menu, select OK. You will now see the Urban Graph Styles tab in your Excel ribbon. The tab will appear every time you open Excel.</li>
                 </ol>
                 
                 <h5>Using the add-in</h5>
-                <ol>
+                <ol class="excel_instructions">
                     <li>Select the data you want to use to create your chart.</li>
                     <li>Click the chart option from the Urban Graph Styles menu that matches the style of your chart.</li>
                     <li>A pop-up box will appear asking if you want to format your graph for web or print (the Cancel option will close the dialog box). An Urban-formatted version of your chart will appear.</li>
@@ -395,7 +396,7 @@
                         </ol>
                     </li>
                 </ol>
-      
+                </div>
         </div>
 
     </section>
@@ -535,7 +536,7 @@ A comprehensive review, installation instructions, and more details and tutorial
             <div class="col-lg-10 col-lg-offset-1">
                 <h1>Color</h1>
                 
-                <p>Urban's main colors are <span class="text-swatch blue-5 dark">cyan,</span> <span class="text-swatch gray-5 ">gray,</span> and <span class="text-swatch black dark">black.</span></span> <span class="text-swatch yellow-5 dark">Yellow</span> and <span class="text-swatch magenta-5 dark">magenta</span> are used as secondary colors throughout the new Urban brand. In general, yellow and magenta should be used sparingly; these colors are best for highlighting purposes, such as when drawing attention to a certain category or indicating a trend line. Tertiary colors for graphics include <span class="text-swatch space-gray-4 dark">space gray,</span> <span class="text-swatch green-5 dark">green,</span> and <span class="text-swatch red-5 dark">red,</span> and should be used infrequently. </p>
+                <p>Urban's main colors are <span class="text-swatch blue-5 dark">cyan,</span> <span class="text-swatch gray-5 ">gray,</span> and <span class="text-swatch black dark">black.</span></span> <span class="text-swatch yellow-5 dark">Yellow</span> and <span class="text-swatch magenta-5 dark">magenta</span> are used as secondary colors throughout the new Urban brand. In general, yellow and magenta should be used sparingly; these colors are best for highlighting purposes, such as when drawing attention to a certain category or indicating a trend line. Tertiary colors for graphics include <span class="text-swatch space-gray-4 dark">space&nbsp;gray,</span> <span class="text-swatch green-5 dark">green,</span> and <span class="text-swatch red-5 dark">red,</span> and should be used infrequently. </p>
                 
                 <p>When selecting colors for charts and graphs, first consider the type of data you are presenting. Usually, data for visualizations can be grouped into one of four main groups: categorical, sequential, diverging, or binary.</p>
                 
@@ -644,7 +645,7 @@ A comprehensive review, installation instructions, and more details and tutorial
                             <div class="color-code"></div>
                         </div>
                     </div>
-                    <p class="color-code">var colors=["#CFE8F3","#A2D4EC","#73BFE2","#46ABDB","#1696D2","#12719E","#0A4C6A","#062635"];</p>
+                    <p class="color-code-hex">var colors=["#CFE8F3","#A2D4EC","#73BFE2","#46ABDB","#1696D2","#12719E","#0A4C6A","#062635"];</p>
                 </div>
                 <div class="multi-group-container">
                     <div class="color eight">
@@ -687,7 +688,7 @@ A comprehensive review, installation instructions, and more details and tutorial
                             <div class="color-code"></div>
                         </div>
                     </div>
-                    <p class="color-code">var colors=["#F5F5F5","#ECECEC","#E3E3E3","#DCDBDB","#D2D2D2","#9D9D9D","#696969","#353535"];</p>
+                    <p class="color-code-hex">var colors=["#F5F5F5","#ECECEC","#E3E3E3","#DCDBDB","#D2D2D2","#9D9D9D","#696969","#353535"];</p>
                 </div>
                 <div class="multi-group-container">
                     <div class="color eight">
@@ -730,7 +731,7 @@ A comprehensive review, installation instructions, and more details and tutorial
                             <div class="color-code"></div>
                         </div>
                     </div>
-                    <p class="color-code">var colors=["#FFF2CF","#FCE39E","#FDD870","#FCCB41","#FDBF11","#E88E2D","#CA5800","#843215"];</p>
+                    <p class="color-code-hex">var colors=["#FFF2CF","#FCE39E","#FDD870","#FCCB41","#FDBF11","#E88E2D","#CA5800","#843215"];</p>
                 </div>
                 <div class="multi-group-container">
                     <div class="color eight">
@@ -773,7 +774,7 @@ A comprehensive review, installation instructions, and more details and tutorial
                             <div class="color-code"></div>
                         </div>
                     </div>
-                    <p class="color-code">var colors=["#F5CBDF","#EB99C2","#E46AA7","#E54096","#EC008B","#AF1F6B","#761548","#351123"];</p>
+                    <p class="color-code-hex">var colors=["#F5CBDF","#EB99C2","#E46AA7","#E54096","#EC008B","#AF1F6B","#761548","#351123"];</p>
                 </div>
                 <div class="multi-group-container">
                     <div class="color eight">
@@ -816,7 +817,7 @@ A comprehensive review, installation instructions, and more details and tutorial
                             <div class="color-code"></div>
                         </div>
                     </div>
-                    <p class="color-code">var colors=["#DCEDD9","#BCDEB4","#98CF90","#78C26D","#55B748","#408941","#2C5C2D","#1A2E19"];</p>
+                    <p class="color-code-hex">var colors=["#DCEDD9","#BCDEB4","#98CF90","#78C26D","#55B748","#408941","#2C5C2D","#1A2E19"];</p>
                 </div>
                 <div class="multi-group-container">
                     <div class="color eight">
@@ -859,7 +860,7 @@ A comprehensive review, installation instructions, and more details and tutorial
                             <div class="color-code"></div>
                         </div>
                     </div>
-                    <p class="color-code">var colors=["#D5D5D4","#ADABAC","#848081","#5C5859","#332D2F","#262223","#1A1717","#0E0C0D"];</p>
+                    <p class="color-code-hex">var colors=["#D5D5D4","#ADABAC","#848081","#5C5859","#332D2F","#262223","#1A1717","#0E0C0D"];</p>
                 </div>
                 <div class="multi-group-container">
                     <div class="color eight">
@@ -902,7 +903,7 @@ A comprehensive review, installation instructions, and more details and tutorial
                             <div class="color-code"></div>
                         </div>
                     </div>
-                    <p class="color-code">var colors=["#F8D5D4","#F1AAA9","#E9807D","#E25552","#DB2B27","#A4201D","#6E1614","#370B0A"];</p>
+                    <p class="color-code-hex">var colors=["#F8D5D4","#F1AAA9","#E9807D","#E25552","#DB2B27","#A4201D","#6E1614","#370B0A"];</p>
                 </div>
 
                 <h4>One group</h4>
@@ -1581,11 +1582,11 @@ A comprehensive review, installation instructions, and more details and tutorial
                 <p>White text at smaller sizes (18px or less) will pass the WCAG AA ratings for contrast on top of these colors:
                     </p>
                     
-                <img src="img/wcag-contrast.png" />
+                <img src="img/wcag-contrast.png" width="100%" />
                 <br><br>
                 <p>Black text at smaller sizes (18px or less) will pass the WCAG AA ratings for contrast on top of these colors: </p>
             
-                <img src="img/wcag-contrast2.png" />
+                <img src="img/wcag-contrast2.png" width="100%" />
             </div>
         </div>
     </section>

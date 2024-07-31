@@ -23,7 +23,7 @@ h3,
 h4,
 h5,
 h6 {
-    margin: 10 0 25px;
+    margin: 2 0 2 0rem;
     text-transform: uppercase;
     font-family:  Lato, "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
@@ -44,12 +44,17 @@ ul{
 }
 
 ol{
+    font-size: 1.75rem;
     text-align:justify;
     list-style-position: inside;   
 }
 
+.excel_instructions {
+    padding: 0;
+}
+
 .centerlist {
-    text-align: center;
+    text-align: left;
     font-size: 2rem;
     list-style-position: inside;
     padding-left: 0;
@@ -440,6 +445,10 @@ float: left;
 margin-left: 0;
     margin-top:-4px;
 width: 130px;
+}
+
+.color-code-hex{
+    display: none;
 }
 }
 
