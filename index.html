@@ -7,22 +7,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
+    <!-- <meta name="robots" content="noindex"> -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@urbaninstitute">
     <meta name="twitter:creator" content="@urbaninstitute">
     <meta name="twitter:title" content="Urban Institute Data Visualization style guide">
     <meta name="twitter:description" content="This site contains guidelines that are in line with data visualization best practices and proven design principles.">
-    <meta name="twitter:image" content="http://apps.urban.org/TPC-styleguide/img/background.jpg">
+    <meta name="twitter:image" content="https://urbaninstitute.github.io/graphics-styleguide/img/UrbanInstitute_0472.jpg">
 
     <meta property="og:title" content="Urban Institute Data Visualization style guide" />
     <meta property="og:description" content="This site contains guidelines that are in line with data visualization best practices and proven design principles." />
 
-    <meta property="og:image" content="http://apps.urban.org/TPC-styleguide/img/background.jpg" />
+    <meta property="og:image" content="https://urbaninstitute.github.io/graphics-styleguide/img/UrbanInstitute_0472.jpg" />
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="400">
     <meta property="og:image:height" content="400">
-    <meta property="og:url" content="http://apps.urban.org/TPC-styleguide/index.html">
+    <meta property="og:url" content="https://urbaninstitute.github.io/graphics-styleguide/">
 
 
     <title>Urban Institute Data Visualization style guide</title>
@@ -54,7 +54,7 @@
 
     <style>
         h4 {padding: 50px 0px 5px 0px}
-        </style>
+    </style>
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
@@ -79,19 +79,19 @@
                         <a target="_blank" href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#typography">Typography</a>
-                    </li>
-                    <li>
                         <a class="page-scroll" href="#chart-parts">Chart Parts</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#color">Color</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#examples">Examples</a>
+                        <a class="page-scroll" href="#best-practices">Best Practices</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#maps">Maps</a>
+                        <a class="page-scroll" href="#accessibility">Accessibility</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#chartexamples">Examples</a>
                     </li>
                 </ul>
             </div>
@@ -107,11 +107,13 @@
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
                         <h1 class="brand-heading">Urban Institute Data Visualization Style Guide</h1>
-                        <!--                        <p class="byline-text">Lorem ipsum</p>-->
-                        <p class="intro-text">Use this data visualization style guide to create a uniform look and feel to all of Urban’s charts and graphs. This site contains guidelines that are in line with data visualization best practices and proven design principles. It also eliminates the burden of design and color decisions when creating charts.</p>
-                        <p>
-                            These guidelines are primarily for publishing charts to the website. Minor sizing and typographic adjustments need to be made to insert charts into documents. </p>
-                        <a target="_blank" href="#typography" class="btn btn-circle page-scroll">
+                        <p class="intro-text">
+                            This data visualization style guide helps the Urban Institute ensure a uniform look and feel across charts, graphs, and tables that appear in Urban publications and on the Urban website. This guide is intended for Urban employees and, as such, may include references and links to internal language and tools. 
+                            <br><br> 
+                            We have made this guide public in the hope of creating a resource for other nonprofit and research organizations and to benefit the wider data visualization community. We will update and expand this guide on an ad hoc basis depending on the changing needs of Urban staff members and evolving technologies, tools, and publication types. If you’re looking for the previous version of the Urban style guide, <a href="http://urbaninstitute.github.io/graphics-styleguide/2023/" target="_blank">click here</a>.
+                        </p>
+                            
+                        <a target="_blank" href="#toc" class="btn btn-circle page-scroll">
                             <i class="fa fa-angle-down animated"></i>
                         </a>
                     </div>
@@ -121,33 +123,68 @@
     </header>
 
     <!-- Typography Section -->
-    <section id="typography" class="container content-section text-center">
+    <section id="toc" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-10 col-lg-offset-1">
-                <h1>Chart Typography</h1>
-                <p>Urban.org uses the font <em>Lato</em>. When possible, this font should also be used to create charts. If Lato is not installed on your computer, contact IT. A suitable replacement is Arial. Good chart typography creates a hierarchy among elements and guides the reader through the visual. </p>
+                <p>LAST UPDATED ON OCTOBER 21, 2024</p>
+                <p>This site contains guidelines that are consistent with current data visualization best practices and design principles. It also reduces the burden of design and color decisions on individual researchers and analysts. These guidelines are primarily intended for charts, graphs, and tables that appear on the Urban website and in Urban (PDF) publications. There are minor sizing and typographic differences between visuals formatted for the web and those appearing in PDF documents and PowerPoint presentations, which we note throughout this guide.</p> 
+
+                <p>The Urban Institute Excel Macro add-in and the Urban styles package for R (<a href="https://urbaninstitute.github.io/urbnthemes/" target="_blank">urbnthemes</a>) are two open source tools Urban staff can use to more easily create and format their data visualizations for different publication types. Both tools automate much of the information in this guide, including applying formatting conventions for charts created in Urban style.</p>
+                
+                <h1>Table of Contents</h1>
+
+                <ol class="centerlist">
+                <li><a href="#typography">Chart Typography and Sizing</a></li>
+                <li><a href="#excel">Using the Excel Macro</a></li>
+                <li><a href="#insert-figs">Inserting Figures into Urban Word Templates</a></li>
+                <li><a href="#third-party-tools">R Shiny, Tableau, and PowerBI Guidance</a></li>
+                <li><a href="#chart-parts">Chart Parts</a></li>
+                <li><a href="#color">Using Color in Urban Graphs and Charts</a></li>
+                <li><a href="#right-chart">What Is the Right Chart for Your Data?</a></li>
+                <li><a href="#best-practices">Best Practices for Creating Effective Charts</a></li>
+                <li><a href="#absolutes">Data Visualization Absolutes</a></li>
+                <li><a href="#accessibility">Accessibility</a></li>
+                <li><a href="#raceethgender">Considerations for Data related to Race, Ethnicity, and Gender</a></li>
+                <li><a href="#chartexamples">Chart Examples</a></li>
+                <li><a href="#maps">Maps</a></li>
+                <li><a href="#tables">Tables</a></li>           
+            </ol>
+            </div>
+        </div>
+    </section>
+
+    <section id="typography" class="container content-section text-center">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1">
+
+                <h1>Chart Typography and Sizing</h1>
+                
+                <p>Good chart typography creates a hierarchy among elements and guides the reader through the visual. Urban uses a defined set of font sizes and styles to create this hierarchy.</p>
+
+                <p>Urban uses the <em>Lato</em> font for all our products, including the website, PDF publications, and presentations. A suitable replacement is the default Arial font. If Lato is not installed on your computer, contact the Tech and Data department.</p>
+
+                <p>The font sizes in Urban charts depend on whether the chart is produced for the web or within a PDF. The Excel macro and R theme apply the correct font sizes to both web and PDF figures.</p>
+
+                <p>Descriptive text — title, subtitle, sources, notes, and logo — are handled differently for web and print (PDF) products. For web products, all text is included in a single image (e.g., PNG) file. For print (PDF) products, descriptive text is placed directly in the Microsoft Word file and not the chart image. Data labels, axis labels, and other text used directly in the chart should be included in the chart image. </p>
 
                 <table class="type-table" border="0" cellspacing="10px" cellpadding="10px" align="left">
                     <tbody>
                         <tr style="text-transform:Uppercase; font-weight:bold; border-bottom:1px solid #000;">
                             <td valign="bottom"> </td>
                             <td valign="bottom">
-                                <p>Typeface (Alternative)</p>
-                            </td>
-                            <td valign="bottom">
-                                <p>Web Size</p>
-                            </td>
-                            <td valign="bottom">
-                                <p>Print Size</p>
-                            </td>
-                            <td valign="bottom">
-                                <p>Case</p>
+                                <p>Font</p>
                             </td>
                             <td valign="bottom">
                                 <p>Color</p>
                             </td>
                             <td valign="bottom">
-                                <p>Notes</p>
+                                <p>Case</p>
+                            </td>
+                            <td valign="bottom">
+                                <p>PDF figures</p>
+                            </td>
+                            <td valign="bottom">
+                                <p>Web figures</p>
                             </td>
                         </tr>
 
@@ -159,18 +196,17 @@
                                 <p>Lato Regular</p>
                             </td>
                             <td valign="top">
-                                <p>11</p>
-                            </td>
-                            <td valign="top">
-                                <p>8</p>
+                                <p>#1696d2 or RGB(22, 150, 210)</p>
                             </td>
                             <td valign="top">
                                 <p>ALL CAPS</p>
                             </td>
                             <td valign="top">
-                                <p>#1696d2 or rgb(22, 150, 210)</p>
+                                <p>8pt</p>
                             </td>
-                            <td valign="top"> </td>
+                            <td valign="top">
+                                <p>11px</p>
+                            </td>
                         </tr>
 
                         <tr>
@@ -178,22 +214,19 @@
                                 <p style="font-size:20px;"><b>Title</b></p>
                             </td>
                             <td valign="top">
-                                <p>Lato Bold (Arial Bold)</p>
+                                <p>Lato Black</p>
                             </td>
                             <td valign="top">
-                                <p>20 (24 for maps–see "Maps" section)</p>
+                                <p>#000000 or RGB(0,0,0)</p>
                             </td>
                             <td valign="top">
-                                <p>12</p>
+                                <p>Title (all major words capitalized)</p>
                             </td>
                             <td valign="top">
-                                <p>Title Case</p>
+                                <p>12pt [inserted in the Word document, not the actual chart]</p>
                             </td>
                             <td valign="top">
-                                <p>#000000 or rgb(0,0,0)</p>
-                            </td>
-                            <td valign="top">
-                                <p>The main point of the chart. Try to keep shorter than two lines and avoid qualifiers.</p>
+                                <p>20px</p>
                             </td>
                         </tr>
 
@@ -202,231 +235,381 @@
                                 <p style="font-size:16px;">Subtitle</p>
                             </td>
                             <td valign="top">
-                                <p>Lato Regular (Arial)</p>
+                                <p>Lato Italic</p>
                             </td>
                             <td valign="top">
-                                <p>16</p>
+                                <p>Black (#000000 or RGB(0,0,0))</p>
                             </td>
                             <td valign="top">
-                                <p>9.5</p>
+                                <p>Sentence (only the first word capitalized)</p>
                             </td>
                             <td valign="top">
-                                <p>Sentence case</p>
+                                <p>10pt [inserted in the Word document, not the actual chart]</p>
                             </td>
                             <td valign="top">
-                                <p>#000000 or rgb(0,0,0)</p>
-                            </td>
-                            <td valign="top">
-                                <p>Use this to add qualifiers or further clarification to the title.</p>
+                                <p>16px</p>
                             </td>
                         </tr>
 
                         <tr>
                             <td valign="top">
-                                <p style="font-size:12px;"><em>X and Y axis titles</em>
-                                </p>
+                                <p>Axis titles</p>
                             </td>
                             <td valign="top">
-                                <p>Lato Regular Italic (Arial Italic)</p>
+                                <p>Lato Regular</p>
                             </td>
                             <td valign="top">
-                                <p>12</p>
+                                <p>Black (#000000 or RGB(0,0,0))</p>
                             </td>
                             <td valign="top">
-                                <p>8.5</p>
+                                <p>Sentence</p>
                             </td>
                             <td valign="top">
-                                <p>Sentence case</p>
+                                <p>8.5pt</p>
                             </td>
                             <td valign="top">
-                                <p>#000000 or rgb(0,0,0)</p>
-                            </td>
-                            <td valign="top">
-                                <p>Always horizontal, above the top axis label Include units or multipliers in parenthesis (millions), ($2014)</p>
+                                <p>12px</p>
                             </td>
                         </tr>
 
                         <tr>
                             <td valign="top">
-                                <p style="font-size:12px;">X and Y axis labels</p>
+                                <p>Axis labels</p>
                             </td>
                             <td valign="top">
-                                <p>Lato Regular (Arial)</p>
+                                <p>Lato Regular</p>
                             </td>
                             <td valign="top">
-                                <p>12</p>
+                                <p>Black (#000000 or RGB(0,0,0))</p>
                             </td>
                             <td valign="top">
-                                <p>8.5</p>
+                                <p>Sentence</p>
                             </td>
                             <td valign="top">
-                                <p>Sentence case</p>
+                                <p>8.5pt</p>
                             </td>
                             <td valign="top">
-                                <p>#000000 or rgb(0,0,0)</p>
-                            </td>
-                            <td valign="top">
-                                <p>Always horizontal, avoid units or multipliers. Those should be added to the axis title in parenthesis</p>
+                                <p>12px</p>
                             </td>
                         </tr>
 
                         <tr>
                             <td valign="top">
-                                <p style="font-size:12px;">Key labels</p>
+                                <p>Data labels</p>
                             </td>
                             <td valign="top">
-                                <p>Lato Regular (Arial)</p>
+                                <p>Lato Regular</p>
                             </td>
                             <td valign="top">
-                                <p>12</p>
+                                <p>Black (#000000 or RGB(0,0,0))</p>
                             </td>
                             <td valign="top">
-                                <p>9.5</p>
+                                <p>Sentence</p>
                             </td>
                             <td valign="top">
-                                <p>Sentence case</p>
+                                <p>8.5pt</p>
                             </td>
                             <td valign="top">
-                                <p>#000000 or rgb(0,0,0)</p>
-                            </td>
-                            <td valign="top">
-                                <p>Always horizontal. Avoid redundant key labels if possible.</p>
+                                <p>12px</p>
                             </td>
                         </tr>
 
                         <tr>
                             <td valign="top">
-                                <p style="font-size:12px;"><b>Direct labels</b>
-                                </p>
+                                <p>Legend text</p>
                             </td>
                             <td valign="top">
-                                <p>Lato Bold (Arial Bold)</p>
+                                <p>Lato Regular</p>
                             </td>
                             <td valign="top">
-                                <p>12</p>
+                                <p>Black (#000000 or RGB(0,0,0))</p>
                             </td>
                             <td valign="top">
-                                <p>9.5</p>
+                                <p>Sentence</p>
                             </td>
                             <td valign="top">
-                                <p>Sentence case</p>
+                                <p>9.5pt</p>
                             </td>
                             <td valign="top">
-                                <p>#000000 or rgb(0,0,0)</p>
-                            </td>
-                            <td valign="top">
-                                <p>Use for line or column charts with three or fewer series.</p>
+                                <p>14px</p>
                             </td>
                         </tr>
 
                         <tr>
                             <td valign="top">
-                                <p style="font-size:12px;">Data-point label</p>
+                                <p>Source</p>
                             </td>
                             <td valign="top">
-                                <p>Lato Regular (Arial)</p>
+                                <p>Lato Regular</p>
                             </td>
                             <td valign="top">
-                                <p>12</p>
+                                <p>Black (#000000 or RGB(0,0,0))</p>
                             </td>
                             <td valign="top">
-                                <p>8.5</p>
+                                <p>Sentence</p>
                             </td>
                             <td valign="top">
-                                <p>Sentence case</p>
+                                <p>8pt</p>
                             </td>
                             <td valign="top">
-                                <p>#000000 or rgb(0,0,0)</p>
-                            </td>
-                            <td valign="top">
-                                <p>Always horizontal. No units or multipliers. Only directly label columns if there are fewer than 10 total columns in the chart.</p>
+                                <p>11px</p>
                             </td>
                         </tr>
 
                         <tr>
                             <td valign="top">
-                                <p style="font-size:11px;">Source and Notes</p>
+                                <p>Notes</p>
                             </td>
                             <td valign="top">
-                                <p>Lato Regular (Arial)</p>
+                                <p>Lato Regular</p>
                             </td>
                             <td valign="top">
-                                <p>11</p>
+                                <p>Black (#000000 or RGB(0,0,0))</p>
                             </td>
                             <td valign="top">
-                                <p>8</p>
+                                <p>Sentence</p>
                             </td>
                             <td valign="top">
-                                <p>Sentence case</p>
+                                <p>8pt</p>
                             </td>
                             <td valign="top">
-                                <p>#000000 or rgb(0,0,0)</p>
-                            </td>
-                            <td valign="top">
-                                <p>Bold “<b>Source:</b>” and “<b>Notes:</b>” as well as any statistical significance indicators.</p>
+                                <p>11px</p>
                             </td>
                         </tr>
 
                     </tbody>
-                </table>
+                </table>    
             </div>
+        </section> 
 
-    </section>
+        <section class="container within-section text-center">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <p>Most of Urban’s charts will be full width (760px for web and 6.25” for PDFs). The main content width on the Urban website is 760px, which translates to approximately 125.83 characters in Excel. In PDF products, simple figures can be 3.13” wide, which is half the width of full-size figures. </p>
+                </div>
+            </div>
+        </section>
 
-    <!-- chart parts Section -->
-    <section id="chart-parts" class="container content-section text-center">
+    <!-- Using the Excel Macro Section -->
+    <section id="excel" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-10 col-lg-offset-1">
-                <h1>Chart Parts</h1>
-                <p>The main content well on the Urban website is 760px wide, which translates to approximately 125.83 characters wide in Excel. Because Excel’s chart title and subtitle fields are limiting in terms of formatting, we use a regular text box for all the text at the top of the graphic, as well as the source and notes text at the bottom. We also include an Urban tag in the lower-right corner of the figure so that when media members copy-paste our charts into their stories, Urban’s brand is on them.</p>
-                <p>This tagline is built from standard text using Lato Regular with 1pt of expanded character spacing. Urban is colored blue—#1696d2 or rgb(22,150,210)—and Institute is black. The text is in uppercase and should be 9pt for web, 7pt for print.</p>
-                <h4>Tips</h4>
+                
+                <h1>Using the Excel Macro</h1>
+                <p>Urban has created an add-in for Microsoft Excel that automatically applies Urban colors, chart formatting, font styling, and font sizes to Excel figures. This set of instructions will show you how to install and use the add-in. </p>
+                <p>Download the Urban Institute Excel macro <a href="UrbanGraphingStyle_2024.xlam" target="_blank">here</a>. Download the WorkRise macro <a href="WorkRiseGraphingStyle_2024.xlam" target="_blank">here</a> and the Tax Policy Center macro <a href="TPCGraphingStyle_2024.xlam" target="_blank">here</a>.</p>
+            </div>         
 
-                <ul>
-                    <li>All of Urban’s charts will be full-width (760px), so it is important to keep the data density as high as possible. Always include a text reference to your figure to give the data context to the content of the report/brief/blog post. If your chart has only two or three values, consider a couple sentences of text to explain the figure.
+            <div class="col-lg-8 col-lg-offset-2">
+                <h5>Installing the add-in on PC computers</h5>
+                <ol class="excel_instructions">
+                    <li>Download the Excel add-in from the <b>Brand Identity Guidelines</b> intranet page: Your Urban > Templates > Excel > “Excel add-in for creating Urban style charts.”</li>
+                    <li>Save the file to your computer. You can put the file anywhere, but placing it directly in the Excel AddIn folder is preferred. On Urban PC computers, the add-in folder is most likely located on the D drive at: <code>D:\Users\USERNAME\AppData\Roaming\Microsoft\AddIns\</code>. (USERNAME is your username on the computer. On other computers, the folder may be in the C: drive in the same subdirectory.)
+                        <ol type="a">
+                            <li>If you can’t locate the <em>AppData</em> subdirectory, you can use Excel’s built-in Themes menu to help you locate it. Under the <em>Page Layout</em> tab, select the <em>Themes</em> button. At the bottom of that menu, select “Save Current Theme.” Excel will bring you to the Document Themes folder, which is in <code>D:\Users\USERNAME\AppData\Roaming\Microsoft\folder</code>. You can copy the folder location from the top of that window, paste it into your Windows Explorer folder, and navigate to the AddIn folder from there.</li>
+                            <li>To navigate to this AddIn folder location, you may need to unhide the AppData subdirectory. To do so, open a Windows Explorer window, click <em>Tools</em>, then <em>View</em>. You can now select “Show hidden files, folders, and drives” under the “Hidden files and folders” option.</li>
+                        </ol>
                     </li>
-                    <li>If you find your explanatory sentences do a better job of distilling the information, you might want to consider going without a chart.
+                    <li>Regardless of whether you saved the file to your AddIn folder or to another location on your computer, you can now install the add-in. To do so, select the <em>File</em> tab in the ribbon.</li>
+                    <li>At the bottom of the <em>File</em> window, select <em>Options</em>.</li>
+                    <li>In the <em>Options</em> window, select the <em>Add-Ins</em> option near the bottom of the left pane, and then select the <em>Go...</em> button at the bottom of the larger window.</li>
+                    <li>At this point, a menu will load. If you saved the add-in file to the “AppData” folder location, the add-in should already be listed. You can simply check the box and select OK. If you saved it anywhere else, select <em>Browse…</em> and navigate to the location where you saved the <code>UrbanGraphingStyle.xlam</code> file. (Excel may ask if you’d like to place the add-in into your Roaming folder; it is fine to select OK here.) Select OK.
+                        <ol type="a">
+                            <li class="security-note">SECURITY NOTE: If the ribbon tab does not appear after installing the add-in (this typically happens in a later session), it may be due to a security update from Microsoft. A detailed description of how to solve this issue can be found <a href="http://peltiertech.com/Utility30/Documentation30/RibbonDisappears.html" target="_blank">here</a>.</li>
+                        </ol>
                     </li>
-                    <li>Title: Keep it short and simple. Try to explain the chart in a few words. If you need to add qualifiers (e.g., years, dollars) or further clarification, use a subtitle
+                </ol>
+                
+                <h5>Installing the add-in on Mac computers</h5>
+                <ol class="excel_instructions">
+                    <li>Save the add-in to a location on your computer.</li>
+                    <li>Under the <em>Tools</em> menu in the top toolbar, select the <em>Excel Add-Ins...</em> option.</li>
+                    <li>Select <em>Browse…</em> and navigate to the <code>UrbanGraphingStyle.xlam</code> file. Select <em>Open</em>. The box next to the UrbanGraphStyle add-in should now be checked. In this smaller menu, select OK. You will now see the <em>Urban Graph Styles tab</em> in your Excel ribbon. The tab will appear every time you open Excel.</li>
+                </ol>
+                
+                <h5>Using the add-in</h5>
+                <ol class="excel_instructions">
+                    <li>Select the data you want to use to create your chart.</li>
+                    <li>Click the chart option from the <em>Urban Graph Styles</em> menu that matches the style of your chart.</li>
+                    <li>A pop-up box will appear asking if you want to format your graph for <em>Web</em> or <em>Print</em> (the <em>Cancel</em> option will close the dialog box). An Urban-formatted version of your chart will appear.</li>
+                    <li>Edit the x-axis title and y-axis title or delete them if the units are already specified in the chart title or subtitle.</li>
+                    <li>Edit any corresponding data cells to fix wording and capitalization as needed. Your edits should automatically appear in the chart.</li>
+                    <li>To export your chart:
+                        <ol type="a">
+                            <li>On PC computers, use the <em>Export</em> menu in the add-in. You can choose a folder location and file type as you would for any other software tool.</li>
+                            <li>On Mac computers, the <em>Export</em> menu does not exist. Instead, copy the chart (<em>Command-C</em>), open the <em>Preview</em> tool, and open a new file (<em>Command-N</em>). Save the chart (<em>Command-S</em>) and use the drop-down menu to change the file format to <em>PNG</em>. In the resulting menu, change the <em>Resolution</em> to 600 (pixels/inch). Name the file and click <em>Save</em>.</li>
+                        </ol>
                     </li>
-                    <li>Source and Notes: This is where the technical information about methodology can go. Try to avoid putting this information in the title, labels, or on the chart.
-                    </li>
-                    <li>Legends: Stretch legends across the top of the chart, or to the right. Order them in a logical way, mirroring the order of the data in the charts.
-                    </li>
-                </ul>
-
-            </div>
-            <div class="col-lg-12">
-                <!-- <h4>In Print</h4>
-                <img src="img/chart-parts-01.png" width="100%" /> -->
-                <h4>On the web</h4>
-                <img src="img/chart-typography-and-layout.png" width="100%" />
-            </div>
-
-
+                </ol>
+                </div>
         </div>
 
     </section>
 
+
+    <!-- Using the R Urban Theme Section -->
+    <section id="urban-theme" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1">
+                <h1>Using the R Urban Theme</h1>
+                
+                <p><a href="https://urbaninstitute.github.io/urbnthemes/" target="_blank">urbnthemes</a> is a set of tools for creating Urban Institute–themed plots and maps in R (the theme has been tested against ggplot2 version 3.0.0; it will not function properly with older versions of ggplot2). The package extends ggplot2 with print and map themes as well as tools that make plotting easier. A comprehensive set of examples is available at the <a href="https://urbaninstitute.github.io/r-at-urban/graphics-guide.html" target="_blank">Institute R Users Group website</a>.</p>
+
+                <p><code>library(urbnthemes)</code> makes ggplot2 output align more closely with this style guide, but it does not produce publication-ready graphics. Visual styles must still be edited using your project’s normal editing workflow. Exporting charts as PDFs rather than image files (e.g., PNG, JPEG) will allow them to be edited more easily.</p> 
+
+<p>Run the following code to install or update urbnthemes:
+    <br>
+<code>install.packages("remotes")<br>
+remotes::install_github("UrbanInstitute/urbnthemes")
+</code>
+
+</p>
+<p>Run the following code at the top of each script:
+<br>
+<code>library(tidyverse)<br>
+library(urbnthemes)<br>
+set_urbn_defaults(style = "print")
+</code>
+<br><br>
+A comprehensive review, installation instructions, and more details and tutorials about using R at Urban and the <code>urbnthemes</code> package can be found in the <a href="https://urbaninstitute.github.io/r-at-urban/graphics-guide.html" target="_blank">Urban Institute R Graphics Guide</a>.</p>
+                
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- Inserting Figures into Urban Word Templates Section -->
+    <section id="insert-figs" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1">
+                <h1>Inserting Figures into Urban Word Templates</h1>
+                
+                <p>Urban Microsoft Word templates have built-in formatting to ensure correct placement of figures. To insert a figure—either as an Excel graph or as an image exported from another tool like R—follows these steps:</p>
+                <ol>
+                    <li>Start with the most recent Word template for your product, which can be downloaded from Urban Explorer on the <a href="https://explorer.urban.org/page/2229" target="_blank">Brand Identity Guidelines</a> intranet page.</li>
+                    <li>For each figure, copy and paste the figure template text from the figure number through the notes line (see image below). This will automatically apply the built-in styles to the text around the figure. </li>
+                    <li>Write out the figure number, title, and subtitle (delete the subtitle if needed) directly in the Word file (not in the Excel graph or image).</li>
+                    <li>Highlight the red “Figure Placer” paragraph and then paste your figure, choosing either “Use Destination Theme and Embed Workbook,” “Use Destination Theme and Link Data,” or “Paste Special … Microsoft Office Graphic Object.”</li>
+                    <li>Write out the Source and Notes beneath the figure.</li> 
+                </ol>
+
+                <img src="img/figure-word-template-insert.png" style="margin-top: 5rem; width: 90%;">
+
+            </div>
+        </div>
+    </section>
+
+<!-- R Shiny, Tableau, and PowerBI Guidance Section -->
+<section id="third-party-tools" class="container content-section text-center">
+    <div class="row">
+        <div class="col-lg-10 col-lg-offset-1">
+            <h1>R Shiny, Tableau, and PowerBI Guidance</h1>
+            
+            <p>Urban staff use a variety of data analytics and visualization tools in their work. When it comes to R, interested users should consult the public-facing R tutorials available on the <a href="https://urbaninstitute.github.io/r-at-urban/index.html" target="_blank">Urban Github site</a> and consult the <a href="https://urbaninstitute.github.io/r-at-urban/" target="_blank">R User Group</a> for additional resources. We recommend that Urban staff consult with the Data Visualization team for additional support related to obtaining Tableau and PowerBI licenses and creating graphs or dashboards with these tools.</p> 
+
+            <p>Public-facing, high-visibility data visualization tools and dashboards published at Urban are built with custom tools and undergo a full design and build process to ensure that products hit the highest accessibility, UI, and mobile-friendly design standards—all with Urban’s wider audience in mind.</p>
+
+            <p>COMM and the Tech and Data Science teams are developing guidance on R Shiny, Tableau, PowerBI, and other off-the-shelf dashboarding tools for use at Urban. Our intake processes are connected for this kind of tooling request.</p>
+
+            <p>Currently, only the R Shiny tool is approved for specific use cases. Our consensus is that R Shiny dashboards can be appropriate for highly niche audiences (e.g., other researchers or select funders), with review and input from COMM’s Design and Data Visualization teams. </p>
+
+            <p>These products are not embedded on Urban’s website. Rather, our guidance is to screenshot and link to them, as seen in this Data at Urban <a href="https://urban-institute.medium.com/local-level-data-and-tools-can-inform-efforts-to-strengthen-community-food-systems-against-climate-414235cd6d1f" target="_blank">post</a> and this <em>Urban Wire</em> <a href="https://www.urban.org/urban-wire/growing-climate-hazards-pose-risks-food-system-resiliency-nationwide-communities-color" target="_blank">post</a>. These guidelines are evolving and subject to change.</p>
+
+            
+        </div>
+    </div>
+
+</section>
+
+
+<!-- chart parts Section -->
+<section id="chart-parts" class="container content-section text-center">
+    <div class="row">
+        <div class="col-lg-10 col-lg-offset-1">
+            <h1>Chart Parts</h1>
+            <p>Key elements of Urban charts are as follows:</p>
+
+            <ul>
+                <li>The chart should be referenced in the text.</li>
+                <li>Titles use headline/title case, and subtitles use sentence case; all titles are left aligned.</li>
+                <li>All text within the figure uses sentence-style capitalization.</li>
+            </ul>
+
+            <br>
+            <p><strong>In all Urban products, researchers should reference charts and tables in the text to provide context for the data.</strong> Figures and tables should be placed immediately after the paragraph that references them. If the chart consists of a limited number of values, consider a couple sentences of text to explain the data in lieu of an image.</p> 
+
+            <p>Urban charts require a title, source line, and axis or other labels identifying the elements and units of the chart. This can be achieved by using some combination of a subtitle, axis titles, axis labels, data labels, and legend (not all elements will be necessary for every figure). Urban charts posted on the web also include an Urban tagline/logo in the lower-right corner of the figure so that when others copy and paste our charts, Urban is identified as the source.</p>
+                
+            <p>For Excel charts produced for the web, add the title, subtitle, source, and notes directly in the Excel chart. Because Excel’s chart title and subtitle fields are limiting in terms of formatting, we use a regular text box for all the text at the top of the graphic, as well as for the source and notes text at the bottom.</p> 
+                
+            <p>In charts produced for PDF publications, add the title, subtitle, sources, and notes as text directly in the Microsoft Word file. Axis titles, labels, and the legend are added in Excel or in the R chart space directly. </p>
+
+        </div>
+
+        <div class="col-lg-12">
+            <h4>On the web</h4>
+            <img src="img/chart-typography-and-layout-2024-web.png" width="100%" />
+
+            <br />&nbsp;<br/>
+            <h4>In print (for PDFs)</h4>
+            <img src="img/chart-typography-and-layout-2024-print.png" width="100%" />
+
+        </div>
+
+        <div class="col-lg-10 col-lg-offset-1">
+        <p>The chart parts are described in detail below.</p>
+        <ul>
+            <li><strong>Titles</strong>: Use headline case for titles and sentence case for subtitles. Keep them short and simple. Try to explain the chart in a few words and draw conclusions where possible. Use a subtitle to add qualifiers or further clarification. The unit of measurement should be mentioned only once, either in the subtitle or the y-axis label. For example, instead of a purely descriptive title, such as “Labor Force Participation Rate, Men and Women, 1950–2024,” a more active title would be “The Labor Force Participation Rate Has Declined for Men and Increased for Women.” Subtitles can be used to denote specifics about the data, such as time periods, frequency, units, or geography.</li>
+            <br> 
+            <li><strong>Axis titles and labels</strong>: Use sentence-style capitalization for all text within the figure, including axis titles, data labels, and legends. In sentence-style capitalization, the first letter of the sentence and any proper names (including program names) are capitalized, and all other text is set in lowercase. For example, “Percentage of total funding,” “2021 operating expenses,” “Denver Regional Transportation District,” and “$50,000 and above.” You can use abbreviations in the axis titles and labels as long as the abbreviations are defined in the notes.</li>
+            <br>
+            <li><strong>Source</strong>: The source line should contain the source of the data for the figure and include full publication information, including the authors, title, and publication date, all in Urban’s notes citation style. All figures in Urban publications should have a source line. If the source of the data is Urban analysis, the source line can read “Authors’ analysis.”</li>
+            <br>
+            <li><strong>Notes</strong>: The notes line can include technical information about methodology, statistical explanations, and notes that apply to certain values. The notes should also define all acronyms and abbreviations used within the figure, using this format: “FPL = federal poverty level.” Notes that apply to certain cells in tables should use superscript letters as note references. Asterisks should only be used to indicate significance levels (e.g., p < 0.001, * = significant at 0.001 level).</li>
+            <br>
+            <li><strong>Legend</strong>: Stretch legends across the top of the chart between the title/subtitle and y-axis label. Order the series in the legend in a logical way, mirroring the order of the data in the chart. When possible, directly label the data in the chart and omit the legend.</li>
+            <br>
+            <li><strong>Data labels</strong>: Chart elements can be labeled to provide readers with the specific data values or additional context. Data labels should match the units of the chart and be placed as close as possible to the actual data point (e.g., top or inside a bar on a bar chart or a point on a line chart). Explanatory labels should be concise and explain important, surprising, or interesting aspects of the graph.</li>
+            <br>
+            <li><strong>Tagline</strong>: The Urban tagline is built from standard text using Lato Bold, 9pt, black, small caps, with 0.5pt of expanded character spacing. The word “Urban” is colored blue (RGB[22,150,210] or #1696d2) and “Institute” is black (RGB[0,0,0] or #000000). The Excel add-in automatically includes the tagline for web graphs. For PDF products, the tagline is added as text in the Microsoft Word file at the bottom right of the figure, with no spacing between the figure and the tagline. The tagline is omitted in government-funded products.</li>
+        </ul>
+    </div>
+
+</div>
+
+</section>
+
+<!-- Color Section -->
     <section id="color" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-10 col-lg-offset-1">
                 <h1>Color</h1>
-                <p>Urban's main colors are <span class="text-swatch blue-5 dark">cyan,</span> <span class="text-swatch gray-5 ">gray,</span> and <span class="text-swatch black dark">black.</span></span> <span class="text-swatch yellow-5 dark">Yellow</span> and <span class="text-swatch magenta-5 dark">magenta</span> are used as secondary colors throughout the new Urban brand. Tertiary colors for graphics include <span class="text-swatch space-gray-4 dark">space gray,</span> <span class="text-swatch green-5 dark">green,</span> and <span class="text-swatch red-5 dark">red,</span> and should be used infrequently. </p>
-                <p>When selecting colors for charts and graphs, we must first consider the type of data we are presenting. Usually, data can be grouped into one of two main groups: categorical or sequential.</p>
-                <p><b>Categorical palettes </b>are best when you want to distinguish discrete chunks of data that do not have an inherent ordering.</p>
-                <p><b>Sequential  </b>color mapping is appropriate when data range from relatively low or uninteresting values to relatively high or interesting values. For sequential data, it’s better to use a palette that has a relatively subtle shift in hue accompanied by a large shift in brightness and saturation. This approach naturally draws the eye to the relatively important parts of the data. Sequential colors are used for sequential groups (not necessarily the way the data trends). So age groups young to old and date ranges might be something that I use sequential colors for.</p>
-                <p><b>Note:</b> <span class="text-swatch yellow-5 dark">Yellow</span> and <span class="text-swatch magenta-5 dark">Magenta</span> should be used sparingly, as these colors should be considered for highlighting purposes (such as drawing attention to a certain category or indicating a trend line).
-                <p>For more information about the subtleties of color and choosing colors for your data visualizations, refer to <a href="https://blog.datawrapper.de/colors-for-data-vis-style-guides/" target="_blank">Datawrapper's blog post "A detailed guide to colors in data vis style guides"</a>, Nightingale magazine's <a href="https://nightingaledvs.com/how-to-choose-colors-for-your-data-visualizations/" target="_blank">blog</a> <a href="https://nightingaledvs.com/tag/color/" target="_blank">posts</a> on the subject, and <a href="https://rockcontent.com/?s=%22subtleties+of+color%22" target="_blank">this collection of blog posts</a> from Rock Content, formerly Visual.ly</a>.</p>
-                <br />
-                <br />
-                <br />
+                
+                <p>Urban's main colors are <span class="text-swatch blue-5 dark">cyan,</span> <span class="text-swatch gray-5 ">gray,</span> and <span class="text-swatch black dark">black.</span></span> <span class="text-swatch yellow-5 dark">Yellow</span> and <span class="text-swatch magenta-5 dark">magenta</span> are used as secondary colors throughout the new Urban brand. In general, yellow and magenta should be used sparingly; these colors are best for highlighting purposes, such as when drawing attention to a certain category or indicating a trend line. Tertiary colors for graphics include <span class="text-swatch space-gray-4 dark">space&nbsp;gray,</span> <span class="text-swatch green-5 dark">green,</span> and <span class="text-swatch red-5 dark">red,</span> and should be used infrequently. </p>
+                
+                <p>When selecting colors for charts and graphs, first consider the type of data you are presenting. Usually, data for visualizations can be grouped into one of four main groups: categorical, sequential, diverging, or binary (see next sections for examples in the Urban color palette).</p>
+                
+                <ul>
+                <li><b>Categorical palettes </b>are best to distinguish discrete chunks of data that do not have an inherent ordering (e.g., race, state of residence).</li>
+                
+                <li><b>Sequential palettes </b>are appropriate when data follow a certain order, such as when data range from low to high (e.g., poverty rates, unemployment rates). The typical approach is to use light(er) colors for low(er) values and dark(er) colors for high(er) values. </li>
+                
+                <li><b>Diverging palettes </b>are used to distinguish values that vary from a central value, such as the average, median, or zero. Diverging palettes will use a neutral color for the central value, such as white or gray, and then employ a sequential color palette in either direction. For example, a sequential palette for changes in per capita gross domestic product might be centered at zero with a white color, then range to dark yellow for negative values and to dark blue for positive values. The center of the diverging palette should always be labeled to avoid confusing the reader. </li>
+                
+                <li><b>Binary palettes </b>are a subset of categorical palettes and are used to distinguish between two distinct groups, such as Republicans and Democrats. When comparing data on binary gender groups, do not use blue to represent men and pink to represent women. Instead, choose a color combination such as yellow and cyan or another combination of our main graphic colors. </li>
+                </ul>
+                <p>For more information about the subtleties of color and choosing colors for your data visualizations, refer to Datawrapper's blog post "<a href="https://blog.datawrapper.de/colors-for-data-vis-style-guides/" target="_blank">A detailed guide to colors in data vis style guides</a>” and <em>Nightingale</em> magazine's <a href="https://nightingaledvs.com/how-to-choose-colors-for-your-data-visualizations/" target="_blank">blog</a> <a href="https://nightingaledvs.com/tag/color/" target="_blank">posts</a> on the subject.</p>
 
-                <h2>Color combinations</h2>
+                <h4>Color combinations</h4>
 
-                <p>The following color combinations are intended to take some of the guess work out of the process of assigning colors to charts. They're only examples, and can be mixed-and-matched depending on the story you are trying to tell with your data.</p>
-                <p>When comparing data by gender do not use blue to represent men and pink to represent women. Instead, choose a color combination like <span class="text-swatch yellow-5 dark">yellow</span> and <span class="text-swatch blue-5 dark">cyan</span>, or another combination of our main graphic colors.</p>
+                <p>Urban’s core color palette consists of eight main colors, ordered below in a hierarchy from core colors to less commonly used colors. All Urban tool sets, including the Excel add-in and <a href="Urban Institute.xml" target="_blank">color palette</a>, and the <a href="https://urbaninstitute.github.io/urbnthemes/" target="_blank">urbnthemes</a> R package, follow this hierarchy. </p>
 
+                <h4>Shades of main colors</h4>
+                <p>Specific shades of each main categorical color are found below for use in graphs that require sequential and diverging palettes. It should be noted that tints and shades of colors in the Excel add-in and <a href="Urban Institute.xml" target="_blank">color palette</a> do not exactly match these colors.</p>
+                
+                <p>The palettes below offers multiple options for combining colors in Urban charts, though only the combinations shown in the first set of each section are included in the Excel add-in and R theme. When in doubt, individuals are encouraged to consult the Urban Design and/or Data Visualization teams for assistance in choosing color combinations.</p>
+                
                 <h4>Main graphic colors</h4>
                 <div class="multi-group-container">
                     <div class="color eight">
@@ -470,6 +653,13 @@
                         </div>
                     </div>
                 </div>
+
+                <h4>Text and contrast</h4>
+                <p>Urban Institute data visualizations should strive to meet <a href="https://www.w3.org/WAI/WCAG2AA-Conformance" target="_blank">Web Content Accessibility Guidelines (WCAG)</a> to make web content most accessible to people with disabilities. (Read more about those international standards <a href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="_blank">here</a> and in the Urban Institute report <a href="https://www.urban.org/research/publication/do-no-harm-guide-centering-accessibility-data-visualization" target="_blank"><em>Do No Harm Guide: Centering Accessibility in Data Visualization</em></a>). Urban follows WCAG 2.0 Level AA guidance to ensure that background color and text pairings maximize contrast.</p> 
+                    
+                <p>The color palettes below contain the correct white or black text to pass the WCAG AA ratings for contrast at smaller text sizes (18px or less).</p>
+
+                
                 <h4>Shades of main colors</h4>
                 <div class="multi-group-container">
                     <div class="color eight">
@@ -488,12 +678,12 @@
                         </div>
                     </div>
                     <div class="color  eight">
-                        <div class="swatch groupcolor blue-4 dark">
+                        <div class="swatch groupcolor blue-4">
                             <div class="color-code"></div>
                         </div>
                     </div>
                     <div class="color  eight">
-                        <div class="swatch groupcolor blue-5 dark">
+                        <div class="swatch groupcolor blue-5">
                             <div class="color-code"></div>
                         </div>
                     </div>
@@ -512,7 +702,7 @@
                             <div class="color-code"></div>
                         </div>
                     </div>
-                    <p class="color-code">var colors=["#CFE8F3","#A2D4EC","#73BFE2","#46ABDB","#1696D2","#12719E","#0A4C6A","#062635"];</p>
+                    <p class="color-code-hex">var colors=["#CFE8F3","#A2D4EC","#73BFE2","#46ABDB","#1696D2","#12719E","#0A4C6A","#062635"];</p>
                 </div>
                 <div class="multi-group-container">
                     <div class="color eight">
@@ -541,7 +731,7 @@
                         </div>
                     </div>
                     <div class="color  eight">
-                        <div class="swatch groupcolor gray-6 dark">
+                        <div class="swatch groupcolor gray-6">
                             <div class="color-code"></div>
                         </div>
                     </div>
@@ -555,7 +745,7 @@
                             <div class="color-code"></div>
                         </div>
                     </div>
-                    <p class="color-code">var colors=["#F5F5F5","#ECECEC","#E3E3E3","#DCDBDB","#D2D2D2","#9D9D9D","#696969","#353535"];</p>
+                    <p class="color-code-hex">var colors=["#F5F5F5","#ECECEC","#E3E3E3","#DCDBDB","#D2D2D2","#9D9D9D","#696969","#353535"];</p>
                 </div>
                 <div class="multi-group-container">
                     <div class="color eight">
@@ -584,7 +774,7 @@
                         </div>
                     </div>
                     <div class="color  eight">
-                        <div class="swatch groupcolor yellow-6 dark">
+                        <div class="swatch groupcolor yellow-6">
                             <div class="color-code"></div>
                         </div>
                     </div>
@@ -598,7 +788,7 @@
                             <div class="color-code"></div>
                         </div>
                     </div>
-                    <p class="color-code">var colors=["#FFF2CF","#FCE39E","#FDD870","#FCCB41","#FDBF11","#E88E2D","#CA5800","#843215"];</p>
+                    <p class="color-code-hex">var colors=["#FFF2CF","#FCE39E","#FDD870","#FCCB41","#FDBF11","#E88E2D","#CA5800","#843215"];</p>
                 </div>
                 <div class="multi-group-container">
                     <div class="color eight">
@@ -617,12 +807,12 @@
                         </div>
                     </div>
                     <div class="color  eight">
-                        <div class="swatch groupcolor magenta-4 dark">
+                        <div class="swatch groupcolor magenta-4">
                             <div class="color-code"></div>
                         </div>
                     </div>
                     <div class="color  eight">
-                        <div class="swatch groupcolor magenta-5 dark">
+                        <div class="swatch groupcolor magenta-5">
                             <div class="color-code"></div>
                         </div>
                     </div>
@@ -641,7 +831,7 @@
                             <div class="color-code"></div>
                         </div>
                     </div>
-                    <p class="color-code">var colors=["#F5CBDF","#EB99C2","#E46AA7","#E54096","#EC008B","#AF1F6B","#761548","#351123"];</p>
+                    <p class="color-code-hex">var colors=["#F5CBDF","#EB99C2","#E46AA7","#E54096","#EC008B","#AF1F6B","#761548","#351123"];</p>
                 </div>
                 <div class="multi-group-container">
                     <div class="color eight">
@@ -660,17 +850,17 @@
                         </div>
                     </div>
                     <div class="color  eight">
-                        <div class="swatch groupcolor green-4 dark">
+                        <div class="swatch groupcolor green-4">
                             <div class="color-code"></div>
                         </div>
                     </div>
                     <div class="color  eight">
-                        <div class="swatch groupcolor green-5 dark">
+                        <div class="swatch groupcolor green-5">
                             <div class="color-code"></div>
                         </div>
                     </div>
                     <div class="color  eight">
-                        <div class="swatch groupcolor green-6 dark">
+                        <div class="swatch groupcolor green-6">
                             <div class="color-code"></div>
                         </div>
                     </div>
@@ -684,7 +874,7 @@
                             <div class="color-code"></div>
                         </div>
                     </div>
-                    <p class="color-code">var colors=["#DCEDD9","#BCDEB4","#98CF90","#78C26D","#55B748","#408941","#2C5C2D","#1A2E19"];</p>
+                    <p class="color-code-hex">var colors=["#DCEDD9","#BCDEB4","#98CF90","#78C26D","#55B748","#408941","#2C5C2D","#1A2E19"];</p>
                 </div>
                 <div class="multi-group-container">
                     <div class="color eight">
@@ -727,7 +917,7 @@
                             <div class="color-code"></div>
                         </div>
                     </div>
-                    <p class="color-code">var colors=["#D5D5D4","#ADABAC","#848081","#5C5859","#332D2F","#262223","#1A1717","#0E0C0D"];</p>
+                    <p class="color-code-hex">var colors=["#D5D5D4","#ADABAC","#848081","#5C5859","#332D2F","#262223","#1A1717","#0E0C0D"];</p>
                 </div>
                 <div class="multi-group-container">
                     <div class="color eight">
@@ -770,7 +960,7 @@
                             <div class="color-code"></div>
                         </div>
                     </div>
-                    <p class="color-code">var colors=["#F8D5D4","#F1AAA9","#E9807D","#E25552","#DB2B27","#A4201D","#6E1614","#370B0A"];</p>
+                    <p class="color-code-hex">var colors=["#F8D5D4","#F1AAA9","#E9807D","#E25552","#DB2B27","#A4201D","#6E1614","#370B0A"];</p>
                 </div>
 
                 <h4>One group</h4>
@@ -781,11 +971,7 @@
                             <div class="color-code"></div>
                         </div>
                     </div>
-<!--                     <div class="color one">
-                        <div class="swatch groupcolor gray-5 ">
-                            <div class="color-code"></div>
-                        </div>
-                    </div> -->
+
                     <div class="color one">
                         <div class="swatch groupcolor black dark ">
                             <div class="color-code"></div>
@@ -794,7 +980,6 @@
                 </div>
 
                 <h4>Two groups</h4>
-                For two color groups, grey should not used as it loses focus while magenta draws attention
                 <h5>Categorical</h5>
                 <div class="multi-group-container">
                     <div class="color two">
@@ -808,7 +993,7 @@
                         </div>
                     </div>
                 </div>
-<!--                 <div class="multi-group-container">
+                <div class="multi-group-container">
                     <div class="color two">
                         <div class="swatch groupcolor blue-5 dark">
                             <div class="color-code"></div>
@@ -819,10 +1004,22 @@
                             <div class="color-code"></div>
                         </div>
                     </div>
-                </div> -->
+                </div>
                 <div class="multi-group-container">
                     <div class="color two">
                         <div class="swatch groupcolor blue-5 dark">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                    <div class="color two">
+                        <div class="swatch groupcolor yellow-5">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="multi-group-container">
+                    <div class="color two">
+                        <div class="swatch groupcolor black dark">
                             <div class="color-code"></div>
                         </div>
                     </div>
@@ -862,11 +1059,15 @@
                 </div>
 
                 <h4>Three groups</h4>
-                For three color groups, grey should not used as it loses focus while magenta draws attention
                 <h5>Categorical</h5>
-<!--                 <div class="multi-group-container">
+                <div class="multi-group-container">
                     <div class="color three">
                         <div class="swatch groupcolor blue-5 dark">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                    <div class="color  three">
+                        <div class="swatch groupcolor black dark">
                             <div class="color-code"></div>
                         </div>
                     </div>
@@ -875,12 +1076,7 @@
                             <div class="color-code"></div>
                         </div>
                     </div>
-                    <div class="color  three">
-                        <div class="swatch groupcolor black dark">
-                            <div class="color-code"></div>
-                        </div>
-                    </div>
-                </div> -->
+                </div>
                 <div class="multi-group-container">
                     <div class="color three">
                         <div class="swatch groupcolor blue-5 dark">
@@ -888,7 +1084,19 @@
                         </div>
                     </div>
                     <div class="color  three">
+                        <div class="swatch groupcolor black dark">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                    <div class="color  three">
                         <div class="swatch groupcolor yellow-5">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="multi-group-container">
+                    <div class="color three">
+                        <div class="swatch groupcolor blue-5 dark">
                             <div class="color-code"></div>
                         </div>
                     </div>
@@ -897,15 +1105,20 @@
                             <div class="color-code"></div>
                         </div>
                     </div>
+                    <div class="color  three">
+                        <div class="swatch groupcolor green-5 dark">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
                 </div>
-<!--                 <div class="multi-group-container">
+                <div class="multi-group-container">
                     <div class="color three">
                         <div class="swatch groupcolor blue-5 dark">
                             <div class="color-code"></div>
                         </div>
                     </div>
                     <div class="color  three">
-                        <div class="swatch groupcolor yellow-5">
+                        <div class="swatch groupcolor black dark">
                             <div class="color-code"></div>
                         </div>
                     </div>
@@ -914,7 +1127,7 @@
                             <div class="color-code"></div>
                         </div>
                     </div>
-                </div> -->
+                </div>
 
 
                 <h5>Sequential</h5>
@@ -939,14 +1152,61 @@
 
                 <h4>Four groups</h4>
                 <h5>Categorical</h5>
+                Use yellow and magenta sparingly, usually only for highlighting data.
                 <div class="multi-group-container">
+                    <div class="color  four">
+                        <div class="swatch groupcolor blue-5 dark">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
                     <div class="color four">
                         <div class="swatch groupcolor black dark">
                             <div class="color-code"></div>
                         </div>
                     </div>
                     <div class="color  four">
-                        <div class="swatch groupcolor gray-5 ">
+                        <div class="swatch groupcolor gray-5">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                    <div class="color  four">
+                        <div class="swatch groupcolor yellow-5">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="multi-group-container">
+                    <div class="color  four">
+                        <div class="swatch groupcolor blue-5 dark">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                    <div class="color four">
+                        <div class="swatch groupcolor black dark">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                    <div class="color  four">
+                        <div class="swatch groupcolor gray-5">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                    <div class="color  four">
+                        <div class="swatch groupcolor magenta-5 dark">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="multi-group-container">
+                    <div class="color  four">
+                        <div class="swatch groupcolor blue-5 dark">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                    <div class="color four">
+                        <div class="swatch groupcolor black dark">
                             <div class="color-code"></div>
                         </div>
                     </div>
@@ -956,12 +1216,12 @@
                         </div>
                     </div>
                     <div class="color  four">
-                        <div class="swatch groupcolor blue-5 dark">
+                        <div class="swatch groupcolor green-5 dark">
                             <div class="color-code"></div>
                         </div>
                     </div>
                 </div>
-                Use yellow and magenta sparingly, usually only for highlighting data.
+
                 <div class="multi-group-container">
                     <div class="color four">
                         <div class="swatch groupcolor blue-5 dark">
@@ -969,7 +1229,7 @@
                         </div>
                     </div>
                     <div class="color  four">
-                        <div class="swatch groupcolor magenta-5 dark">
+                        <div class="swatch groupcolor black dark">
                             <div class="color-code"></div>
                         </div>
                     </div>
@@ -979,11 +1239,12 @@
                         </div>
                     </div>
                     <div class="color  four">
-                        <div class="swatch groupcolor space-gray-4 dark">
+                        <div class="swatch groupcolor magenta-5 dark">
                             <div class="color-code"></div>
                         </div>
                     </div>
                 </div>
+
                 <h5>Sequential</h5>
                 <div class="multi-group-container">
                     <div class="color four">
@@ -1017,7 +1278,7 @@
                         </div>
                     </div>
                     <div class="color five">
-                        <div class="swatch groupcolor yellow-5 ">
+                        <div class="swatch groupcolor black dark">
                             <div class="color-code"></div>
                         </div>
                     </div>
@@ -1027,15 +1288,16 @@
                         </div>
                     </div>
                     <div class="color five">
-                        <div class="swatch groupcolor magenta-5 dark">
+                        <div class="swatch groupcolor yellow-5 ">
                             <div class="color-code"></div>
                         </div>
                     </div>
                     <div class="color five">
-                        <div class="swatch groupcolor black dark">
+                        <div class="swatch groupcolor magenta-5 dark">
                             <div class="color-code"></div>
                         </div>
                     </div>
+
                 </div>
                 <div class="multi-group-container">
                     <div class="color five">
@@ -1044,7 +1306,7 @@
                         </div>
                     </div>
                     <div class="color five">
-                        <div class="swatch groupcolor blue-7 dark">
+                        <div class="swatch groupcolor black dark">
                             <div class="color-code"></div>
                         </div>
                     </div>
@@ -1059,7 +1321,63 @@
                         </div>
                     </div>
                     <div class="color five">
-                        <div class="swatch groupcolor space-gray-5 dark">
+                        <div class="swatch groupcolor blue-7 dark">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="multi-group-container">
+                    <div class="color five">
+                        <div class="swatch groupcolor blue-5 dark">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                    <div class="color five">
+                        <div class="swatch groupcolor black dark">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                    <div class="color five">
+                        <div class="swatch groupcolor gray-5">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                    <div class="color five">
+                        <div class="swatch groupcolor green-5 dark">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                    <div class="color five">
+                        <div class="swatch groupcolor blue-7 dark">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="multi-group-container">
+                    <div class="color five">
+                        <div class="swatch groupcolor blue-5 dark">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                    <div class="color five">
+                        <div class="swatch groupcolor black dark">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                    <div class="color five">
+                        <div class="swatch groupcolor yellow-5">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                    <div class="color five">
+                        <div class="swatch groupcolor green-5 dark">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                    <div class="color five">
+                        <div class="swatch groupcolor magenta-5 dark">
                             <div class="color-code"></div>
                         </div>
                     </div>
@@ -1103,16 +1421,6 @@
                             <div class="color-code"></div>
                         </div>
                     </div>
-                    <div class="color  six">
-                        <div class="swatch groupcolor magenta-5 dark">
-                            <div class="color-code"></div>
-                        </div>
-                    </div>
-                    <div class="color  six">
-                        <div class="swatch groupcolor yellow-5">
-                            <div class="color-code"></div>
-                        </div>
-                    </div>
                     <div class="color six">
                         <div class="swatch groupcolor black dark">
                             <div class="color-code"></div>
@@ -1124,14 +1432,30 @@
                         </div>
                     </div>
                     <div class="color  six">
+                        <div class="swatch groupcolor yellow-5">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                    <div class="color  six">
                         <div class="swatch groupcolor green-5 dark">
                             <div class="color-code"></div>
                         </div>
                     </div>
+                    <div class="color  six">
+                        <div class="swatch groupcolor magenta-5 dark">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
                 </div>
+
                 <div class="multi-group-container">
                     <div class="color six">
                         <div class="swatch groupcolor blue-5 dark">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                    <div class="color  six">
+                        <div class="swatch groupcolor black dark">
                             <div class="color-code"></div>
                         </div>
                     </div>
@@ -1141,7 +1465,35 @@
                         </div>
                     </div>
                     <div class="color  six">
-                        <div class="swatch groupcolor magenta-5 dark">
+                        <div class="swatch groupcolor yellow-5">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                    <div class="color six">
+                        <div class="swatch groupcolor green-5 dark">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                    <div class="color  six">
+                        <div class="swatch groupcolor blue-7 dark">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="multi-group-container">
+                    <div class="color six">
+                        <div class="swatch groupcolor blue-5 dark">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                    <div class="color  six">
+                        <div class="swatch groupcolor black dark">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                    <div class="color  six">
+                        <div class="swatch groupcolor blue-7 dark">
                             <div class="color-code"></div>
                         </div>
                     </div>
@@ -1151,17 +1503,17 @@
                         </div>
                     </div>
                     <div class="color six">
-                        <div class="swatch groupcolor space-gray-5 dark">
+                        <div class="swatch groupcolor green-5 dark">
                             <div class="color-code"></div>
                         </div>
                     </div>
-
                     <div class="color  six">
-                        <div class="swatch groupcolor blue-7 dark">
+                        <div class="swatch groupcolor magenta-5 dark">
                             <div class="color-code"></div>
                         </div>
                     </div>
                 </div>
+
                 <h5>Sequential</h5>
                 <div class="multi-group-container">
                     <div class="color six">
@@ -1195,406 +1547,693 @@
                         </div>
                     </div>
                 </div>
+                
                 <h4>Seven Groups</h4>
-                <img src="http://www.reactiongifs.com/wp-content/uploads/2012/12/too-much.gif" />
+                <h5>Categorical</h5>
+                <div class="multi-group-container">
+                    <div class="color seven">
+                        <div class="swatch groupcolor blue-5 dark">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                    <div class="color seven">
+                        <div class="swatch groupcolor black dark">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                    <div class="color  seven">
+                        <div class="swatch groupcolor gray-5">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                    <div class="color  seven">
+                        <div class="swatch groupcolor yellow-5">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                    <div class="color  seven">
+                        <div class="swatch groupcolor green-5 dark">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                    <div class="color  seven">
+                        <div class="swatch groupcolor magenta-5 dark">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                    <div class="color  seven">
+                        <div class="swatch groupcolor blue-7 dark">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                </div>
 
-                <h5>Consider consolidating categories or breaking up the chart. Seven groups is really too many.</h5>
+                <h5>Sequential</h5>
+                <div class="multi-group-container">
+                    <div class="color seven">
+                        <div class="swatch groupcolor blue-1">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                    <div class="color  seven">
+                        <div class="swatch groupcolor blue-2">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                    <div class="color  seven">
+                        <div class="swatch groupcolor blue-3">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                    <div class="color seven">
+                        <div class="swatch groupcolor blue-4">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                    <div class="color  seven">
+                        <div class="swatch groupcolor blue-5 dark">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                    <div class="color  seven">
+                        <div class="swatch groupcolor blue-6 dark">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                    <div class="color  seven">
+                        <div class="swatch groupcolor blue-7 dark">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <h4>Eight Groups</h4>
+                <img src="img/too-much.gif" />
+
+                <br><br>
+                <p>Consider consolidating categories or breaking up the chart. Eight groups is really too many.</p>           
+                
+
+                <h4>Diverging</h4>
+                <div class="multi-group-container">
+                    <div class="color eight">
+                        <div class="swatch groupcolor yellow-7 dark">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                    <div class="color  eight">
+                        <div class="swatch groupcolor yellow-5 ">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                    <div class="color  eight">
+                        <div class="swatch groupcolor yellow-3 ">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                    <div class="color  eight">
+                        <div class="swatch groupcolor yellow-1">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                    <div class="color  eight">
+                        <div class="swatch groupcolor blue-1 ">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                    <div class="color  eight">
+                        <div class="swatch groupcolor blue-3 ">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                    <div class="color  eight">
+                        <div class="swatch groupcolor blue-5 dark">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                    <div class="color  eight">
+                        <div class="swatch groupcolor blue-7 dark">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                    <p class="color-code-hex">var colors=["#CA5800","#FDBF11","#FDD870","#FFF2CF","#CFE8F3","#73BFE2","#1696D2","#0a4c6a"];</p>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- chart parts Section -->
-    <section id="examples" class="container content-section text-center">
+
+
+    <!--What Is the Right Chart for Your Data? Section -->
+    
+    <section id="right-chart" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-10 col-lg-offset-1">
-                <h1>Examples</h1>
-                <p>The following examples use the styles and colors to illustrate common chart types. To deconstruct any example, download the the master Excel file.</p>
-                <!--            download the file-->
-                <h3>Excel example files</h3>
-                <a href="chart-styles.xlsx">
-                    <button class="btn btn-primary">Web version</button>
-                </a>
-                <a href="chart-styles-pubs.xlsx">
-                    <button class="btn btn-primary">Print version</button>
-                </a>
-                <h3 style="margin-top:25px;">Bar and Column Charts</h3>
-                <h4>When to use a bar or column chart</h4>
-                <ul>
-                    <li>For mostly for one variable
-                    </li>
-                    <li>To compares numerical values for different observations
-                    </li>
-                    <li>To show relative amounts
-                    </li>
-                    <li>To break one numerical variable out into different subgroups with grouped or stacked bars or columns</li>
-                </ul>
+                
+                <h1>What Is the Right Chart for Your Data?</h1>
+                <p>Stop! Should it even be a chart?</p>   
+                
+                <p>Although charts are great for communicating data, they are not the appropriate tool for every situation. If you find explanatory sentences do a better job of distilling the information you want to convey, consider going without a chart. If your main goal is to present detailed information as opposed to showing patterns, or if it’s important that the reader can accurately determine the values of your data, consider using a table instead. You may also find that simply including a single, large number (commonly known as “<a href="https://policyviz.com/2023/07/13/the-power-of-big-aggregate-numbers/" target="_blank">big aggregate numbers</a>”) may be sufficient. In these cases, inserting a simple text box or shape in your PowerPoint or Word document will work.</p>
 
-                <h4>Style tips</h4>
-                <ul>
-                    <li>Avoid 3D bars or columns
-                    </li>
-                    <li>The y-axis should start at zero <a href="http://qz.com/418083/its-ok-not-to-start-your-y-axis-at-zero/" target="_blank">(there are a few instances when it is okay for the y-axis not to start at zero).</a>
-                    </li>
-                    <li>The width of the bars should be about twice the width of the space between the bars.
-                    </li>
-                    <li>If all the bars measure the same variable, make them all the same color. Different shades have no relevance to the data.
-                    </li>
-                    <li>If you are showing fewer than 10 bars, consider eliminating the horizontal gridlines and y-axis line and directly labeling the data points.
-                    </li>
-                    <li>To differentiate subsets of data, projections, or averages, consider using a different color shade or gray.
-                    </li>
-                    <li>Legends should be stretched across the top of the chart and the order should match the order in the chart.
-                    </li>
-                    <li>Sequential series should be shaded from lightest to darkest for easy comparison.
-                    </li>
-                </ul>
-
-
-                <img src="img/column1-new.png" width="100%" class="example-chart" />
-                <br />&nbsp;<br />
-                <img src="img/column2-new.png" width="100%" class="example-chart" />
-                <br />&nbsp;<br />
-                <img src="img/column-chart-new.png" width="100%" class="example-chart" />
-                <br />&nbsp;<br />
-
-                <h5>Notes about this chart</h5>
-                <ul>
-                    <li>Columns on the right in the “Top 10 percent” are a lighter sequential shade to differentiate them from the quintiles.</li>
-                    <li>The “All” category is shaded gray to create visual contrast from the rest of the columns.
-                    </li>
-                    <li>This chart isn't perfect because the columns on the right side of the chart are disproportionately large—their categories are a fraction of the others, yet visually they are equally weighted. A possible solution is to use <a href="https://support.office.com/en-nz/article/Quick-start-Apply-conditional-formatting-6b6f7c2a-5d62-45a1-8f67-584a76776d67" target="_blank">conditional formatting</a> and build on a traditional distributional table. See below.</li> <br />&nbsp;<br />
-
-                </ul>
-                <img src="img/conditional-formatting.png" width="100%" class="example-chart" />
-                <br />&nbsp;<br />
-                <img src="img/grouped-column-3-new.png" width="100%" class="example-chart" />
-                <br />&nbsp;<br />
+                <p>Selecting the appropriate chart type for your data and the message you want to convey is critical to creating a successful data visualization. The table below offers guidance on what types of charts are best suited for different purposes. However, this is not an infallible set of choices, because there is not a one-to-one relationship between data types and graph types; for example, a vertical bar chart can be used to compare categories or show changes over time. The list below should therefore be viewed as a starting resource to guide the graph creator. If you are unsure, reach out to the Data Visualization team to help explore your options.</p>
             
-                <h5>Notes about this chart</h5>
-                <ul>
-                    <li>When dealing with political comparisons, lean on the identifiable colors of the parties. Red colors are generally associated with Republicans and blues are generally associated with Democrats.
-                    </li>
-                    <li>When working on a chart that has political categories, be sure to use a nonpolitical color for baseline or unaffiliated series (in this case, “current law”).</li>
+                <table class="type-table" border="0" cellspacing="10px" cellpadding="10px" align="center">
+                    <tbody>
+                        <tr style="text-transform:Uppercase; font-weight:bold; border-bottom:1px solid #000;">
+                            <td valign="bottom"> 
+                                <p>I want to...</p>
+                            </td>
+                            <td valign="bottom">
+                            </td>
+                        </tr>
 
-                </ul>
+                        <tr>
+                            <td valign="top">
+                                <p>Compare values or rankings</p>
+                            </td>
+                            <td valign="top">
+                                <ul>
+                                    <li>Bar charts</li>
+                                    <li>Dot plots</li>
+                                </ul>
+                            </td>
+                        </tr>
 
-            </div>
+                        <tr>
+                            <td valign="top">
+                                <p>Show trends or change over time</p>
+                            </td>
+                            <td valign="top">
+                                <ul>
+                                    <li>Area charts</li>
+                                    <li>Bar charts</li>
+                                    <li>Connected scatterplots</li>
+                                    <li>Dot plots</li>
+                                    <li>Gantt charts</li>
+                                    <li>Line charts</li>
+                                    <li>Slope charts</li>
+                                    <li>Sparklines</li>
+                                </ul>
+                            </td>
+                        </tr>
 
+                        <tr>
+                            <td valign="top">
+                                <p>Depict a part-to-whole relationship</p>
+                            </td>
+                            <td valign="top">
+                                <ul>
+                                    <li>Pie/donut charts</li>
+                                    <li>Stacked bar charts</li>
+                                    <li>Stacked area charts</li>
+                                    <li>Tree maps</li>
+                                    <li>Unit/waffle charts</li>
+                                </ul>
+                            </td>
+                        </tr>
 
+                        <tr>
+                            <td valign="top">
+                                <p>Show deviation from a reference point</p>
+                            </td>
+                            <td valign="top">
+                                <ul>
+                                    <li>Bubble charts</li>
+                                    <li>Heat maps</li>
+                                    <li>Scatter plots</li>
+                                </ul>
+                            </td>
+                        </tr>
 
-            <!--
-            ///////////////////////////////////////
-            /////////////     CHART     ///////////
-            ///////////////////////////////////////
--->
+                        <tr>
+                            <td valign="top">
+                                <p>Show the distribution of values</p>
+                            </td>
+                            <td valign="top">
+                                <ul>
+                                    <li>Beeswarm charts</li>
+                                    <li>Box and whisker plots</li>
+                                    <li>Fan/confidence interval plots</li>
+                                    <li>Histograms</li>
+                                    <li>Strip charts</li>
+                                </ul>
+                            </td>
+                        </tr>
 
-            <div class="col-lg-10 col-lg-offset-1">
-                <hr class="divider" />
-                <h3 style="margin-top:25px;">Bar Charts</h3>
-                <h4>When to use a bar chart</h4>
-                <ul>
-                    <li>To show the trend in one variable, usually across a number of categories.
-                    </li>
-                    <li>To show multiple variables with multiple bars(if they are on the same scale).
-                    </li>
-                    <li>To show the same variable for multiple observations with multiple lines.
-                    </li>
-                </ul>
+                    </tbody>
+                </table>
+            </div>                      
+      
+        </div>
+    </section>
 
-                <h4>Style tips</h4>
-                <ul>
-                    <li>The y-axis should start at zero <a href="http://qz.com/418083/its-ok-not-to-start-your-y-axis-at-zero/" target="_blank">(there are a few instances when it is okay for the y-axis not to start at zero).</a>
-                    </li>
-                    <li>Axis labels should always be horizontal. If you have long labels, consider making a horizontal bar chart instead of a column chart.
-                    </li>
-                    <li>When using a horizontal bar chart, right-align the category labels and center them vertically with the respect to the bar.
-                    </li>
-                    <li>Try to avoid vertical grid lines. Instead, directly label each bar.</li>
-                </ul>
+ <!--Best Practices Section -->
+    
+ <section id="best-practices" class="container content-section text-center">
+    <div class="row">
+        <div class="col-lg-10 col-lg-offset-1">
+            
+            <h1>Best Practices for Creating Effective Charts</h1>
+            
+            <p>Data visualization is a mix of science and art. There are some basic guidelines and best practices rooted in our understanding of cognitive psychology, statistics, and human-computer interaction, but these also reflect preferences for different colors, typefaces, layouts, and more. The list of best practices provided here is a set of guidelines derived from years of work, research, and experience.</p>
 
-
-                <img src="img/bar-chart-new.png" width="100%" class="example-chart" />
-
-                <!--            chart notes-->
-                <h5>Notes about this chart</h5>
-                <ul>
-                    <li>United States is highlighted using the Poppy color. OECD-Total is differentiated by using a darker shade of the primary bar color</li>
-
-                </ul>
-
-
-
-
-            </div>
-
-
-
-
-            <!--            END CHART-->
-
-
-            <!--
-            ///////////////////////////////////////
-            /////////////     CHART     ///////////
-            ///////////////////////////////////////
--->
-
-            <div class="col-lg-10 col-lg-offset-1">
-                <hr class="divider" />
-                <h3 style="margin-top:25px;">Area and Stacked Column Charts</h3>
-                <h4>When to use an area chart</h4>
-                <ul>
-                    <li>To show the trend in composition of a group over time. </li>
-                    <li>To display the part-to-whole relationship of categories, as well as totals.
-                    </li>
-                </ul>
-                <h4>When to use a stacked column chart</h4>
-                <ul>
-                    <li>When you want to show the composition of groups, but the data is not in a continuous time series. </li>
-                    <li>A 100 percent stacked area chart can be used when displaying composition over time. </li>
-                </ul>
-
-                <h4>Style tips</h4>
-                <ul>
-                    <li>The y-axis should always<a href="http://qz.com/418083/its-ok-not-to-start-your-y-axis-at-zero/" target="_blank">*</a> start at zero.
-                    </li>
-                    <li>When possible, directly label series. If they are too small, use a legend.
-                    </li>
-                    <li>Avoid individual data labels.
-                    </li>
-                    <li>In a single chart, try to keep the maximum number of categories to three or four. More is not always better. Plotting too many categories on the same chart gives a confusing picture and defeats the purpose.
-                    </li>
-                    <li>Legends should be stretched across the top of the chart, or on the right, and the order should match the order in the chart.
-                    </li>
-                    <li>Sequential series should be shaded from lightest to darkest for easy comparison.</li>
-                </ul>
-
-                <img src="img/area2-new.png" class="example-chart" width="100%" />
-
-                <!--            chart notes-->
-                <h5>Notes about this chart</h5>
-                <ul>
-
-                    <li>This chart is an example of how to use two color families to tell a better story. Here, the CTC series are in shades of gray and the EITC series are in blues. This helps the user visually connect each series.
-                    </li>
-                    <li>Instead of a key, there is enough room to directly label the series using text boxes. Coordinated text color also helps the user make the connection between the label and the series, but beware of colors that are very light or otherwise difficult to read when applied to text. </li>
-                </ul>
-
-                <img src="img/area-new.png" class="example-chart" width="100%" />
-
-                <!--            chart notes-->
-                <h5>Notes about this chart</h5>
-                <ul>
-
-                    <li>X-axis labels should be every 5 or 10 years for time-series data like this, but the chart data starts at 1962. To hack this, I created a new column called "chart-year" and only included the years I wanted to show. Because of spacing issues, I had to abbreviate the first year, 1962, as '62.
-                    </li>
-                    <li>It appears that the growth in Medicare and Medicaid spending is a big story in this chart. For that reason, I chose to use the brightest color in the categorical palette for that series. </li>
-                    <li>Contrast in typographic elements helps establish hierarchy. The "actual" and "projected" labels are different from the series labels, so I made them gray and italic. </li>
-                </ul>
-
-                <img src="img/area-100-percent-new.png" class="example-chart" width="100%" />
-
-                <h5>Notes about this chart</h5>
-                <ul>
-
-                    <li>The x-axis is starting to get a little cramped. To free up some space, we could modify the data so that anything over one million dollars is represented as $1m instead of $1,000,000.
-                    </li>
-                    <li>I put the legend to the right of the chart in a vertical layout. The order matches the order of the data in the columns. </li>
-                </ul>
+            <p><strong>Keep it simple</strong>. Don’t try to stuff every data value into a single graph. This doesn’t mean you need to strip out all your data, but consider what you want your reader to come away with. You might be able to include all your data and highlight a subset of values. For example, consider a line chart with all 50 US states—you could use gray for the majority of states and add color to just the few you want to highlight. </p>
  
-                <br />&nbsp;<br />
-                <h3>Case study: Alternative to a stacked column chart</h3>
-                <p>Often, when you want to show composition across several dimensions (usually time), the default choice is a stacked column chart. Though this is not a bad chart type, often a story can be better told by using a different chart.</p>
+            <p><strong>Be consistent</strong>. Once you’ve chosen blue to represent one group in one chart, make sure all other charts in your publication or slide deck use blue to represent that group as well. This consistency makes reading and comprehension easier for your reader.  </p>
+ 
+            <p><strong>Small multiples</strong>. The small multiples approach is exactly what it sounds like: create a series of smaller graphs positioned in close proximity. Breaking a single larger, complex graph into smaller pieces can not only make a complex graph easier for readers to comprehend but also help create a sense of movement by aligning changes over time in a particular order. </p>
+ 
+            <p>There are two primary guidelines to follow when creating a small multiples visualization. First, each multiple should be the same type, shape, and size and use the same type of scales, which should start and end at the same values. The best way to think about small multiples is to take a single, dense graph and break it up into many charts—in other words, the framing elements of the chart should not change. Second, try to order the small multiple graphs in a meaningful way—for example, by some value, geographic location, or even alphabetically. </p>
+ 
+            <p><strong>Highlighting</strong>. Highlighting can call attention to specific data points in very dense charts. The observations you want the reader to focus on should be rendered in a color that helps them stand out (usually pink or yellow at Urban), while the rest of the series are in a different color (usually blue, black, or gray). However, be selective with your use of color to highlight specific values, series, or observations, because too many colors can make it difficult to pick out the values on which you want your reader to focus.  </p>
+ 
+            <p><strong>Reference lines</strong>. There may be times when you want to include a reference line or pointer for a specific event, threshold, or benchmark. In such cases, make sure that your line is measured precisely. For example, if you are marking June 2010 in a line chart, the reference line should be located halfway between 2010 and 2011. </p>
+ 
+            <p><strong>Titles</strong>. Use active, concise titles. For example, instead of a purely descriptive title, such as “Labor Force Participation Rate, Men and Women, 1950–2019,” a more active title would be “The Labor Force Participation Rate Has Declined for Men and Increased for Women.” Subtitles can be used to denote specifics about the data, such as time periods, frequency, units, or geography. </p>
+ 
+            <p><strong>Annotation</strong>. Annotation is one of the most important ways to improve your data communication efforts. There are two primary ways to annotate your visualizations. First, adding explanatory text within the graph itself can highlight specific values or explain content. Second, you can add a layer of annotation to explain how to read the graph. This approach can be especially useful for readers who may not be familiar with a particular graph type. For example, you could add a pointer that denotes how the values get larger or smaller along each axis in a scatterplot. </p>
+ 
+            <p><strong>Data labels and markers</strong>. When possible, avoid using legends and instead directly label the data on the graph. Endeavor to evenly space and align the labels instead of scattering them around the graph, which can make it difficult for your reader to find the label and risks emphasizing one series or data value over another. On a line chart, for example, you might place the labels at the far right of the graph, slightly outside the graph space, but left-aligned.</p>
+  
+            <p><strong>Marking outliers</strong>. Data values that are significantly different from others in your dataset may be considered outliers. In some sense, the statistical definition of an outlier is not necessarily important; a data value(s) may simply look like an outlier when plotted in your graph, which may require some explanation. Be careful with outliers, however; they can signify an interesting result or finding, but they may also indicate that something is wrong or mismeasured in the data.</p>
+ 
+            <p><strong>Showing uncertainty</strong>. Visualizations that depict distributions or uncertainty may be inherently difficult for many readers who are not familiar with the underlying data or statistical concepts. It is therefore important to clearly explain when certain data are missing or if there is uncertainty around certain estimates.   </p>
+ 
+            <p>There are various kinds of data uncertainty. One form of uncertainty stems from randomness in the data. Small samples are a prime example of this kind of uncertainty. Consider a political poll that gives candidate Smith a 54 percent approval rating with a margin of error of plus or minus 4 percentage points. The poll has uncertainty because the dataset is only a sample of people who responded to the survey. </p>
+ 
+            <p>Another form of uncertainty comes from inaccurate, untrusted, imprecise, or unknown data. In some cases, we would be unable to address the uncertainty because we aren’t aware of it. In other cases, we could say our data are imprecise because, for example, it’s measured at an aggregate level; for example, infants’ ages captured in months rather than weeks.</p>
+ 
+            <p>Urban takes both kinds of uncertainty seriously, and researchers are best equipped to assess whether their data are unreliable. But knowing when to visualize different kinds of uncertainty is a different task and often depends on the knowledge and statistical sophistication of your reader.  </p>
+ 
+            <p><strong>Stay away from 3-D</strong>. There is no need to add a superfluous third dimension to your chart, particularly when you don’t have a third value. The 3-D effect available in many software tools actually distorts the data values because the effect is not actually 3-D but rather a perspective rendering of 3-D. </p>
+  
+            <p><strong>Be careful with data transformations</strong>. Log scales or other transformations can be useful for depicting rates of change or to address large outliers. The obvious trade-off is that many readers will not understand what a log transformation is and what it means. For example, everyone can understand what $150,000 of income means, but a logged value of 5.18 is not familiar to many readers. However, log scales can be an appropriate choice when the rate of change is more meaningful than absolute values.</p>
+        </div>                      
+    </div>
+</section>
 
-                <img src="img/stacked-column-categorical-new.png" class="example-chart" width="100%" />
+<section id="absolutes" class="container content-section text-center">
+ 
+    <div class="row">
+        <div class="col-lg-10 col-lg-offset-1">
+            
+            <h1>Data Visualization Absolutes</h1>
+            
+            <p>The Urban Institute is committed to exploring and expanding how we create and engage audiences and readers through our visual display of information. While the practice of data visualization is a mixture of art and science with ample opportunity for creativity, there are certain data visualization practices that we avoid.</p>
+            <ul>    
+            <li><strong>Nonzero baselines</strong>. The axis in bar charts (whether vertical or horizontal) should always start at zero. The gaps between bars are overemphasized when the value axis starts at something other than zero. When small differences between bars are important to show but a zero axis makes those differences difficult for the reader to see, consider adjusting the data to show percent change, difference, or some other similar adjustment. It is important to note that other charts types that do not use length or height as the primary encoding—including, for example, scatterplots and line charts—do not necessarily need to start at zero.</li>
+            <br>
+            <li><strong>Dual axis charts</strong>. Charts that have two axes—where one series is tagged to one axis and another series is tagged to another, parallel axis—should be avoided. These kinds of charts are confusing, difficult to read, and are often misleading. There are several possible solutions to creating a dual axis chart, including multiple graphs (arrayed either horizontally or vertically); showing the percent change or another normalization; or using a different chart type such as a connected scatterplot. (There are two exceptions to this rule: charts that show the translation of a single measure such as Fahrenheit and Celsius temperatures; and the Pareto chart, which shows individual values as bars and a line showing the cumulative sum.)</li>
+            <br>
+            <li><strong>Pie charts with too many slices</strong>. This advice is purposely left unclear. There is no specific “rule” about how many slices are too many slices in a pie chart, but the general recommendation is to keep the overall number of slices in pie charts to fewer than 5. Humans cannot easily compare differently sized slices in pie charts, which reduces the effectiveness of the chart itself. In general, pie charts are best used when the slices of interest are values that generate right angles, which are familiar shapes, namely 25% and 75%, or a straight vertical line through the chart, namely 50%. While there may be exceptions to this guidance, Urban style is to avoid pie charts that have too many slices and are therefore difficult to understand.</li>
+            <br>
+            <li><strong>Avoid too many categories</strong>. While the Urban color palette offers several hues and multiple tints and shades, our standard is to keep the number of categories in any graph to fewer than seven. Stacked bar/column charts, pie charts, line charts, and other charts with seven or more series/colors will look cluttered and be difficult to read. In these instances, fewer series or several multiple charts may be a better solution.</li>
+            </ul>    
 
-                <!--            chart notes-->
-                <h5>Notes about this chart</h5>
+
+        </div>
+    </div>
+
+</section>
+
+   <!-- Accessibility Section -->
+<section id="accessibility" class="container content-section text-center">
+ 
+    <div class="row">
+        <div class="col-lg-10 col-lg-offset-1">
+            
+            <h1>Accessibility</h1>
+            <p>It’s important to consider how people with different impairments and disabilities access online content. Many people rely on screen readers to navigate the internet. (Screen readers are tools used by blind people, people with low vision, and people with learning disabilities who consume text in audio formats.) When a screen reader passes by content on the screen, including file names, titles, and headings, it reads this content out loud. Ensuring that content will work with screen readers is a large part of making a document accessible. Some of the primary issues we’re concerned with when we talk about accessibility are <a href="https://www.disabled-world.com/disability/types/hearing/" target="_blank">hearing issues</a>, <a href="https://www.cdc.gov/vision-health-data/case-definitions/vision-loss-blindness.html" target="_blank">vision issues</a>, <a href="https://www.nei.nih.gov/learn-about-eye-health/eye-conditions-and-diseases/color-blindness" target="_blank">color blindness</a>, <a href="https://www.cdc.gov/ncbddd/disabilityandhealth/disability.html" target="_blank">ability</a>, <a href="https://webaim.org/articles/cognitive/" target="_blank">cognition</a>, <a href="https://www.disabled-world.com/disability/awareness/neurodiversity/#google_vignette" target="_blank">neurodiversity</a>, and <a href="https://ldaamerica.org/disability_type/learning-disabilities/" target="_blank">learning disabilities</a>. Not all the conditions are permanent—consider, for instance, how you would use a computer if you were to break your arm.</p> 
+
+            <p>To create accessible content, Urban follows the guidelines laid out in Section 508 of the Rehabilitation Act of 1973. Section 508 requires US federal government agencies to develop, procure, maintain, and use information and communications technology that is accessible to people with disabilities. We also follow some of the recommendations and guidelines from the <a href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="_blank">Web Content Accessibility Guidelines</a>. Some federal agencies that fund Urban work have agency-specific accessibility requirements that we are asked to follow.</p>
+
+            <p>Data visualization creators can do several things to create accessible charts and tables:</p>
+
+            <h4>Write alt text</h4>
+            <ul>
+                <li>Screen readers can only communicate information via text. To meet accessibility requirements, all nontext items in a web product require “alternative text” (alt text), or a written description that communicates visual content. All Urban website content must have alt text for charts, tables, and images. All Urban PDF products asked to meet 508 accessibility requirements must also have alt text, but alt text is not otherwise required for images in Urban PDF products.</li>
+                <li>Urban researchers are responsible for writing alt text when it is required. It is often easier to write alt text as you create your figures rather than at the end of the writing process. Engaging with Urban’s Disability Affinity Group may be one way to seek advice on writing good alt text or, more generally, creating accessible content.</li>
+            </ul>
+
+            <br><br>
+            <p>Below, we share some guidance on writing from the <a href="https://www.macfound.org/" target="_blank">MacArthur Foundation</a> and a <a href="https://medium.com/nightingale/writing-alt-text-for-data-visualization-2a218ef43f81" target="_blank">blog post</a> by Amy Cesal:</p>
+            <ul>
+                <li>Alternative text should present the content and function, not necessarily a description, of an image. If you had to remove the image, what text would you put in its place?</li>
+                <li>If an image is decorative, such as a header image on a blog or cover image on a report, or the alternative text is provided in nearby text, then the image should have empty alternative text (some tools have an option for “blank” or “empty”). If this is not an option, leave the field blank. You should not put empty spaces, empty quotes (except in HTML alt=""), or any other nonsense information in these fields.
+                <li>Avoid words like “picture of,” “image of,” or “link to.”</li>
+                <li>Use the fewest number of words necessary. Less than 160 characters is ideal for search engine optimization.</li>
+                <li>Avoid phrases like “click here,” “here,” “more,” “more information,” “read more,” and “continue.” Instead, use descriptive text that informs a user of the link destination.</li>
+            </ul>  
+
+            <h4>Meet color contrast requirements</h4>
+            <p>Urban’s color palette has been tested to meet accessibility requirements. If you are working with an agency or group that requires additional accessibility considerations, please contact the Data Visualization or Design teams. You can also consider adding additional encodings to your visualizations, such as hashmarks, stripes, or other patterns. This style guide promotes clean design and graphs that are free of extraneous colors, but when communicating data to readers with accessibility needs, additional encodings may be important. </p>
+ 
+            <p><a href="https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#contrast-minimum" target="_blank">Web Content Accessibility Guidelines (WCAG) 2.0</a> Level AA requires the contrast ratio of the luminance (think: brightness) of two colors to be 4.5:1 for normal text and 3:1 for large text. A higher level of contrast (Level AAA), requires a contrast ratio of 7:1 for normal text and 4.5:1 for large text. Large text is defined as 14 point (typically 18.66px) and bold or larger, or 18 point (typically 24px) or larger. Text standards also apply to text in graphics, such as data labels in a chart or text boxes in a logic model. </p>
+        
+            <p>Please note that the Urban blue used in Urban Word templates does not meet color contrast requirements for headings. If you are producing an Urban PDF product that needs to meet 508 accessibility requirements, the editorial team has 508-compliant Word templates that use Urban dark blue to meet contrast requirements.</p>
+
+            <h4>Avoid merged cells in tables</h4>
+            <p>Tables are possibly the most difficult aspect of working with 508 accessibility standards. Tables that meet accessibility requirements cannot have any merged cells, blank cells, blank rows, or blank columns, as screen readers have a difficult time with spanner headings and blank cells. To meet 508-accessibility requirements, tables need to be stripped of spanner headings so that every column has a separate heading. This can be a tedious and time-consuming process. If you know you are producing a product that needs to be 508 compliant, it can be helpful to design tables that have no spanner headings from the start. </p>
+
+            <h4>Use built-in Word styles in Urban Word templates</h4>
+            <p>Manual formatting that creates tabbed indents for paragraphs, line spaces between paragraphs, and arbitrary heading styles is not accessible, as it creates extra characters that screen readers will read. Urban Word templates have built-in styles that apply proper line spacing, paragraph indents, and heading hierarchy without relying on manual formatting. Urban’s built-in styles also cover table and figure formatting to ensure that proper line spacing and styles are applied to figure and table numbers, titles, subtitles, and notes. Built-in styles also allow us to apply the correct formatting and spacing to table elements, including column headings, row headings, table rows, and table text. Using these styles rather than manually applying formatting will help meet accessibility guidelines for line spacing, headings, and color contrast. You can apply Urban Word styles using the Styles Pane in Word, and/or your editor will review and apply these styles during the editing process. For PDF products that need to meet 508 accessibility requirements, use the 508-compliant brief or report template, which has additional accessibility formatting built in.</p>
+
+            <h4>Write in plain language</h4>
+
+            <p>Government agencies follow plain language guidelines to meet the <a href="https://www.plainlanguage.gov/guidelines/" target="_blank">Plain Language Act of 2010</a>. In cases where Urban products must meet plain language requirements, the Urban Editorial team can conduct a plain language edit in addition to a copyedit. But even if your product does not need to meet plain language requirements, adopting some principles of plain language can help your readers better understand your charts and tables.</p> 
+            <ul>
+                <li><strong>Use active voice in titles and labels</strong>. Urban style is to use concise, active titles that tell the reader what they are supposed to learn and take away from the graph. Active titles help tell the story of your graph.</li>
+                <li><strong>Make sure to explain all chart parts</strong>. Your chart or table should have enough information that it can be understood out of context of the rest of your document. Make sure titles, labels, legends, and notes provide enough information to tell the full story of your data. Your target audience should be able to navigate your chart, even if they don’t have a technical background.</li>
+                <li><strong>Reduce jargon</strong>. Think about your audience and decide whether the terms that are familiar to you as a researcher will be understood by your readers. Aim to be as clear as possible and try to replace complicated words and phrases with more direct language. If a technical term is necessary to include but may not be understood by all your readers, define it!  </li>
+                <li><strong>Omit needless words</strong>. With charts and tables, space is at a premium. Identify phrases that can be rewritten to be more concise. </li>
+            </ul>
+
+            <p>Additional guidelines and strategies can be found in Urban’s <a href="https://www.urban.org/research/publication/do-no-harm-guide-centering-accessibility-data-visualization" target="_blank"><em>Do No Harm Guide: Centering Accessibility in Data Visualization</em></a> and the following Urban editorial resources: “<a href="https://urbanorg.app.box.com/file/1319104028961?s=phtm4c7aefgv1rg6wlfe0conbhqewyfy" target="_blank">508 Compliance Process</a>” and “<a href="https://urbanorg.app.box.com/file/317866315236?s=c7y0hwmrp9j4bd7k6sws5ucchwyuiiz7" target="_blank">508 Accessibility Basics</a>.”</p>
+        </div>
+    </div>
+</section>
+
+    <!-- Race Ethn Gender Section -->
+    <section id="raceethgender" class="container content-section text-center">
+ 
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1">
+
+                <h1>Considerations for Data Related to Race, Ethnicity, and Gender</h1>
+                <p>The Urban Institute’s mission is to open minds, shape decisions, and offer solutions. To advance that goal, we must think intentionally about how we can learn from and speak to audiences that reflect the rich diversity of US communities, and we must foster a culture where employees from different backgrounds and perspectives enjoy mutual respect, inclusivity, and collegiality.</p>
+
+                <p>Urban’s efforts around diversity, equity, and inclusion (DEI) are reflected in our hiring and promotion practices as well as in our published work. With every data project, Urban researchers have an opportunity to carefully consider the language they use to describe people and groups and how to visually present data about these groups to readers, users, and audiences, including the communities that participate in or are affected by our research.</p>
+                    
+                <h4>Choosing language related to people and demographic groups</h4>
+                <p>Urban editorial style does not prescribe language for the terms used to describe people. Instead, we encourage research teams to consider using language and terms that are inclusive and respectful of the people they describe. (See Urban’s <a href="https://explorer.urban.org/page/2231" target="_blank">DEI toolkits</a>, a collection of reference guides for creating respectful and inclusive products.) Urban editors encourage researchers to choose terms mindfully and to use these terms consistently and appropriately throughout a research product, including in the titles, labels, and annotations of tables and graphs.</p> 
+                <p>In some instances, Urban researchers may choose to use the same terms used in an underlying data source, such as the racial categories used by the US Census Bureau. In other cases, researchers may choose to deviate from those terms. Researchers may want to consider including a footnote explaining their language choices related to the people and groups in their research and, if appropriate, why these language choices mirror or deviate from the terms used in an underlying data source. (This footnote only needs to appear once in an Urban publication and is usually placed at the first instance of a term; it does not need to be repeated in the notes for each table and figure.) There are example footnotes in many of the DEI toolkits.</p> 
+                    
+                <h4>Choosing the order for groups in charts and tables</h4>
+                <p>Many graphs and tables encode data by demographic group. Graph producers should take an active role in choosing how to order and present data values for different groups. Urban does not have universal rules about ordering demographic data in visuals, but a few considerations can help you make decisions about order:</p>
                 <ul>
-                    <li>It is hard to see change in the middle series because of the shifting height of the salaries and wages bars.</li>
-                    <li>The x-axis is starting to get a little cramped. To free up some space, we could modify the data so that anything over one million dollars is represented as $1m instead of $1,000,000.
+                    <li>Is there a quantitative relationship or ordering between groups in your data?</li>
+                    <li>Is there a particular story or relationship you are trying to visualize? If so, the order or presentation of results should reflect that story.</li>
+                    <li>Is there a basic way to sort the results, such as by population size or sample size (weighted or unweighted), alphabetically, or by magnitude/effect of the results? </li> 
+                    <li>Are groups ordered in a particular way in the underlying data, and is it appropriate to match that order in your chart or table?</li>
+                </ul>    
+                
+                <h4>Choosing colors for groups of people</h4>
+                    
+                <p>Follow the Urban color palette to select colors for the groups in your dataset. Urban tries not to use color palettes that reinforce gender or racial stereotypes (e.g., pink for women and blue for men). Furthermore, researchers should avoid using colors associated with skin tones. Using standard Urban colors will avoid such issues.</p> 
+                    
+                <p>Additional guidelines and strategies can be found in Urban’s <a href="https://www.urban.org/research/publication/do-no-harm-guide-applying-equity-awareness-data-visualization" target="_blank"><em>Do No Harm Guide: Applying Equity Awareness in Data Visualization</em></a>.</p>
+
+            </div>
+        </div>
+    </section>
+
+  <!-- Chart Examples Section -->
+
+    <section id="chartexamples" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1">
+
+                <h1>Chart Examples</h1>
+
+                <p>The following examples use the Urban style and color guidelines to illustrate common chart types in Excel. To deconstruct any example, download the Excel Example Files file. The Excel add-in and the R theme will replicate (or closely replicate) these styles but may still require some additional manual edits. Over time, this list will grow to include more graph types and additional guidance.</p>
+                
+                <h3>Excel examples file</h3>
+                <a href="StyleGuideGraphs.xlsx">
+                    <button class="btn btn-primary">Download</button>
+                </a>
+                
+                <h3 style="padding-top:5rem;">Horizontal and Vertical Bar Charts</h3>
+                <p>In the Excel parlance, bar charts that are oriented vertically are called “column charts” and bar charts that are oriented horizontally are called “bar charts.” Both versions use a rectangle (or bar) as the core attribute to visualize the data. We use the term “bar charts” below to refer to both orientations. </p>
+
+                <h4>When to use a bar chart (horizontally- or vertically-oriented)</h4>
+                <ul>
+                    <li>To compare numerical values for different observations. 
                     </li>
-                    <li>Because some series are too small to directly label them, a legend is necessary. The legend is positioned to the right of the chart in a vertical layout. The order matches the order of the data in the columns. </li>
+                    <li>To show relative amounts.
+                    </li>
+                    <li>To break one numerical variable out into different subgroups with grouped or stacked bars or columns.
+                    </li>
+                    <li>To show changes over time for a relatively small number of time points.
+                    </li>
+
                 </ul>
+
+                <h4>Style tips</h4>
+                <ul>
+                    <li>Avoid 3D bars or columns.
+                    </li>
+                    <li>The y-axis should start at zero <a href="http://qz.com/418083/its-ok-not-to-start-your-y-axis-at-zero/" target="_blank">(there are a few instances when it is okay for the y-axis not to start at zero)</a>, but with few exceptions, Urban style is to start all bar charts at zero.
+                    </li>
+                    <li>The width of the bars should be about twice the width of the space between the bars (use the <em>Gap Width</em> format area in Excel).
+                    </li>
+                    <li>If all the bars measure the same variable, make them all the same color. Using different colors is an unnecessary element on the chart. When directly labeling the bars, consider eliminating the horizontal gridlines and y-axis labels as they add unnecessary elements to the chart.  
+                    </li>
+                    <li>Sequential series can be shaded from lightest to darkest for easy comparison. 
+                    </li>
+                    <li>To differentiate subsets of data, projections, or averages, consider using a different color shade or gray.  
+                    </li>
+                    <li>Legends should be stretched across the top of the chart and the order of the legend entries should match the order in the chart.
+                    </li>
+                    <li>When data labels are included—typically just outside the ends of the bars—Urban style is to omit y-axis labels and gridlines (see examples below). 
+                    </li>
+                    <li>In the second graph below, notice the use of the black color for the bar measuring the “Overall” results to differentiate it from the other categories. Also notice the alphabetical ordering of racial groups. For alternative sorting strategies for demographic data, see the Urban Institute’s Do No Harm Project.  
+                    </li>
+                    <li>
+                        The text box for <strong>Sources</strong> and <strong>Notes</strong> may need to be adjusted manually to fit all of the text. For web graphics, Urban style is to try to align the top of that text box with the Urban logo.  
+                    </li>
+                </ul>
+
+                <img src="img/bar-chart.png" width="100%" class="example-chart" style="padding: 3rem 0;"/>
+                <br />&nbsp;<br />
+                <img src="img/column-chart.png" width="100%" class="example-chart" style="padding: 3rem 0;" />
                 <br />&nbsp;<br />
 
-                <h5>Grouped column chart</h5>
-                <img src="img/grouped-column-categorical-new.png" class="example-chart" width="100%" />
-
-                <!--            chart notes-->
-                <h5>Notes about this chart</h5>
+                <h4>When to use a horizontal bar chart specifically</h4>
+               
                 <ul>
-                    <li>This version makes it easier to see the change in individual series across categories.</li>
-                    <li>It is also easier to compare series within the same category, allowing a better visual understanding of the part-to-whole relationship of any one data point.</li>
-                    <li>The x-axis is starting to get a little cramped. To free up some space, we could modify the data so that anything over one million dollars is represented as $1m instead of $1,000,000.
+                    <li>Horizontal bar charts are especially useful when long labels would make the text vertical or oddly-oriented in a vertical bar chart.  
                     </li>
-                    <br />&nbsp;<br />
-
-
+                    <li>
+                    When using a horizontal bar chart, right-align the category labels and center them vertically with the respect to the bar.  
+                </li>
+                <li>
+                    Same styling decisions for vertical bar charts apply to horizontal bar charts. 
+                </li>
                 </ul>
 
-                <h5>Small Multiples Area Charts</h5>
+            
+                <h4>Paired Bar Charts</h4>  
 
-                <img src="img/area-multiples-new.png" class="example-chart" width="100%" />
-
-
-                <!--            chart notes-->
-                <h5>Notes about this chart</h5>
+                <h4>When to use a paired bar chart </h4>
                 <ul>
-                    <li>If the story for this chart is about the distribution of any given series, small multiple area charts are the way to go. </li>
-                    <li>For example, it's easy to see that the lower-earning groups get most of their income from salary, whereas the highest-earners get more from capital gains.</li>
-                    <li>The x-axis labels are a little small.</li>
-                    <li>The legend is likely unnecessary—the same labels could be accomplished with text boxes. </li>
-                    <li>The colors here are also unnecessary—There's no need to code the data by color because they're all separate. I do, however, like the contrast the colors give each category.</li>
+                    <li>When you want to compare different groups or show the change in the composition of groups over time, but the data is not in a continuous time series. 
+                    </li>
+                    <li>
+                    To display the part-to-whole relationship of categories, as well as totals. 
+                    </li>
+                    <li>
+                    Relative to stacked bar charts (see next section) where some series do not sit on a consistent horizontal baseline, this version makes it easier to see the change in individual series across categories. It is also easier to compare series within the same category, allowing a better visual understanding of the part-to-whole relationship of any one data point. 
+                    </li>
+                    <li>
+                    In cases where large values hide some of the variation for smaller values, consider using more than one chart.  
+                    </li>
                 </ul>
+
+
+                <img src="img/paired-bar-chart.png" width="100%" class="example-chart" style="padding: 3rem 0;"/>
+                <br />&nbsp;<br />
+                <img src="img/paired-column-chart.png" width="100%" class="example-chart" style="padding: 3rem 0;" />
+                <br />&nbsp;<br />
+
+                <h4>Stacked Bar Charts</h4>  
+
+                <h4>When to use a stacked bar chart </h4>
+                <ul>
+                    <li>
+                        When you want to compare different groups or show the change in the composition of groups over time, but the data is not in a continuous time series. 
+                    </li>
+                    <li>
+                        To display the part-to-whole relationship of categories, as well as totals. 
+                    </li>
+                </ul>
+
+                <h4>Style tips </h4>
+                <ul>
+                    <li>
+                        Again, the axis in a bar chart should always start at zero. 
+                    </li>
+                    <li>
+                        In a single chart, avoid plotting too many series—more than five or six—because too many categories generate a confusing picture.  
+                    </li>
+                    <li>
+                        Sequential series can be shaded from lightest to darkest for easy comparison. 
+                    </li>
+                    <li>
+                        Order the segments of the chart in a logical fashion. It is easier for readers to compare values for the series that sits directly on the horizontal or vertical axis—because the baseline doesn’t change over time. Thus, that series should either be (a) the most important series or (b) the series with the largest values. 
+                    <ul>
+                        <li>That decision, however, should not override a logical ordering of the data, for example, age groups or educational attainment groups. 
+                        </li>
+                    </ul>
+                </li>
+                </ul>               
+       
+                <img src="img/stacked-bar-chart.png" width="100%" class="example-chart" style="padding: 3rem 0;"/>
+                <br />&nbsp;<br />
+                <img src="img/stacked-column-chart.png" width="100%" class="example-chart" style="padding: 3rem 0;" />
+                <br />&nbsp;<br />
+
             </div>
 
-            <!--                END CHART-->
-            <!--
-            ///////////////////////////////////////
-            /////////////     CHART     ///////////
-            ///////////////////////////////////////
--->
+
+
 
             <div class="col-lg-10 col-lg-offset-1">
                 <hr class="divider" />
                 <h3 style="margin-top:25px;">Line Charts</h3>
                 <h4>When to use a line chart</h4>
                 <ul>
-                    <li>To show the trend in one variable, usually over time.
+                    <li>To show the trend in one or more metrics, usually over time.  
                     </li>
-                    <li>To show multiple variables with multiple lines (if they are on the same scale).
-                    </li>
-                    <li>To show the same variable for multiple observations with multiple lines.</li>
                 </ul>
 
                 <h4>Style tips</h4>
                 <ul>
-                    <li>The y-axis should always<a href="http://qz.com/418083/its-ok-not-to-start-your-y-axis-at-zero/" target="_blank">*</a> start at zero.
+                    <li>   
+                         When possible, directly label the data series. If the lines are too close together or the labels are too long, a horizontal legend below the title is preferable. 
                     </li>
-                    <li>When possible, directly label series. If too close together, use a legend.
+                    <li>
+                        Avoid individual data markers for long time series. In the example below, data markers are added because the lines are essentially parallel. 
                     </li>
-                    <li>Avoid individual data markers.
+                            <ul>
+                    <li>
+                        When data markers are included on a line chart, Urban typically uses circles. 
                     </li>
-                    <li>Avoid dashed lines.
+                    <li>
+                        Urban style does not define a specific number of data points or lines to determine when data markers should be included. 
+                       </li> 
+                            </ul>
+                    <li>
+                        In a single chart, try to keep the maximum number of lines to no more than five or six. Plotting too many lines on the same chart can be confusing and clutter the message.  
                     </li>
-                    <li>In a single chart, try to keep the maximum number of lines to three or four. More is not always better. Plotting too many lines on the same chart gives a confusing picture and defeats the purpose.
+                             <ul>
+                            <li>
+                                An important exception is the case where you may want to plot a lot of lines but only add color (and/or change the line thickness) to specific lines. For example, the graph below shows the annual poverty rate for all 50 states and Washington, DC for the 2008-2021 period, but highlights the lines for the areas with the biggest declines (Delaware, Washington, DC, and Idaho). In such cases, the other lines can be made a thinner and in a lighter gray color while the three areas of interest made slightly thicker and in Urban colors. 
+                            </li>
+                            <li>
+                                This can be more easily done using the “Start With Gray” option in the Urban Excel add-in tool. 
+                            </li> 
+                            </ul>
+                    <li>
+                        When necessary, legends should be stretched across the top of the chart and the order should match the order of the lines in the chart.  
                     </li>
-                    <li>Legends should be stretched across the top of the chart and the order should match the order in the chart.
+                    <li>
+                        As noted above, avoid dual axis line charts whenever possible. In such cases, consider another chart type, such as two separate line charts or a connected scatterplot. 
                     </li>
-                    <li>Sequential series should be shaded from lightest to darkest for easy comparison.</li>
                 </ul>
 
 
+             
+                <img src="img/LineChart.png" width="100%" class="example-chart" style="padding: 3rem 0;"/>
+                <br />&nbsp;<br />
+                <img src="img/PovertyRates.png" width="100%" class="example-chart" style="padding: 3rem 0;" />
+                <br />&nbsp;<br />
+             
 
-                <img src="img/line-chart-new.png" width="100%" class="example-chart" />
 
-                <h5>Notes about this chart</h5>
+            </div>
+
+
+
+
+            <!--    AREA CHARTS      -->
+
+            <div class="col-lg-10 col-lg-offset-1">
+                <hr class="divider" />
+                <h3 style="margin-top:25px;">Area Charts</h3>
+                <h4>When to use an area chart</h4>
                 <ul>
-                    <li>Supposing the data in this chart is categorical, I used two contrasting colors. If the data were sequential, I would have used two shades of teal.
+                    <li>To show a trend in composition of a group or groups over time. </li>
+                    <li>To display the part-to-whole relationship of categories, as well as totals.
                     </li>
-                    <li>The x-axis is starting to get a little cramped. To free up some space, we could reduce the number of labels (labeling every 2, 5, or 10 years) or change the year format to be '98, '99, '00, etc.
-                    <li>If the labels contain the month and year, the standard format would be "Jan. 2010", for instance. Alternatively, other formats could be "1/2010" or "1/'10".</li>
+                </ul>
+
+                <h4>When to use a stacked column chart</h4>
+                <ul>
+                    <li>When you want to compare different groups or show the change in the composition of groups over time, but the data is not in a continuous time series. </li>
+                </ul>
+
+                <h4>Style tips</h4>
+                <ul>
+                    <li> Basic guidance is to start the vertical (y-) axis at zero for area charts. While there is <a href="https://qz.com/418083/its-ok-not-to-start-your-y-axis-at-zero" target="_blank">some debate about this recommendation</a>, Urban views it as a starting point that can be altered with additional discussion.  
+                    </li>
+                    <li>
+                        When possible, directly label the series. If space is an issue, consider adding them off to the right of the graph, preferably matching the color of the data series. If the labels are too small or there are too many data series, use a legend positioned horizontally along the top of the chart.  
+                    </li>
+                    <li>
+                        In a single chart, avoid plotting too many series—more than five or six—because too many categories generate a confusing picture.  
+                    </li>
+                    <li>
+                        Sequential series can be shaded from lightest to darkest for easy comparison. 
+                    </li>
+                    <li>
+                        Order the segments of the chart in a logical fashion. It is easier for readers to compare values for the series that sits directly on the horizontal axis—because the baseline doesn’t change over time. Thus, that series should either be (a) the most important series or (b) the series with the largest values.  
+                    </li>
+                    <li>
+                        When plotting time years (e.g., years) along the x-axis, the typical approach is to use round numbers in intervals of one, two, five, or ten. Custom labels can be added when using round increments but would end on an odd year. For example, an axis extends from 2000 to 2024 and shows increments in every five years; in this case, a custom label could be added for 2024 at the end of the graph.  
+                    </li>
+                <ul>
+                    <li>
+                        When using round increments are difficult to fit in the graph, consider using abbreviations for the dates, such as “’90” for annual data or “Jan 1990” for monthly data.  
+                    </li>
+                </ul>
+                    <li>
+                        In the graph below, notice the use of “Trillions of dollars” in the subtitle area to define the y-axis labels, rather than writing out the full number with all of the zeros. 
+                    </li>
+                </ul>
+
+                <img src="img/area-chart.png" width="100%" class="example-chart" style="padding: 3rem 0;"/>
+                <br />&nbsp;<br />
+                <img src="img/stacked-area-chart.png" width="100%" class="example-chart" style="padding: 3rem 0;" />
+                <br />&nbsp;<br />
+            </div>
+
+        <!--      Pie    -->
+
+            <div class="col-lg-10 col-lg-offset-1">
+                <hr class="divider" />
+                <h3 style="margin-top:25px;">Pie Charts</h3>
+                <h4>When to use a pie chart</h4>
+                <ul>
+                    <li>    Use pie charts when you want to show the relative relationship between a relatively small number of slices. It can be difficult for readers to accurately discern the values when there are more than 5 or 6 slices in the chart.  
+                    </li>
+                    <li>
+                        One strategy to make legible pie charts with many categories is to aggregate smaller values into an “other” or “miscellaneous” category.  
+                    </li>
+                    <li>
+                        If accuracy is a paramount concern, consider using a bar chart or another chart type.  
+                    </li>
+                    <li>
+                        Keep in mind that increments of 25° create right angles (and a straight line down the center of the chart) are more familiar to readers.  
+                    </li>
+                    <li>
+                        The typical alignment is to start the graph at 12 o’clock and have the slices rotate clockwise from largest to smallest. An exception to this standard is when the series follow a logical order, such as age group. 
+                    </li>
+                    <li>
+                        It's helpful to directly label each slice. Relying on a key requires the reader to do too much work to shift their eyes from one spot to another. 
+                    </li>
+                    <li>
+                        Pie charts should always add up to 100 percent. 
                     </li>
                 </ul>
 
                 <br />&nbsp;</br />
-                <img src="img/line-new.png" width="100%" class="example-chart" />
-                <h5>Notes about this chart</h5>
-                <ul>
-                    <li>Sometimes, we need to display data that are not on regular intervals. In these cases, it is helpful to mark the data points with individual markers.</li>
-                </ul>
+                <img src="img/pie.png" width="100%" class="example-chart" />
+            
 
 
 
             </div>
-
-            <!--            END CHART-->
-
-
-            <!--
-            ///////////////////////////////////////
-            /////////////     CHART     ///////////
-            ///////////////////////////////////////
--->
-
-            <div class="col-lg-10 col-lg-offset-1" id="piecharts">
-                <hr class="divider" />
-                <h3 style="margin-top:25px;">Pie and Distribution charts</h3>
-                <h4>When to use a pie chart</h4>
-                <ul>
-                    <li>Use them sparingly. Often a bar or column chart is better. It is difficult to visually judge the size of circles (or circle segments). These segments are easier to discern as rectangles on a scale.
-                    </li>
-                    <li>Use pie charts when you want to show the relative relationship between two or three things</li>
-                    <li>When they add up to 100 percent (which may necessitate the inclusion of a category such as “none”, or “other”).
-                    </li>
-                </ul>
-
-                <div style="background-color:#efefef; padding: 10px;">
-                    <h4 class="yellow-5" style="padding: 10px;">Cautions about pie charts</h4>
-                    <h6>Excerpted from Jon Schwabish's <a href="
-http://pubs.aeaweb.org/doi/pdfplus/10.1257/jep.28.1.209" target="_blank">An Economist’s Guide to Visualizing Data</a></h6>
-                    <p>The debate concerning the effectiveness of pie charts is among the most contentious in the field of data visualization. Many people love pie charts—they are familiar, easily understood, and present “part-to-whole” relationships in an obvious way. But others argue that because pie charts force readers to make comparisons using the areas of the slices or the angles formed by the slices—something that our visual perception does not accurately support—they are not an effective way to communicate information.</p>
-                    <p>Pie chart slices that form 90-degree right angles—that is, slices that form one-quarter increments—are the most familiar to our eyes. Other amounts are more difficult to discern. For that reason, a column or bar chart is preferable in most cases.
-                    </p>
-                    <img src="img/pie-comparison.png" width="100%" class="example-chart" />
-
-
-                    <h4>Pie chart research</h4>
-                    <p>
-                        <ul>
-                            <li><a href="
-http://www.perceptualedge.com/articles/visual_business_intelligence/save_the_pies_for_dessert.pdf" target="_blank">Save the Pies for Desert,</a> Stephen Few</li>
-                            <li><a href="
-http://pubs.aeaweb.org/doi/pdfplus/10.1257/jep.28.1.209" target="_blank">An Economist’s Guide to Visualizing Data</a>, Jon Schwabish</li>
-                            <li><a href="
-http://www.businessinsider.com/pie-charts-are-the-worst-2013-6" target="_blank">Pie Charts are the Worst,</a> Walter Hickey</li>
-                            <li><a href="
-                        http://www.jstor.org/stable/2288400?seq=15#page_scan_tab_contents" target="_blank">Graphical Perception: Theory, Experimentation, and Application to the Development of Graphical Methods,</a> William S. Cleveland and Robert McGill</li>
-                        </ul>
-                    </p>
-                    <p>
-                        The current thinking is pretty much summed up by this tweet from data visualization pioneer Edward Tufte: "Pie chart users deserve same suspicion+skepticism as those who mix up its/it&#39;s, there/their. To compare,use little table, sentence, not pies." - Edward Tufte (@EdwardTufte)</p>
-                    <p>
-                        That’s not to say that pie charts don’t have a place when communicating research. They're OK to use when the number of slices are fewer than four or five— and when you’re trying to tell a clear ‘part-to-whole’ story about a single slice.
-                    </p>
-
-                </div>
-                <!--            end cautions section-->
-
-                <h4>Pie chart examples</h4>
-                <img src="img/pie-new.png" width="100%" class="example-chart" />
-
-                <h5>Notes about this chart</h5>
-                <ul>
-                    <li>Some times, pie charts are useful. In this case, the largest slice is 51%, a value that is very easy to recognize because our eyes can easily find the 50% mark.
-                    </li>
-                    <li>Pie charts work extremely well when they have fewer than four or five slices.
-                    </li>
-                    <li>It's helpful to directly label each slice. Relying on a key requires the reader to do too much work to shift their eyes from one spot to another.
-                    </li>
-                    <li>With only a few colors and direct labels, extra colors become distracting. Stick with only one color and use a highlight if needed.
-                    </li>
-                    <li>An alternative, below, is a histogram. But in this case, the pie chart is nearly as compelling.
-                    </li>
-
-                </ul>
-                <img src="img/pie-alternative-new.png" width="100%" class="example-chart" />
-                <hr class="divider" />
-                <img src="img/pie-many-new.png" width="100%" class="example-chart" />
-                <h5>Notes about this chart</h5>
-                <ul>
-                    <li>This pie chart has many more slices than the first example, however It's still fairly easy to make out the individual slices.</li>
-                    <li>Depending on the purpose of the chart, a histogram may be a better option. If the purpose is to show the size of one slice compared to the rest of the categories, a pie chart makese sense. In that case, it would be good to highlight that individual slice with a different color. If the purpose of the chart is to show how each slice compares to other slices, a histogram would work better (below). Histograms make it much easier to compare values than pie charts.
-                    </li>
-                </ul>
-                <img src="img/pie-many-alternative-new.png" width="100%" class="example-chart" />
-
-
-
-            </div>
-
-
 
 
     </section>
@@ -1603,124 +2242,286 @@ http://www.businessinsider.com/pie-charts-are-the-worst-2013-6" target="_blank">
         <div class="row">
             <div class="col-lg-10 col-lg-offset-1">
                 <h1>Maps</h1>
-                <H3>should it even be a map?</H3>
-                <p>Just because you've got geographic data, <a href="https://drive.google.com/open?id=0B8Ayd1M8yKi4VmE3ejRuTkR3a2c" target="blank">doesn't mean that you have to make a map.</a> Many times, there are more efficient storyforms that will get your point across more clearly. If your data shows a very clear geographic trend or if the absolute location of a place or event matters, maps might be the best approach, <a href="http://www.ericson.net/content/2011/10/when-maps-shouldnt-be-maps/" target="_blank">but sometimes the reflexive impulse to map the data can make you forget that showing the data in another form might answer other&mdash;and sometimes more important&mdash;questions.</a> Consider using other graphic types when the interesting patterns are not geographic patterns, or when the geographic data is more effective for analysis than for presentation. Many times, a simple bar chart, column chart, scatterplot or table are more effective at translating your research to a reader.</p>
-                <p>
-                    <p>In some cases, maps might actually be misleading. State level US maps, for example, give disproportionate weight to states with large land areas, and tend to obscure smaller states in the Northeast. Maps with more granularity can still be misleading. Many times, what appear to be geographic trends are actually directly correlated to population density (wealth, power consumption, etc.), or in some cases directly correlated to some other hidden variable such as racial composition, age distribution, or even weather.</p>
-                    <h3>Map Projections</h3>
-                    <p>Depending on the purpose and content, maps should use different projections. US maps for print publication, or use in reports should use the Albers Equal Area projection. Simple interactive county- or state-level maps also use the Albers projection. <a href="http://apps.urban.org/features/ncdb/immigrants-reshaping-residential-segregation/index.html#" target="_blank">Zoomable tile-based interactive maps</a> use the Mercator projection.</p>
+                
+                <p>There are obvious advantages to plotting geographic data on a map—people can find themselves and their communities, they can see the pattern across a state or country, and they are generally familiar to readers. However, one should approach the desire of creating a map with skepticism and critical thought. Is a map the best way to present geographic data? Or is the map simply showing where people live? Does it show interesting relationships to explore or simply relying on the fact that a map can be familiar to readers? </p>
+                <p>Whether to create a map and which kind of map to use will depend on two questions: How important are the geographic patterns in the data? And how important is it for the reader to see a familiar map? </p>
+                <p>A longer version of this section—along with Urban-specific guidance on creating maps in Excel, Datawrapper, and R—can be found at the <a href="https://ui-research.github.io/code-library/mapping/mapping.html" target="_blank">Code@Urban Github page</a>.</p>
+                
+                <h4>Should you use a map to visualize your data? </h4>
 
-                    <h3>Map Colors</h3>
-                    <p>Maps should follow the same basic rules as other graphics when it comes to colors. <a href="https://en.wikipedia.org/wiki/Choropleth_map" target="_blank">Choropleth maps</a>, or maps that show the magnitude of a variable, should normally use the blue sequential ramp. </p>
+                <p>The overarching challenge with creating data-driven maps is that the familiarity of the map does not necessarily accurately represent the data being plotted. Take, for example, the US presidential election. What matters in the election is the number of electoral votes for each state, which directly corresponds to the number of people living in the state, not the state’s land area. So, for example, Wyoming, Idaho, and Montana are more than 325,000 square miles of the country and currently have 11 electoral votes. Massachusetts, by comparison, is about 7,800 square miles or less than 2.5 percent of the other three states, but itself also has 11 electoral votes. To address this imbalance between land size and the importance of the geography in the data, cartograms are one alternative to the standard maps. </p>
 
-                    <div class="multi-group-container">
-                        <div class="color five">
-                            <div class="swatch groupcolor blue-1">
-                                <div class="color-code"></div>
-                            </div>
-                        </div>
-                        <div class="color five">
-                            <div class="swatch groupcolor blue-3">
-                                <div class="color-code"></div>
-                            </div>
-                        </div>
-                        <div class="color five">
-                            <div class="swatch groupcolor blue-5 dark ">
-                                <div class="color-code"></div>
-                            </div>
-                        </div>
-                        <div class="color five">
-                            <div class="swatch groupcolor blue-7 dark">
-                                <div class="color-code"></div>
-                            </div>
-                        </div>
-                        <div class="color five">
-                            <div class="swatch groupcolor blue-9 dark">
-                                <div class="color-code"></div>
-                            </div>
-                        </div>
+                <p>Cartograms reshape geographic areas based on the data values. They might use differently-sized circles or squares for each state, or similarly-sized shapes to correspond to data elements. In his book <a href="https://amzn.to/3XRyrxx" target="_blank">Cartography</a>, Kenneth Field summarizes the purpose of cartograms: </p>
 
-                    </div>
+                <blockquote>
+                    The intent of most thematic maps is to provide the reader with a map from which comparisons can be made, and so geography is almost always inappropriate. This fact alone creates problems for perception and cognition. Accounting for these problems might be addressed in many ways such as manipulating the data itself. Alternatively, instead of changing the data and maintaining the geography, you can retain the data values but modify the geography to create a cartogram. 
+                </blockquote>
 
-                    <iframe class="map-frame" frameborder="1" height="650px" marginheight="0px" marginwidth="0px" name="myiFrame" scrolling="no" src="http://apps.urban.org/features/school-poverty/map1.html" style="border:0px #FFFFFF none;" width="100%"></iframe>
+                <h4>Map Projections </h4>
 
-                    <p>Sometimes, a map needs to <a href="http://apps.urban.org/features/mapping-americas-futures/" target="_blank">display change in a positive and negative way.</a> In those cases, a diverging scheme works best. </p>
-                    <div class="multi-group-container">
-                        <div class="color eight">
-                            <div class="swatch groupcolor yellow-7 dark">
-                                <div class="color-code"></div>
-                            </div>
-                        </div>
-                        <div class="color  eight">
-                            <div class="swatch groupcolor yellow-5 ">
-                                <div class="color-code"></div>
-                            </div>
-                        </div>
-                        <div class="color  eight">
-                            <div class="swatch groupcolor yellow-3 ">
-                                <div class="color-code"></div>
-                            </div>
-                        </div>
-                        <div class="color  eight">
-                            <div class="swatch groupcolor yellow-1">
-                                <div class="color-code"></div>
-                            </div>
-                        </div>
-                        <div class="color  eight">
-                            <div class="swatch groupcolor blue-1 ">
-                                <div class="color-code"></div>
-                            </div>
-                        </div>
-                        <div class="color  eight">
-                            <div class="swatch groupcolor blue-3 ">
-                                <div class="color-code"></div>
-                            </div>
-                        </div>
-                        <div class="color  eight">
-                            <div class="swatch groupcolor blue-5 dark">
-                                <div class="color-code"></div>
-                            </div>
-                        </div>
-                        <div class="color  eight">
-                            <div class="swatch groupcolor blue-7 dark">
-                                <div class="color-code"></div>
-                            </div>
+                <p>There are myriad maps to choose from to create a data visualization. Geographic units on a map (e.g., states or counties) can be colored differently (i.e., “choropleth maps”) or can include different shapes such as dots or lines. Furthermore, there are hundreds of different map projections to choose from, all of which are attempting to take the three-dimensional spherical shape of the earth and flatten it to two dimensions. 
+                    </p>
+                <p>Depending on the purpose and content, maps should use different projections. US maps for print publication, or use in Urban reports should use the Albers Equal Area projection. Simple interactive <a href="https://www.urban.org/data-tools/does-snap-cover-cost-meal-your-county-2022" target="_blank">county-level</a> or <a href="https://www.urban.org/projects/how-much-would-poverty-decrease-each-state-if-every-eligible-person-received-safety-net" target="_blank">state-level</a> maps also typically use the Albers projection. <a href="https://www.urban.org/data-tools/where-are-children-head-start-exposed-environmental-hazards" target="_blank">Zoomable tile-based interactive maps</a>, on the other hand, tend to use the Mercator projection. </p>
+
+                <h4>Different Kinds of Maps </h4>
+
+                <p>Once you have decided that a map is the best solution for your data, the next question is what kind of map are you going to create? Urban typically produces three kinds of maps:</p>  
+                <ul>
+                    <li>
+                    <strong>Choropleth maps</strong>. A map that uses colors, shades, or patterns on geographic units to show proportionate quantities and magnitudes. 
+                </li>
+                <li>
+                    <strong>Tile grid maps</strong>. A map that uses a single square for each geographic unit to approximate the shape of the overall geography. There are variations on the tile grid map, such as hex grid maps (which use hexagons for each geographic unit) and Demers cartograms (which use differently sized squares for each geographic unit). 
+                </li>
+                <li>
+                    <strong>Point-based maps</strong>. Maps that use dots or other shapes to mark specific locations or show quantities on a map or, in the case of dot density maps, use such shapes to indicate an overall pattern of distribution. 
+                </ul>
+
+                <img src="img/choropleth-and-tilemap.png" width="100%">
+
+                <p>A secondary, but also important, question to consider when creating a map is how to choose the intervals (or bins) that will shade or define the geographic units. Placing data into discrete categories is, at its core, an aggregation problem. By combining several states or counties into a single bin, the reader cannot clearly distinguish how different the values are from one another.  </p>
+
+                <p>There are four primary binning methods for maps:</p> 
+                <ul>
+                    <li>
+                        <strong>No Bins</strong>. Essentially a continuous color palette (or “ramp”) in which each data value receives a unique color tone.  
+                </li>
+                <li>
+                    <strong>Equal Interval Bins</strong>. In this approach, the data are divided into equally-sized groups, such as 1-25, 26-50, 51-75, and 76-100. 
+                </li>
+                <li>
+                    <strong>Data Distribution Bins</strong>. Instead of having a bin at equal intervals, the bins can be arranged to hold the same number of observations, such as quartiles or quintiles.  
+                </li>
+                <li>
+                    <strong>Arbitrary Bins</strong>. Here, the map creator chooses the bin cutoffs based on round numbers, natural breaks, or some other arbitrary criterion. 
+                </li>
+                </ul>
+
+                <img src="img/bins-for-maps.png" >
+
+                <h4>Map Colors</h4>
+
+                <p>Maps should follow the same basic rules as other graphics when it comes to colors. <a href="https://en.wikipedia.org/wiki/Choropleth_map" target="_blank">Choropleth maps</a>, or maps that show the magnitude of a variable, should normally use the blue sequential color ramp. </p> 
+
+                <p>Sometimes, a map needs to <a href="http://apps.urban.org/features/mapping-americas-futures/" target="_blank">display change in a positive and negative way</a>. In those cases, a diverging color palette works best. When using a diverging palette, be sure to clearly label the midpoint. </p>
+
+                <div class="multi-group-container">
+                    <div class="color eight">
+                        <div class="swatch groupcolor yellow-7 dark">
+                            <div class="color-code"></div>
                         </div>
                     </div>
-
-                    <img src="img/maf.png" class="example-chart" width="100%" />
-
-                    <h4>Other ways to map</h4>
-                    <p>Need to show data across multiple points in time? Consider using small map multiples to show the progression or spread.</p>
-                    <img src="img/sm-multiple-map.jpg" class="example-chart" width="100%" />
-                    <h4>Tile Maps</h4>
-                    <p>The problem with normal state-by-state maps is that the western US has very large states and the eastern US has small states. This leads to the western states being over represented with more visual weight than the states in the northeast.</p>
-                    <p>Recently, <a href="http://blog.apps.npr.org/2015/05/11/hex-tile-maps.html" target="_blank">many organizations</a> have adopted use of grid or tile maps. The advantage of these maps is that each state has equal visual weight.</p>
-                    <p><a href="tile-maps_template.xlsx" ><img src = "img/xlsx.png" style="width: 60px;padding-right: 10px;"></a>Even better, these maps can be created with a <a href="tile-maps_template.xlsx" >simple excel file.</a></p>
-                <div class="col-md-6 ">
-                    <div class="col-md-6 ">
-                        <img src="img/tile-map-1.png" width="100%" class="example-chart" />
+                    <div class="color  eight">
+                        <div class="swatch groupcolor yellow-5 ">
+                            <div class="color-code"></div>
+                        </div>
                     </div>
-                    <div class="col-md-6 ">
-                        <img src="img/tile-map-4.png" width="100%" class="example-chart" />
+                    <div class="color  eight">
+                        <div class="swatch groupcolor yellow-3 ">
+                            <div class="color-code"></div>
+                        </div>
                     </div>
+                    <div class="color  eight">
+                        <div class="swatch groupcolor yellow-1">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                    <div class="color  eight">
+                        <div class="swatch groupcolor blue-1 ">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                    <div class="color  eight">
+                        <div class="swatch groupcolor blue-3 ">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                    <div class="color  eight">
+                        <div class="swatch groupcolor blue-5 dark">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                    <div class="color  eight">
+                        <div class="swatch groupcolor blue-7 dark">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                    <p class="color-code-hex">var colors=["#CA5800","#FDBF11","#FDD870","#FFF2CF","#CFE8F3","#73BFE2","#1696D2","#0a4c6a"];</p>
+                </div>
 
-                    <!--
-                    projections
-                colors
-                labels
-                examples
-                interactive vs print
-                    cartograms?
--->
+                <iframe title="" aria-label="Map" id="datawrapper-chart-Xd0rD" src="https://datawrapper.dwcdn.net/Xd0rD/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="609" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
+                </script>
 
+                <h2>&nbsp;</h2>
+                <p>Special palettes are sometimes required for specific projects or use cases. In such instances, contact the data visualization and design teams to work towards a solution.</p>
+                <div class="multi-group-container"></div>
+                    <div class="color eight">
+                        <div class="swatch groupcolor magenta-7 dark">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                    <div class="color  eight">
+                        <div class="swatch groupcolor magenta-6 dark">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                    <div class="color  eight">
+                        <div class="swatch groupcolor magenta-3 ">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                    <div class="color  eight">
+                        <div class="swatch groupcolor magenta-2">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                    <div class="color  eight">
+                        <div class="swatch groupcolor green-2 ">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                    <div class="color  eight">
+                        <div class="swatch groupcolor green-3 ">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                    <div class="color  eight">
+                        <div class="swatch groupcolor green-6 dark">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                    <div class="color  eight">
+                        <div class="swatch groupcolor green-7 dark">
+                            <div class="color-code"></div>
+                        </div>
+                    </div>
+                    <p class="color-code-hex">var colors=["#761548", "#AF1F6B", "#E46AA7", "#EB99C2","#BCDEB4", "#98CF90", "#408941","#2C5C2D"];</p>
+                </div>
+                
 
-
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
 
+        <section id="tables" class="container content-section text-center">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <h1>Tables</h1>
+
+                    <p>Tables are a unique form of visualizing data because, unlike many charts and graphs, they are not usually intended to give a quick, visual representation of data. Instead, tables are useful when you want to show the exact values of your data or estimates. They are not the best solution if you want to show a lot of data or if you want to show the data in a compact space. A well-designed table can help your reader find specific numbers and discover patterns and outliers.  </p>
+
+                    <h3>Urban Styles</h3>
+                    <p>As with Urban charts, Urban tables follow style guidelines for font styles, font sizes, number formatting, number alignment, and cell/row/column shading. Each of these components has specific styling guidelines that make Urban visualizations look specific and consistent. Formatting differs slightly for PDF and web tables, as listed below. When built in Excel, tables are generally structured as shown below. </p>
+
+                    <h4>Tables for PDF Products </h4>
+                    <p>For tables that appear in Urban Word templates — which can be found on the <a href="https://explorer.urban.org/page/2229" target="_blank">Urban intranet</a> — the built-in Urban styles will automatically apply the correct formatting. You can use these styles as you create tables, or your editor can apply the styles during the editing process. The default styles in Word can be found in the <em>Home > Styles</em> tab of the ribbon. </p>
+                
+                    <h4>Table size and formatting </h4>
+                    <ul>
+                        <li>
+                    Tables should be full width, which is 6.25 inches in PDF products, with the following exceptions: 
+                </li><li>
+                    Smaller tables can be 3.13 inches or 4.69 inches (i.e., 50 or 75 percent of the page width) 
+                </li><li>
+                    Tables on landscape pages, such as in an appendix, can be 8.67 inches (100 percent of the page width) 
+                </li><li>
+                    Tables should have no empty columns or rows. The built in Urban styles will automatically apply the appropriate line spacing between table rows. 
+                </li><li>
+                    Urban style uses a 1pt black border beneath all column headings and the last row in a table. The default Urban style is to use no borders within a table; however, if needed, column or row borders can be used to increase readability. The style of (vertical) column borders is 1 pt, black. The style of (horizontal) row borders is 1 pt, round dot, and a color of 217 217 217 (light gray). 
+                </li>
+                </ul>
+
+                <h4>Table Text Styling for Urban Reports </h4>
+               
+                <h4>Title</h4> 
+                <ul>
+                    <li>
+                    Headline capitalization, e.g., “Would Rolling Up Programs Conflate Different Outcomes?” rather than “Would rolling up programs conflate different outcomes”? 
+                </li><li>
+                    Keep text concise and use active voice 
+                </li><li>
+                    Figure/Table Title style (see list below) 
+                </li>
+                </ul>
+
+                <h4>Subtitle </h4>
+                <ul>
+                    <li>
+                    Subtitles are optional in Urban tables and figures and can be used to list units or add contextual information. Keep text concise and use active voice. 
+                </li><li>
+                    Sentence capitalization (first word and proper nouns capitalized) 
+                </li><li>
+                    Figure/Table Subtitle style 
+                </li>
+            </ul>
+
+                <h4>Column headings </h4>
+                <ul>
+                    <li>
+                    Use sentence capitalization for all column headings except for spanner headings, which use headline capitalization. Set supra-spanner headings in small caps. 
+                </li><li>
+                    Use spanner headings for units of measurement that apply to multiple cells. (Unless your document must be 508-compliant, in which case avoid using spanner headings altogether). 
+                </li><li>
+                    Table Column Heading style to all column headings and spanner headings. 
+                 </li>
+                </ul>
+
+                <h4>Row headings </h4>
+                <ul>
+                    <li>
+                    Use row headings when contextual information applies to more than one row. 
+                </li><li>
+                    Table Row Heading style (row subheadings use the same style) 
+                 </li>
+                </ul>
+
+                <h4>Cell contents </h4>
+                <ul>
+                    <li>
+                    All cell data should be decimal aligned 
+                </li><li>
+                    Where possible, keep similar cells to similar widths, making exceptions to accommodate lengthy cells or column headings 
+                </li><li>
+                    Data cells should be aligned bottom right 
+                </li><li>
+                    Text cells should be aligned bottom left 
+                </li><li>
+                    Table Row style for numerical cells  
+                </li><li>
+                    Table Text style for text cells 
+                 </li>
+                </ul>
+
+                <h4>Source and notes</h4> 
+                <ul>
+                    <li>
+                    Like figures, all tables must have a source line 
+                </li><li>
+                    The notes line can include notes applying to the whole table, notes for a particular row or column (use superscripted letters), and notes on significance levels (use asterisks) 
+                </li><li>
+                    Figure/Table Notes style 
+                </li>
+                </ul>
+
+                <h4>Styles section of Home tab in Microsoft Word</h4>
+                <h5>PC</h5> 
+                <img src="img/table-styles-pc.png" width="50%">
+                <h5>Mac</h5> 
+                <img src="img/table-styles-mac.png" width="50%">
+
+                <h4>Tables for the Web </h4>
+                <p>Tables for the Urban website—including the Urban Wire and Data at Urban blogs—should follow the formatting shown in the images below. Many figures and tables for the Urban Wire blog are built in the Datawrapper tool; contact the data visualization or blog team for assistance. </p>
+                <img src="img/table-mockup.png" width="100%"> 
+                <img src="img/table-final.png" width="100%" style="padding-top: 5rem; padding-bottom: 5rem;">
+                
+                <p>There are many ways to make your tables more visual by adding icons, color shades, small charts, and more. For additional options, see <em><a href="https://www.cambridge.org/core/journals/journal-of-benefit-cost-analysis/article/abs/ten-guidelines-for-better-tables/74C6FD9FEB12038A52A95B9FBCA05A12" target="_blank">Ten Guidelines for Better Tables</a></em>. </p>
+
+                <img src="img/conditional-formatting.png" width="100%">
+
+                </div>
+            </div>
+        </section>      
 
     <!-- Download Section -->
     <section id="download" class="content-section text-center">
@@ -1728,7 +2529,7 @@ http://www.businessinsider.com/pie-charts-are-the-worst-2013-6" target="_blank">
             <div class="container">
                 <div class="col-lg-8 col-lg-offset-2">
                     <h2>Additional resources</h2>
-                    <p>Have a question or looking for more help? Contact <a href="mailto:bchartoff@urban.org">Ben Chartoff</a> or <a href="mailto:jschwabish@urban.org">Jon Schwabish</a>.
+                    <p>Have a question or looking for more help? Contact <a href="mailto:abajak@urban.org">Aleszu Bajak</a> or <a href="mailto:jschwabish@urban.org">Jon Schwabish</a>.
                     </p>
                     <p class="credit">Photo from <a target="_blank" href="http://www.shutterstock.com" target="_blank">Shutterstock</a>
                     </p>
@@ -1782,7 +2583,7 @@ http://www.businessinsider.com/pie-charts-are-the-worst-2013-6" target="_blank">
             m.parentNode.insertBefore(a, m)
         })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-        ga('create', 'UA-392952-17', 'auto');
+        ga('create', 'GTM-PGGXXJ2', 'auto');
         ga('send', 'pageview');
     </script>
 
