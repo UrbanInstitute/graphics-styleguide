@@ -23,7 +23,7 @@ h3,
 h4,
 h5,
 h6 {
-    margin: 10 0 25px;
+    margin: 2 0 2 0rem;
     text-transform: uppercase;
     font-family:  Lato, "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
@@ -33,14 +33,31 @@ h6 {
 
 p {
     margin: 0 0 15px;
-    font-size: 18px;
+    font-size: 2rem;
     line-height: 1.5;
     text-align: left;
 }
 
 ul{
- text-align: left;
-    font-size: 1.25em;
+    text-align: left;
+    font-size: 1.75rem;
+}
+
+ol{
+    font-size: 1.75rem;
+    text-align:justify;
+    list-style-position: inside;   
+}
+
+.excel_instructions {
+    padding: 0;
+}
+
+.centerlist {
+    text-align: left;
+    font-size: 2rem;
+    list-style-position: inside;
+    padding-left: 0;
 }
 
 .example-chart{
@@ -48,6 +65,10 @@ ul{
  max-width:700px;
  margin:0 auto;
 
+}
+
+.within-section {
+    padding-top: 50px;
 }
 
 .text-swatch{
@@ -198,7 +219,7 @@ width: 130px;
     padding: 100px 0;
     text-align: left;
     color: #fff;
-    background: url(../img/shutterstock_169137914.jpg) no-repeat bottom center scroll;
+    background: url(../img/UrbanInstitute_0472.jpg) no-repeat bottom center scroll;
     background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -350,7 +371,7 @@ width: 130px;
 
 @media(min-width:767px) {
     .content-section {
-        padding-top: 250px;
+        padding-top: 150px;
     }
 
     .download-section {
@@ -424,6 +445,10 @@ float: left;
 margin-left: 0;
     margin-top:-4px;
 width: 130px;
+}
+
+.color-code-hex{
+    display: none;
 }
 }
 
