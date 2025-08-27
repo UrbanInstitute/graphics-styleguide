@@ -47,9 +47,10 @@ p {
     text-align: left;
 }
 
-ul, ol{
+ul, ol {
     text-align: left;
-    font-size: 1.75rem;
+    font-size: 2rem;
+    line-height: 1.5;
     margin: 15px 0 30px;
 }
 
@@ -58,7 +59,7 @@ li{
     margin: 0 0 15px; 
 }
 section.content-section {
-    border-top:1px solid #eee;
+    border-top:1px solid #ccc;
     padding: 50px 0;
 }
 section.footer {
