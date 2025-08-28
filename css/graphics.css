@@ -1,7 +1,7 @@
 /*!
- * Start Bootstrap - Grayscale Bootstrap Theme (http://startbootstrap.com)
+ * Start Bootstrap - Grayscale Bootstrap Theme (https://startbootstrap.com)
  * Code licensed under the Apache License v2.0.
- * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ * For details, see https://www.apache.org/licenses/LICENSE-2.0.
  */
 
 body {
@@ -23,7 +23,6 @@ h3,
 h4,
 h5,
 h6 {
-    margin: 2 0 2 0rem;
     text-transform: uppercase;
     font-family:  Lato, "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
@@ -31,6 +30,16 @@ h6 {
     clear: both;
 }
 
+h1,.h1, h2,.h2,h3,.h3 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding:0;
+}
+h4,.h4,h5,.h5,h6,.h6 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding:0;
+}
 p {
     margin: 0 0 15px;
     font-size: 2rem;
@@ -38,34 +47,53 @@ p {
     text-align: left;
 }
 
-ul{
+ul, ol {
     text-align: left;
-    font-size: 1.75rem;
+    font-size: 2rem;
+    line-height: 1.5;
+    margin: 15px 0 30px;
 }
 
-ol{
+li{
     font-size: 1.75rem;
-    text-align:justify;
-    list-style-position: inside;   
+    margin: 0 0 15px; 
+}
+section.content-section {
+    border-top:1px solid #ccc;
+    padding: 50px 0;
+}
+section.footer {
+    border-top:none;
+    padding: 50px 0 0;
 }
 
 .excel_instructions {
     padding: 0;
 }
-
+.page-top-nav {
+    text-align: right;
+    font-size: .9em;
+    padding-right:30px;
+}
 .centerlist {
     text-align: left;
     font-size: 2rem;
-    list-style-position: inside;
-    padding-left: 0;
+    padding-left: 100px;
 }
 
 .example-chart{
- width:100%;
- max-width:700px;
- margin:0 auto;
+     width:100%;
+     max-width:700px;
+     margin:30px auto 10px;
 
 }
+.example-chart-lg{
+     max-width:1000px;
+}
+.example-chart-sm{
+     max-width:500px;
+}
+
 
 .within-section {
     padding-top: 50px;
@@ -77,7 +105,7 @@ ol{
     padding-right: 4px;
 }
 .text-list li{
- text-align: left !important;
+     text-align: left !important;
     font-size: 18px;
 }
 .type-table p{
@@ -87,6 +115,7 @@ ol{
     margin-left:5px;
     margin-right:5px;
 }
+table {margin-bottom:60px;}
 @media(min-width:767px) {
     p {
         margin: 0 0 35px;
@@ -98,7 +127,7 @@ ol{
 .divider{
    width: 150px;
   display: inline-block;
-  border: 3px solid #1696d2;
+  border: 2px solid #1696d2;
   margin-top: 55px;
     margin-bottom:55px;
   display: block;
@@ -216,7 +245,7 @@ width: 130px;
     display: table;
     width: 100%;
     height: auto;
-    padding: 100px 0;
+    padding: 160px 0 100px;
     text-align: left;
     color: #fff;
     background: url(../img/UrbanInstitute_0472.jpg) no-repeat bottom center scroll;
@@ -260,7 +289,7 @@ width: 130px;
 @media(min-width:767px) {
     .intro {
         height: 100%;
-        padding: 120px;
+        padding: 160px 0 100px;
     }
 
     .intro .intro-body .brand-heading {
@@ -347,15 +376,11 @@ width: 130px;
     }
 }
 
-.content-section {
-    padding-top: 100px;
-}
-
 .download-section {
     width: 100%;
     padding: 50px 0;
     color: #fff;
-    background: url(../img/shutterstock_169137914.jpg) no-repeat bottom center scroll;
+    background: url(../img/UrbanInstitute_0472.jpg) no-repeat bottom center scroll;
     background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -370,9 +395,6 @@ width: 130px;
 }
 
 @media(min-width:767px) {
-    .content-section {
-        padding-top: 150px;
-    }
 
     .download-section {
         padding: 100px 0;
@@ -487,7 +509,7 @@ body {
 @media(min-width:1024px) {
         .intro {
         height: 100%;
-        padding: 120px;
+        padding: 160px 0 100px;
     }
 
     .intro .intro-body .brand-heading {
